@@ -143,6 +143,7 @@ Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi')
 Branch'inizi push edin (git push origin feature/yeni-ozellik)
 
 Pull Request oluşturun
+```
 
 📄 Lisans
 Bu proje Palamutçuoğlu lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.

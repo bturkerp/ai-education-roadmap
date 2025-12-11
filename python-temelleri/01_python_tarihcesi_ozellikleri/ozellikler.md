@@ -13,73 +13,69 @@ Python, insan diline yakın bir sözdizimine sahiptir.
 sayilar = [1, 2, 3, 4, 5]
 toplam = sum(sayilar)
 ortalama = toplam / len(sayilar)
-2. Yorumlanan Dil
+
+## 2. Yorumlanan Dil
 Python kodu satır satır yorumlanır.
 
 Avantajları:
 
-Hızlı geliştirme
+- Hızlı geliştirme
 
-Platform bağımsız
+- Platform bağımsız
 
-Kolay hata ayıklama
+- Kolay hata ayıklama
 
 Dezavantajları:
 
-Derlenmiş dillere göre yavaş
+- Derlenmiş dillere göre yavaş
 
-Interpreter gerektirir
+- Interpreter gerektirir
 
 Çalışma Süreci:
 
-Python kodu yazılır
+- Python kodu yazılır
 
-Interpreter satır satır okur
+- Interpreter satır satır okur
 
-Bytecode'a çevrilir
+- Bytecode'a çevrilir
 
-Sanal makinede çalıştırılır
+- Sanal makinede çalıştırılır
 
 3. Dinamik Tip Sistemi
 Değişken tipleri çalışma zamanında belirlenir.
 
 Örnek:
-
+```
 python
 x = 10          # integer
 x = "Python"    # string
 x = 3.14        # float
 x = [1, 2, 3]   # list
+```
 Avantajları:
+- Esneklik
 
-Esneklik
-
-Hızlı prototipleme
+- Hızlı prototipleme
 
 Dezavantajları:
-
-Runtime hataları
-
-Tip kontrolü yok
+- Runtime hataları
+- Tip kontrolü yok
 
 4. Platform Bağımsız
 Aynı kod farklı sistemlerde çalışır.
 
 Desteklenen Platformlar:
-
-Windows
-
-Linux
-
-macOS
-
-Raspberry Pi
+- Windows
+- Linux
+- macOS
+- Raspberry Pi
 
 Örnek:
-
+```
 python
 import sys
 print(f"Platform: {sys.platform}")
+```
 5. Açık Kaynak
 Python tamamen açık kaynaklıdır.
 

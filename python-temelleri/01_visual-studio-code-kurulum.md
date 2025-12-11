@@ -92,7 +92,7 @@ python-projelerim
 4. İçine yaz:
 
 ```python
-print("VS Code çalışıyor!")
+print("VS Code çalışıyor!")'''
 
 Çalıştırmak için:
 

@@ -270,7 +270,7 @@ print(b[0])  # 77 → 'M'nin ASCII değeri
 print(type(b))  # <class 'bytes'>
 ```
 
-## bytearray – Değiştirilebilir Bayt Dizisi
+### bytearray – Değiştirilebilir Bayt Dizisi
 ```
 python
 
@@ -279,15 +279,75 @@ ba[0] = 75  # 'K' ASCII'si
 print(ba)  # bytearray(b'Kerhaba')
 ```
 
+### memoryview – Bellek Görünümü
+Büyük verilerde kopyalama yapılmadan erişim sağlar (performans için).
+
+```
+python
+
+veri = bytearray(b"Python")
+görünüm = memoryview(veri)
+print(görünüm[0])  # 80
+```
+
+## 2.8 NoneType – None
+- "Hiçbir şey"i temsil eder.
+- Fonksiyon bir şey döndürmezse None döner.
+
+```
+python
+
+sonuç = print("Merhaba")  # print None döner
+print(sonuç)  # None
+print(type(None))  # <class 'NoneType'>
+```
+None bir singletontur: None is None → True
 
 
+## Tür Kontrolü ve Dönüşümü
 
+### type() ve isinstance()
+```
+python
 
+x = 42
+print(type(x) == int)        # True
+print(isinstance(x, int))    # True (önerilen)
+```
 
+### Tür Dönüştürme (Type Casting)
+```
+python
 
+# Sayı ↔ Metin
+sayi = int("42")         # str → int
+metin = str(42)          # int → str
 
+# Ondalıklı ↔ Tam
+x = float(5)             # 5.0
+y = int(3.9)             # 3 (keser, yuvarlamaz!)
 
+# Liste ↔ Demet
+liste = list((1, 2, 3))  # (1, 2, 3) → [1, 2, 3]
+demet = tuple([1, 2, 3]) # [1, 2, 3] → (1, 2, 3)
 
+# İkili ↔ Metin
+b = "Türker".encode("utf-8")   # str → bytes
+s = b.decode("utf-8")          # bytes → str
+```
 
+## 2.10 Değişken Kimliği ve Referanslar
+Python’da değişkenler nesnelere referanstır:
+```
+python
+
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)  # [1, 2, 3, 4] → çünkü a ve b aynı nesneyi gösterir
+
+# Kimlik (bellek adresi)
+print(id(a) == id(b))  # True
+```
 
 

@@ -102,4 +102,23 @@ selam = 'Merhaba, "arkadaş"!'
 satırlı
 bir stringtir."""
 ```
+### Kaçış Dizileri (Escape Sequences)
 
+```
+python
+
+print("Satır\nbaşı")     # Yeni satır
+print("Sekme\tkarakteri") # Sekme
+print("C:\\Users\\Türker") # Ters eğik çizgi
+print(r"Ham string: C:\Users\Türker")  # r ile escape'leri iptal et
+```
+
+### Diziler ve İndeksleme
+```
+python
+
+s = "Python"
+print(s[0])    # 'P'
+print(s[-1])   # 'n'
+print(s[1:4])  # 'yth'
+```

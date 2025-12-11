@@ -67,40 +67,51 @@ Bu repository, sıfırdan ileri seviyeye Python programlama öğrenmek isteyenle
 Conda Environment Kurulumu:
 bash
 # 1. Environment oluşturma
+```
 conda create -n python_egitimi python=3.9
-
+```
 # 2. Environment'i aktif etme
+```
 conda activate python_egitimi
-
+```
 # 3. Gerekli paketleri yükleme
+```
 pip install -r requirements.txt
+```
 🚀 Hızlı Başlangıç
 Repository'yi klonlayın:
-
+```
 bash
 git clone https://github.com/kullaniciadi/python-egitimi.git
 cd python-egitimi
-Virtual environment oluşturun:
+```
 
+Virtual environment oluşturun:
+```
 bash
 python -m venv venv
-
 # Windows
 venv\Scripts\activate
 
 # Linux/Mac
 source venv/bin/activate
-Gerekli paketleri yükleyin:
+```
 
+Gerekli paketleri yükleyin:
+```
 bash
 pip install -r requirements.txt
-İlk Python programınızı çalıştırın:
+```
 
+İlk Python programınızı çalıştırın:
+```
 bash
 python 01_python_tarihcesi_ozellikleri/merhaba.py
+```
+
 📝 Proje Yapısı
 Her bölüm aşağıdaki yapıyı içerir:
-
+```
 text
 bolum_adi/
 ├── README.md              # Konu anlatımı ve teorik bilgiler
@@ -108,9 +119,11 @@ bolum_adi/
 ├── alistirmalar.py        # Pratik alıştırmalar
 ├── cozumler.py            # Alıştırma çözümleri
 └── test_bolum.py          # Unit testler
+```
+
 🧪 Test Etme
 Her bölüm için unit testler bulunmaktadır:
-
+```
 bash
 # Tüm testleri çalıştır
 python -m pytest
@@ -120,6 +133,7 @@ python -m pytest 04_degiskenler_veri_tipleri/test_degiskenler.py
 
 # Coverage raporu al
 python -m pytest --cov=. --cov-report=html
+```
 🤝 Katkıda Bulunma
 Bu repository'yi fork edin
 
@@ -146,65 +160,4 @@ Bu eğitimi geliştirmeye yardım eden herkese
 
 ⭐ Bu repository'yi beğendiyseniz yıldız vermeyi unutmayın!
 
-text
 
-## 2. requirements.txt
-
-```txt
-# Temel Paketler
-python>=3.8
-ipython>=8.0.0
-jupyter>=1.0.0
-notebook>=6.4.0
-
-# Development Tools
-black>=22.0.0
-flake8>=4.0.0
-mypy>=0.930
-pytest>=7.0.0
-pytest-cov>=3.0.0
-pylint>=2.12.0
-autopep8>=1.6.0
-
-# Data Science & Analysis
-numpy>=1.21.0
-pandas>=1.3.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-scipy>=1.7.0
-
-# Web Development
-flask>=2.0.0
-django>=4.0.0
-requests>=2.26.0
-beautifulsoup4>=4.10.0
-selenium>=4.0.0
-
-# Machine Learning
-scikit-learn>=1.0.0
-tensorflow>=2.7.0
-torch>=1.10.0
-xgboost>=1.5.0
-
-# Database
-sqlalchemy>=1.4.0
-psycopg2-binary>=2.9.0
-pymongo>=4.0.0
-
-# Automation & Scripting
-schedule>=1.1.0
-pyautogui>=0.9.0
-openpyxl>=3.0.0
-python-docx>=0.8.0
-pdfkit>=0.6.0
-
-# Testing & Documentation
-sphinx>=4.0.0
-pydocstyle>=6.0.0
-coverage>=6.0.0
-
-# Utilities
-python-dotenv>=0.19.0
-tqdm>=4.62.0
-rich>=10.0.0
-colorama>=0.4.0

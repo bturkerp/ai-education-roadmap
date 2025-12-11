@@ -41,28 +41,34 @@ Kurulum dosyasını açınca:
 2) ✔ Lisans sözleşmesini kabul edin
 3) ✔ Aşağıdaki iki kutuyu mutlaka DOĞRU şekilde ayarlayın:
 
-
+```
 ☐ Add Miniconda3 to PATH            (BUNU İŞARETLEME!)
 ☑ Register Miniconda3 as the default Python
-
+```
 PATH'e eklemiyoruz çünkü sorun çıkarır. Conda zaten kendi terminaliyle PATH'i yönetiyor.
 
 Install → Kurulum 1 dakika sürer.
+
 🟦 4. Kurulum Sonrası Test
 
 Başlat → Anaconda Prompt (Miniconda3) açın.
 
 Aşağıdaki komutu yazın:
 
+```
 conda --version
+```
 
 Beklenen çıktı:
-
+```
 conda 24.x.x
+```
 
 Python sürümünü test edin:
-
+```
 python --version
+```
+
 🟦 5. Conda Ortamı Oluşturma (ÖNEMLİ)
 
 Her projede ayrı ortam kullanılır.

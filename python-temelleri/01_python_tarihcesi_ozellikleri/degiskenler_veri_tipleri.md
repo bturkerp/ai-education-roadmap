@@ -1,6 +1,6 @@
 **🐍 Python Eğitimi: Değişkenler ve Veri Tipleri (Tam Kapsamlı)**
 
-#🔹 1. Değişken Nedir?
+# 1. Değişken Nedir?
 
 Python’da değişken, bir veriyi bellekte saklamak için kullandığın isimli bir referanstır. Değişken tanımlamak için = atama operatörünü kullanırsın:
 ```
@@ -20,7 +20,7 @@ yas = 28
 
 💡 PEP8 tavsiyesi: Değişken isimleri snake_case olmalı: ogrenci_sayisi
 
-#🔹 2. Python’da Tüm Yerleşik Veri Tipleri
+# 2. Python’da Tüm Yerleşik Veri Tipleri
 
 Python’da her şey bir nesnedir, ve her nesnenin bir türü (type) vardır. Temel veri tipleri 7 ana kategoriye ayrılır:
 
@@ -35,8 +35,8 @@ Python’da her şey bir nesnedir, ve her nesnenin bir türü (type) vardır. Te
 
 Aşağıda her birini detaylı örneklerle inceleyeceğiz.
 
-## 🔸 2.1 Sayısal Tipler
-### 🔹 int – Tam Sayılar
+##  2.1 Sayısal Tipler
+### int – Tam Sayılar
 Sınırsız uzunlukta, pozitif/negatif tam sayılar.
 
 ```
@@ -50,7 +50,7 @@ print(type(x))  # <class 'int'>
 
 Python 3'te long tipi yoktur; int sonsuz duyarlılıkta çalışır.
 
-###🔹 float – Ondalıklı Sayılar
+### float – Ondalıklı Sayılar
 
 64-bit IEEE 754 double precision (yaklaşık 15–17 anlamlı basamak).
 
@@ -69,7 +69,7 @@ python
 
 print(0.1 + 0.2)  # 0.30000000000000004
 ```
-###🔹 Complex – Karmaşık Sayılar
+### Complex – Karmaşık Sayılar
 
 Gerçek (real) ve sanal (imag) kısımdan oluşur. j sanal birimi temsil eder.
 

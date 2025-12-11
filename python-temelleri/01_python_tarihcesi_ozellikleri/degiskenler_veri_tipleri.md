@@ -229,6 +229,61 @@ kullanıcı["şehir"] = "İstanbul"
 print(kullanıcı.get("telefon", "Belirtilmemiş"))  # Belirtilmemiş
 ```
 
+## 2.6 Küme (Set) Tipleri
+
+### set – Küme
+Sırasız, değiştirilebilir, yinelenen eleman içermeyen koleksiyon.
+
+```
+python
+
+meyveler = {"elma", "muz", "portakal"}
+meyveler.add("çilek")
+meyveler.add("elma")  # Tekrar eklenmez!
+print(meyveler)  # {'çilek', 'muz', 'elma', 'portakal'} (sıra değişebilir)
+
+# Küme işlemleri
+a = {1, 2, 3}
+b = {3, 4, 5}
+print(a | b)  # Birleşim: {1, 2, 3, 4, 5}
+print(a & b)  # Kesişim: {3}
+```
+
+### frozenset – Değiştirilemez Küme
+    set gibi ama sözlük anahtarı olarak kullanılabilir.
+```
+python
+
+donmuş = frozenset([1, 2, 3])
+# donmuş.add(4) → AttributeError
+```
+
+## 2.7 İkili (Binary) Tipler
+### bytes – Bayt Dizisi
+Değiştirilemez, 0–255 arası tam sayılardan oluşur.
+    
+```
+python
+
+b = b"Merhaba"
+print(b[0])  # 77 → 'M'nin ASCII değeri
+print(type(b))  # <class 'bytes'>
+```
+
+## bytearray – Değiştirilebilir Bayt Dizisi
+```
+python
+
+ba = bytearray(b"Merhaba")
+ba[0] = 75  # 'K' ASCII'si
+print(ba)  # bytearray(b'Kerhaba')
+```
+
+
+
+
+
+
 
 
 

@@ -100,7 +100,9 @@ print("VS Code çalışıyor!")
 
 Terminal’e yaz:
 
-```python test.py
+```
+python
+python test.py
 ```
 Eğer çıktı şu geliyorsa kurulum başarılıdır:
 

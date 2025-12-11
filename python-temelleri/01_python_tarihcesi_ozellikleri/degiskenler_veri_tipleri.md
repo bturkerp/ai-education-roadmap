@@ -48,8 +48,40 @@ z = 0
 print(type(x))  # <class 'int'>
 ```
 
-    Python 3'te long tipi yoktur; int sonsuz duyarlılıkta çalışır.
+Python 3'te long tipi yoktur; int sonsuz duyarlılıkta çalışır.
 
 ###🔹 float – Ondalıklı Sayılar
 
 64-bit IEEE 754 double precision (yaklaşık 15–17 anlamlı basamak).
+
+```
+python
+
+pi = 3.14159
+negatif = -0.001
+bilimsel = 1.23e4  # 1.23 × 10⁴ = 12300.0
+print(bilimsel)  # 12300.0
+print(type(pi))  # <class 'float'>
+```
+⚠️ Dikkat: 0.1 + 0.2 == 0.3 → False! (Kayan nokta hassasiyeti nedeniyle)
+```
+python
+
+print(0.1 + 0.2)  # 0.30000000000000004
+```
+###🔹 Complex – Karmaşık Sayılar
+
+Gerçek (real) ve sanal (imag) kısımdan oluşur. j sanal birimi temsil eder.
+
+```
+python
+
+c = 3 + 4j
+print(c.real)   # 3.0
+print(c.imag)   # 4.0
+print(type(c))  # <class 'complex'>
+
+# Alternatif oluşturma
+c2 = complex(2, -5)  # 2 - 5j
+```
+

@@ -12,7 +12,7 @@ Python, insan diline yakın bir sözdizimine sahiptir.
 ```python
 sayilar = [1, 2, 3, 4, 5]
 toplam = sum(sayilar)
-ortalama = toplam / len(sayilar)
+ortalama = toplam / len(sayilar)```
 
 ## 2. Yorumlanan Dil
 Python kodu satır satır yorumlanır.

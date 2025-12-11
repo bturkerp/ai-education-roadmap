@@ -89,6 +89,7 @@ Beklenen çıktı:
 ```
 Python 3.10.x
 ```
+
 🟦 6. Pip & Conda Paketleri Kurma
 
 Conda ortamı aktifken istediğiniz paketleri kurabilirsiniz:
@@ -98,18 +99,20 @@ pip ile:
 pip install numpy pandas matplotlib
 conda ile:
 conda install numpy pandas -y
+```
 
 CUDA destekli PyTorch veya TensorFlow kurmayı da ileride işleyeceğiz.
 
 🟦 7. Ortamları Listeleme & Silme
 
 Mevcut ortamları listele:
-
+```
 conda env list
-
+```
 Ortam silme:
-
+```
 conda remove -n tf --all
+```
 🟦 8. VS Code ile Conda Bağlantısı
 
 VS Code → sol alt köşedeki Python sürümüne tıklayın.

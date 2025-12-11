@@ -23,12 +23,16 @@ Bu nedenle Python’u direkt sisteme kurmak yerine Conda ortamına kurmak her za
 Resmî indirme sayfası: https://docs.anaconda.com/miniconda/
 
 İndirilecek sürüm:
-
+```
 Windows • Miniconda3 • 64-bit • Installer (.exe)
+```
 
 Genelde isim şöyle olur:
 
+```
 Miniconda3-latest-Windows-x86_64.exe
+```
+
 🟦 3. Kurulum Adımları
 
 Kurulum dosyasını açınca:

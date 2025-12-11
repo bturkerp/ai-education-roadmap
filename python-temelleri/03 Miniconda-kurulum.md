@@ -37,9 +37,11 @@ Miniconda3-latest-Windows-x86_64.exe
 
 Kurulum dosyasını açınca:
 
-✔ 1) "Just Me" seçin (önerilir)
-✔ 2) Lisans sözleşmesini kabul edin
-✔ 3) Aşağıdaki iki kutuyu mutlaka DOĞRU şekilde ayarlayın:
+1) ✔ "Just Me" seçin (önerilir)
+2) ✔ Lisans sözleşmesini kabul edin
+3) ✔ Aşağıdaki iki kutuyu mutlaka DOĞRU şekilde ayarlayın:
+
+
 ☐ Add Miniconda3 to PATH            (BUNU İŞARETLEME!)
 ☑ Register Miniconda3 as the default Python
 

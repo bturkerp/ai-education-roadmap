@@ -1,261 +1,404 @@
-# Python Değişkenler ve Veri Tipleri
+🐍 Python Eğitimi: Değişkenler ve Veri Tipleri
 
-## Değişken Nedir?
-Veri saklamak için kullanılan isimli bellek alanı.
+Bu bölümde, Python'da değişkenlerin nasıl tanımlandığını ve temel veri tiplerini öğreneceksiniz. Python, dinamik olarak yazılan (dynamically typed) bir dildir — yani bir değişkenin türünü açıkça belirtmenize gerek yoktur; Python bunu otomatik olarak algılar.
+📌 İçindekiler
 
-**Örnek:**
-```
+    Değişken Nedir?
+    Değişken Tanımlama Kuralları
+    Python’da Temel Veri Tipleri
+        1. Sayısal Tipler
+            a) int – Tam Sayılar
+            b) float – Ondalıklı Sayılar
+            c) complex – Karmaşık Sayılar
+        2. Metin Tipleri
+            str – Dizgeler (Strings)
+        3. Mantıksal Tipler
+            bool – Boolean
+        4. Sıralı (Sequence) Tipler
+            list – Liste
+            tuple – Demet
+            range – Aralık
+        5. Eşleme (Mapping) Tipi
+            dict – Sözlük
+        6. Küme (Set) Tipleri
+            set – Küme
+            frozenset – Sabit Küme
+        7. İkili (Binary) Tipler
+            bytes
+            bytearray
+            memoryview
+    Veri Tipini Nasıl Öğreniriz?
+    Değişken Türünü Dönüştürme (Type Casting)
+    Önemli Hatırlatmalar
+
+Değişken Nedir?
+
+Bir değişken, bir veriyi (sayı, metin, liste vb.) bellekte saklamak için kullanılan bir isimdir.
+Python’da bir değişken oluşturmak için yalnızca değişken_adı = değer yazmanız yeterlidir.
+
 python
-ad = "Ahmet"
-yas = 25
-boy = 1.75
-ogrenci = True
-```
+1
+2
 
-Temel Veri Tipleri
-1. Integer (int) - Tam Sayılar
+Bu örnekte:
+
+    isim adlı bir değişkene "Ahmet" metni,
+    yas adlı bir değişkene 25 sayısı atanmıştır.
+
+Değişken Tanımlama Kuralları
+
+    Harf veya alt çizgi (_) ile başlamalıdır.
+    ✅ Geçerli: ad, _puan
+    ❌ Geçersiz: 2ad, @puan
+    Sadece harf, rakam ve alt çizgi içerebilir.
+    ✅ Geçerli: toplam_puan1
+    ❌ Geçersiz: toplam-puan, toplam puan
+    Python anahtar kelimeleri (örn. if, else, for) kullanılamaz.
+    Büyük/küçük harf duyarlıdır.
+    Ad ile ad farklı değişkenlerdir.
+    Türkçe karakterler teknik olarak kullanılabilir, ancak önerilmez.
+    ✅ not_ortalaması → tercih edilen
+    ❌ not_ortalamasııı → okunabilirlik düşer
+
+Python’da Temel Veri Tipleri
+
+Python, çeşitli veri tiplerini yerleşik olarak destekler. Ana kategoriler şunlardır:
+1. Sayısal Tipler
+a) int – Tam Sayılar
+
+Pozitif, negatif veya sıfır olabilen tam sayılardır. Sınırsız sayıda basamak içerebilir.
+
 python
-# Tam sayı örnekleri
-sayi = 42
-negatif = -15
-buyuk = 1_000_000  # Okunabilirlik için alt çizgi
+1
+2
+3
+4
 
-# İşlemler
-toplam = 10 + 5      # 15
-fark = 20 - 8        # 12
-carpim = 4 * 6       # 24
-bolum = 15 // 4      # 3 (tam bölme)
-kalan = 15 % 4       # 3
-us = 2 ** 3          # 8 (2^3)
-2. Float (float) - Ondalıklı Sayılar
+b) float – Ondalıklı Sayılar
+
+Ondalık nokta içeren sayılardır.
+
 python
-# Float örnekleri
-pi = 3.14159
-sıcaklık = -5.5
-buyuk_float = 2.5e6  # 2,500,000
-kucuk_float = 1.5e-3 # 0.0015
+1
+2
+3
 
-# Hassasiyet sorunu
-print(0.1 + 0.2)  # 0.30000000000000004
+    ⚠️ Not: 3. veya 5.0 gibi yazım da float tipindedir.
 
-# Çözüm
-from decimal import Decimal
-print(Decimal('0.1') + Decimal('0.2'))  # 0.3
-3. String (str) - Metinler
+c) complex – Karmaşık Sayılar
+
+Gerçek ve sanal kısımdan oluşan sayılardır. j sanal birimi temsil eder.
+
 python
-# String oluşturma
-isim = "Ali"
-cumle = 'Python öğreniyorum'
-cok_satir = """Bu
-çok satırlı
-bir string"""
+1
+2
+3
+4
 
-# String işlemleri
-print(len(isim))           # 3
-print(isim.upper())        # ALI
-print(isim.lower())        # ali
-print("Python".replace("P", "J"))  # Jython
+2. Metin Tipleri
+str – Dizgeler (Strings)
 
-# String birleştirme
-ad = "Ahmet"
-soyad = "Yılmaz"
-tam_ad = ad + " " + soyad  # Ahmet Yılmaz
+Tek tırnak (' '), çift tırnak (" ") veya üçlü tırnak (''' ''' / """ """) ile tanımlanır.
 
-# String formatlama
-yas = 25
-print(f"{ad} {yas} yaşında")        # Ahmet 25 yaşında
-print("{} {} yaşında".format(ad, yas))
-4. Boolean (bool) - Mantıksal Değerler
 python
-# Boolean değerler
-dogru = True
-yanlis = False
+1
+2
+3
+4
+5
+6
+7
 
-# Boolean dönüşüm
-print(bool(0))      # False
-print(bool(1))      # True
-print(bool(""))     # False
-print(bool("a"))    # True
-print(bool([]))     # False
-print(bool([1]))    # True
+Dizgeler değiştirilemezdir (immutable). Yani üzerinde doğrudan değişiklik yapılamaz.
+3. Mantıksal Tipler
+bool – Boolean
 
-# Karşılaştırma operatörleri
-print(5 > 3)    # True
-print(5 == 5)   # True
-print(5 != 3)   # True
-print(5 <= 10)  # True
+Sadece iki değere sahiptir: True veya False.
 
-# Mantıksal operatörler
-print(True and False)   # False
-print(True or False)    # True
-print(not True)         # False
-5. List (liste) - Sıralı Koleksiyon
 python
-# Liste oluşturma
-sayilar = [1, 2, 3, 4, 5]
-meyveler = ["elma", "armut", "kiraz"]
-karisik = [1, "iki", 3.0, True]
+1
+2
+3
 
-# Liste işlemleri
-meyveler.append("muz")      # Sonuna ekle
-meyveler.insert(1, "portakal")  # Belirli pozisyona ekle
-meyveler.remove("armut")    # Değeri sil
-son_eleman = meyveler.pop() # Son elemanı al ve sil
-uzunluk = len(meyveler)     # Liste uzunluğu
+    Mantıksal veriler genellikle karşılaştırma işlemlerinden elde edilir:
 
-# Liste dilimleme
-print(sayilar[0])      # 1 (ilk eleman)
-print(sayilar[-1])     # 5 (son eleman)
-print(sayilar[1:4])    # [2, 3, 4] (1'den 4'e kadar)
-print(sayilar[:3])     # [1, 2, 3] (baştan 3'e kadar)
-print(sayilar[2:])     # [3, 4, 5] (2'den sona kadar)
-6. Tuple (demet) - Değiştirilemez Liste
+    python
+    1
+    2
+
+4. Sıralı (Sequence) Tipler
+list – Liste
+
+    Değiştirilebilir (mutable)
+    Aynı veya farklı veri tiplerini barındırabilir.
+    Köşeli parantez ([]) ile tanımlanır.
+
 python
-# Tuple oluşturma
-renkler = ("kırmızı", "yeşil", "mavi")
-koordinat = (10, 20)
-tek_eleman = (42,)  # Virgül önemli!
+1
+2
+3
 
-# Tuple işlemleri
-print(renkler[0])      # kırmızı
-print(len(renkler))    # 3
-print("kırmızı" in renkler)  # True
+tuple – Demet
 
-# Tuple unpacking
-x, y = koordinat  # x=10, y=20
-7. Dictionary (sözlük) - Anahtar-Değer Çiftleri
+    Değiştirilemez (immutable)
+    Aynı veya farklı veri tiplerini barındırabilir.
+    Normal parantez (()) ile tanımlanır.
+
 python
-# Sözlük oluşturma
-ogrenci = {
-    "ad": "Ahmet",
-    "yas": 25,
-    "numara": 12345,
-    "notlar": [85, 90, 78]
-}
+1
+2
+3
 
-# Sözlük işlemleri
-print(ogrenci["ad"])           # Ahmet
-print(ogrenci.get("ad"))       # Ahmet
-print(ogrenci.get("adres", "Belirtilmemiş"))  # Varsayılan değer
+range – Aralık
 
-ogrenci["email"] = "ahmet@mail.com"  # Yeni anahtar ekle
-ogrenci["yas"] = 26              # Değer güncelle
-silinen = ogrenci.pop("numara")  # Anahtarı sil
+    Sayı dizileri oluşturmak için kullanılır.
+    Genellikle döngülerde (for) kullanılır.
 
-# Anahtarlar ve değerler
-print(ogrenci.keys())    # dict_keys(['ad', 'yas', 'notlar', 'email'])
-print(ogrenci.values())  # dict_values(['Ahmet', 26, [85, 90, 78], 'ahmet@mail.com'])
-print(ogrenci.items())   # dict_items([('ad', 'Ahmet'), ('yas', 26), ...])
-8. Set (küme) - Tekrarsız Elemanlar
 python
-# Küme oluşturma
-sayilar = {1, 2, 3, 4, 5}
-meyveler = {"elma", "armut", "kiraz"}
+1
+2
+3
 
-# Küme işlemleri
-meyveler.add("muz")      # Eleman ekle
-meyveler.remove("armut") # Eleman sil
-meyveler.discard("portakal")  # Varsa sil, yoksa hata verme
+5. Eşleme (Mapping) Tipi
+dict – Sözlük
 
-# Küme operasyonları
-A = {1, 2, 3, 4}
-B = {3, 4, 5, 6}
+    Anahtar-değer (key-value) çiftleriyle çalışan bir veri yapısıdır.
+    Süslü parantez ({}) ile tanımlanır.
+    Anahtarlar benzersiz ve değiştirilemez olmalıdır.
 
-print(A | B)  # Birleşim: {1, 2, 3, 4, 5, 6}
-print(A & B)  # Kesişim: {3, 4}
-print(A - B)  # Fark: {1, 2}
-print(A ^ B)  # Simetrik fark: {1, 2, 5, 6}
-
-Tip Kontrolü ve Dönüşümü
-Tip Kontolü:
 python
-print(type(42))           # <class 'int'>
-print(type(3.14))         # <class 'float'>
-print(type("Python"))     # <class 'str'>
-print(type(True))         # <class 'bool'>
-print(type([1,2,3]))      # <class 'list'>
-print(type((1,2,3)))      # <class 'tuple'>
-print(type({"a": 1}))     # <class 'dict'>
-print(type({1,2,3}))      # <class 'set'>
-Tip Dönüşümü:
+1
+2
+3
+4
+5
+6
+7
+
+6. Küme (Set) Tipleri
+set – Küme
+
+    Sırasız, benzersiz elemanlardan oluşur.
+    Değiştirilebilir.
+    Süslü parantez ({}) veya set() fonksiyonu ile tanımlanır.
+
 python
-# String'den diğer tiplere
-sayi_str = "42"
-sayi_int = int(sayi_str)      # 42
-sayi_float = float(sayi_str)  # 42.0
+1
+2
 
-# Integer'dan diğer tiplere
-sayi = 42
-sayi_str = str(sayi)          # "42"
-sayi_float = float(sayi)      # 42.0
-sayi_bool = bool(sayi)        # True
+    Aynı elemandan iki defa olmaz:
 
-# Listeden tuple'a ve tersi
-liste = [1, 2, 3]
-demet = tuple(liste)          # (1, 2, 3)
-yeni_liste = list(demet)      # [1, 2, 3]
+    python
+    1
 
-# String'den listeye
-metin = "Python"
-liste_metin = list(metin)     # ['P', 'y', 't', 'h', 'o', 'n']
-Değişken İsimlendirme Kuralları
-Geçerli İsimler:
+frozenset – Sabit Küme
+
+    Değiştirilemez kümelerdir.
+    frozenset() fonksiyonu ile oluşturulur.
+
 python
-ad = "Ahmet"
-_soyad = "Yılmaz"
-yas1 = 25
-ogrenci_notu = 85.5
-PI = 3.14  # Sabit değer (geleneksel)
-Geçersiz İsimler:
+1
+2
+
+7. İkili (Binary) Tipler
+
+Bu tipler genellikle düşük seviyeli işlemlerde veya dosya okuma/yazma işlemlerinde kullanılır.
+bytes
+
+    Değiştirilemez bayt dizisidir.
+    b öneki ile tanımlanır.
+
 python
-# 1yas = 25        # Rakamla başlayamaz
-# ad-soyad = "Ali" # Tire içeremez
-# class = "A"      # Keyword olamaz
-# ad soyad = "Ali" # Boşluk içeremez
-İyi İsimlendirme Örnekleri:
+1
+2
+
+bytearray
+
+    Değiştirilebilir bayt dizisidir.
+
 python
-# Açıklayıcı isimler
-ogrenci_adi = "Ahmet"
-toplam_not = 250
-ortalama_not = toplam_not / 5
+1
+2
+3
 
-# Sabit değerler (büyük harf)
-PI = 3.14159
-MAX_OGRENCI = 100
-None (Boş Değer)
+memoryview
+
+    Bellek üzerinde veriye erişimi optimize eder (özellikle büyük verilerde).
+
 python
-# None değeri
-bos_deger = None
-tanimsiz = None
+1
+2
+3
 
-# None kontrolü
-def kullanici_bul(id):
-    if id == 1:
-        return {"ad": "Ahmet", "yas": 25}
-    return None
+Veri Tipini Nasıl Öğreniriz?
 
-sonuc = kullanici_bul(999)
-if sonuc is None:
-    print("Kullanıcı bulunamadı")
-Dinamik Tip Sistemi
+type() fonksiyonu ile herhangi bir değişkenin veri tipini öğrenebilirsiniz.
+
 python
-# Python'da değişken tipleri değiştirilebilir
-x = 10          # x şimdi int
-print(type(x))  # <class 'int'>
+1
+2
+3
+4
+5
 
-x = "Python"    # x şimdi str
-print(type(x))  # <class 'str'>
+Alternatif olarak isinstance() ile belirli bir türe sahip olup olmadığını kontrol edebilirsiniz:
 
-x = [1, 2, 3]   # x şimdi list
-print(type(x))  # <class 'list'>
+python
+1
+2
 
-Özet Tablosu
-Veri Tipi	Örnek	Değiştirilebilir	Sıralı	Açıklama
-int	42	-	-	Tam sayı
-float	3.14	-	-	Ondalıklı sayı
-str	"Python"	Hayır	Evet	Metin
-bool	True	-	-	Mantıksal
-list	[1, 2, 3]	Evet	Evet	Değiştirilebilir liste
-tuple	(1, 2, 3)	Hayır	Evet	Değiştirilemez liste
-dict	{"a": 1}	Evet	Hayır	Anahtar-değer çiftleri
-set	{1, 2, 3}	Evet	Hayır	Tekrarsız elemanlar
+Değişken Türünü Dönüştürme (Type Casting)
+
+Python, veri türlerini dönüştürmek için bazı yerleşik fonksiyonlar sağlar:
+Fonksiyon
+	
+Açıklama
+	
+Örnek
+int()
+	
+Sayıya çevirir
+	
+int("10") → 10
+float()
+	
+Ondalıklı sayıya çevirir
+	
+float("3.14") → 3.14
+str()
+	
+Metne çevirir
+	
+str(42) → "42"
+bool()
+	
+Mantıksal değere çevirir
+	
+bool(1) → True
+list()
+	
+Listeye çevirir
+	
+list("abc") → ['a','b','c']
+tuple()
+	
+Tuple’a çevirir
+	
+tuple([1,2]) → (1, 2)
+
+    ⚠️ Dönüştürme her zaman mümkün değildir:
+
+    python
+    1
+
+Önemli Hatırlatmalar
+
+    Python’da her şey nesnedir → her veri tipi bir sınıf (class) olarak tanımlıdır.
+    Değişkenler bellekte referanslar olarak saklanır.
+    id() fonksiyonu ile bir değişkenin bellek adresini öğrenebilirsiniz.
+    None özel bir değerdir ve “hiçbir şey” anlamına gelir (NoneType tipindedir).
+
+python
+1
+2
+
+📚 Özet Tablosu
+Veri Tipi
+	
+Değiştirilebilir?
+	
+Sıralı mı?
+	
+Benzersiz mi?
+int
+	
+Hayır
+	
+—
+	
+—
+float
+	
+Hayır
+	
+—
+	
+—
+str
+	
+Hayır
+	
+Evet
+	
+—
+bool
+	
+Hayır
+	
+—
+	
+—
+list
+	
+Evet
+	
+Evet
+	
+Hayır
+tuple
+	
+Hayır
+	
+Evet
+	
+Hayır
+set
+	
+Evet
+	
+Hayır
+	
+Evet
+frozenset
+	
+Hayır
+	
+Hayır
+	
+Evet
+dict
+	
+Evet
+	
+Hayır*
+	
+Anahtarlar benzersiz
+bytes
+	
+Hayır
+	
+Evet
+	
+—
+bytearray
+	
+Evet
+	
+Evet
+	
+—
+
+    * Python 3.7+’da dict sıralıdır (ekleme sırasını korur), ancak mantıksal olarak "sıralı veri tipi" olarak sınıflandırılmaz.
+
+🔄 Sonraki Adım
+
+Bir sonraki bölümde, operatörler ve ifadeler konusunu ele alacağız:
+→ Aritmetik, karşılaştırma, mantıksal ve üyelik operatörleri!
+
+    ✨ İpucu: Kodlarınızı denemek için Python REPL
+     veya Google Colab
+     gibi çevrimiçi ortamları kullanabilirsiniz.
+
+Yazar: [Senin Adın]
+Lisans: MIT
+Son Güncelleme: 📅 12 Aralık 2025

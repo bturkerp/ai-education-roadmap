@@ -85,3 +85,21 @@ print(type(c))  # <class 'complex'>
 c2 = complex(2, -5)  # 2 - 5j
 ```
 
+## 2.2 Metin Tipi: str
+   Temel Özellikler
+- Tek (') veya çift (") tırnakla tanımlanır.
+- Değiştirilemez (immutable).
+- Unicode destekler.
+
+```
+python
+
+ad = "Türker"
+selam = 'Merhaba, "arkadaş"!'
+çift_tırnak = "O, 'evet' dedi."
+çok_satırlı = """Bu
+çok
+satırlı
+bir stringtir."""
+```
+

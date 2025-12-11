@@ -1,99 +1,97 @@
-📘 Visual Studio Code Kurulum Rehberi (Windows)
+# 📘 Visual Studio Code Kurulum Rehberi (Windows)
 
-Bu derste Windows işletim sisteminde Visual Studio Code (VS Code) kurulumunu sıfırdan yapıyoruz.
+Bu derste Windows işletim sisteminde Visual Studio Code (VS Code) kurulumunu sıfırdan yapıyoruz.  
 VS Code, Python, veri bilimi, makine öğrenmesi ve yapay zekâ çalışmalarında en çok kullanılan kod editörlerinden biridir.
 
-🟦 1. VS Code’u Neden Kullanıyoruz?
+---
+
+## 🟦 1. VS Code’u Neden Kullanıyoruz?
 
 VS Code’un avantajları:
 
-Ücretsiz
-
-Çok hızlı
-
-Python eklentileri mükemmel
-
-Jupyter destekli
-
-Git/GitHub ile kusursuz entegre
-
-Kod yazmayı kolaylaştıran binlerce eklenti var
+- Ücretsiz  
+- Çok hızlı  
+- Python eklentileri mükemmel  
+- Jupyter destekli  
+- Git/GitHub ile kusursuz entegre  
+- Kod yazmayı kolaylaştıran binlerce eklenti var  
 
 Bu nedenle tüm eğitim sürecinde VS Code kullanacağız.
 
-🟦 2. VS Code’u İndir
+---
+
+## 🟦 2. VS Code’u İndir
 
 Aşağıdaki bağlantıya git:
 
 👉 https://code.visualstudio.com/
 
-Sayfada Windows x64 Installer otomatik olarak görünür.
+Sayfada *Windows x64 Installer* otomatik olarak görünür.  
 Tıklayıp dosyayı indir.
 
 İndirilen dosya genelde şu isimde olur:
 
 VSCodeUserSetup-x64-<sürüm>.exe
 
-🟦 3. Kurulum Adımları
 
-“I accept the agreement” kutusunu işaretle.
+---
 
-Aşağıdaki 3 kutuyu mutlaka işaretle:
+## 🟦 3. Kurulum Adımları
 
-✔ Add to PATH
-
-✔ Register Code as editor
-
-✔ Add "Open with Code" action (context menu)
-
-Install → kurulum başlar.
+1. **“I accept the agreement”** kutusunu işaretle.  
+2. Aşağıdaki 3 kutuyu mutlaka işaretle:
+   - ✔ Add to PATH  
+   - ✔ Register Code as editor  
+   - ✔ Add "Open with Code" action (context menu)  
+3. **Install** → kurulum başlar.
 
 Bu ayarlar sayesinde VS Code her yerde kullanılabilir.
 
-🟦 4. İlk Açılış
+---
+
+## 🟦 4. İlk Açılış
 
 Kurulum tamamlandığında VS Code açılır ve şu ekran görülür:
 
-Sol tarafta menüler
+- Sol tarafta menüler  
+- Ortada boş çalışma alanı  
+- Üstte komut paleti  
 
-Ortada boş çalışma alanı
+Tema seçmek istersen:  
+**Ayarlar → Color Theme**
 
-Üstte komut paleti
+---
 
-İstersen tema seçebilirsin:
-Ayarlar → Color Theme
+## 🟦 5. Gerekli Eklentilerin Kurulumu
 
-🟦 5. Gerekli Eklentilerin Kurulumu
-
-Sol taraftan Extensions bölümüne (veya Ctrl + Shift + X) gir.
+Sol taraftan **Extensions** bölümüne (veya `Ctrl + Shift + X`) gir.
 
 Aşağıdaki eklentileri kur:
 
-⭐ Python (Microsoft)
-
-⭐ Pylance
-
-⭐ Jupyter
-
-⭐ GitLens
-
-⭐ Material Icon Theme
+- ⭐ Python (Microsoft)  
+- ⭐ Pylance  
+- ⭐ Jupyter  
+- ⭐ GitLens  
+- ⭐ Material Icon Theme  
 
 Bu beş eklenti tüm eğitim boyunca yeterli olacak.
 
-🟦 6. VS Code’da İlk Python Dosyası Oluşturma
+---
 
-Masaüstüne yeni klasör oluştur:
+## 🟦 6. VS Code’da İlk Python Dosyası Oluşturma
+
+1. Masaüstüne yeni klasör oluştur:
+
+
 
 python-projelerim
 
 
-VS Code → File → Open Folder → bu klasörü seç
+2. VS Code → **File → Open Folder** → bu klasörü seç  
+3. Sol üstte **New File** → `test.py` oluştur  
+4. İçine yaz:
 
-Sol üstte New File → test.py oluştur
-
-İçine yaz:
-
+```python
 print("VS Code çalışıyor!")
 
 
@@ -122,7 +120,11 @@ Bu kısım, ileride conda ortamları bağlarken önemli olacak.
 🟦 8. Bu Derste Öğrendiklerimiz
 
 ✔ VS Code indirildi
+
 ✔ Kurulum ayarları yapıldı
+
 ✔ Gerekli eklentiler kuruldu
+
 ✔ İlk Python dosyası yazıldı
+
 ✔ Terminalde çalıştırma test edildi

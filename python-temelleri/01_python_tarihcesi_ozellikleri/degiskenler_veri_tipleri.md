@@ -375,8 +375,9 @@ b = copy.deepcopy(a)
 1. Adını, yaşını, boyunu ve öğrencimi olduğunu içeren bir dict oluştur.
 2. Bu sözlüğü kullanarak "Merhaba, ben Türker. 28 yaşındayım, boyum 1.75m ve öğrenci değilim." şeklinde bir cümle üret.
 3. Aşağıdaki ifadelerin sonuçlarını tahmin et, sonra çalıştır:
-        * bool([])
-        * bool("False")
-        * int(3.9)
-        * str(10) + str(20)
-        * list(range(0, 10, 2))
+
+* bool([])
+* bool("False")
+* int(3.9)
+* str(10) + str(20)
+* list(range(0, 10, 2))

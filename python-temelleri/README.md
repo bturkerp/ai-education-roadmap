@@ -148,7 +148,7 @@ Pull Request oluşturun
 Bu proje Palamutçuoğlu lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
 
 👨‍💻 Yazar
-[Öğr. Gör. Dr. B. Türker PALAMUTÇUOĞLU] - https://github.com/bturkerp
+[Öğr. Gör. Dr. B. Türker PALAMUTÇUOĞLU] - (https://github.com/bturkerp)
 
 🙏 Teşekkürler
 Python Yazılım Vakfı

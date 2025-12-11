@@ -73,22 +73,28 @@ python --version
 
 Her projede ayrı ortam kullanılır.
 
-Örnek: Python 3.12 ortamı oluşturma:
-
-conda create -n tf python=3.12 -y
-
+Örnek: Python 3.10 ortamı oluşturma:
+```
+conda create -n tf python=3.10 -y
+```
 Ortamı aktifleştir:
-
+```
 conda activate tf
-
+```
 Doğru çalıştığını kontrol edin:
-
+```
 python --version
+```
+Beklenen çıktı: 
+```
+Python 3.10.x
+```
 🟦 6. Pip & Conda Paketleri Kurma
 
 Conda ortamı aktifken istediğiniz paketleri kurabilirsiniz:
 
 pip ile:
+```
 pip install numpy pandas matplotlib
 conda ile:
 conda install numpy pandas -y

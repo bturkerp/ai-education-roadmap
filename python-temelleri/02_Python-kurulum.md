@@ -10,15 +10,15 @@ Python, yapay zekâ ve makine öğrenmesi alanında en çok kullanılan programl
 
 Kullanım alanları:
 
-Makine Öğrenmesi
+- Makine Öğrenmesi
 
-Derin Öğrenme (TensorFlow, PyTorch)
+- Derin Öğrenme (TensorFlow, PyTorch)
 
-Veri Bilimi (NumPy, Pandas, Matplotlib)
+- Veri Bilimi (NumPy, Pandas, Matplotlib)
 
-Yapay Zekâ projeleri
+- Yapay Zekâ projeleri
 
-Otomasyon, API, web uygulamaları
+- Otomasyon, API, web uygulamaları
 
 Bu eğitim boyunca tüm örnekleri Python ile yazacağız.
 
@@ -51,18 +51,19 @@ Windows Installer (64-bit)
 Kurulum penceresi açıldığında en kritik adım:
 
 ✅ Mutlaka işaretle:
+```
 ☑ Add Python 3.10 to PATH
-
+```
 
 Bu kutuyu işaretlemezsen Python çalışmaz.
 
 Sonra:
 
-Customize installation → tıkla
+1. Customize installation → tıkla
 
-Tüm seçenekler işaretli kalsın
+2. Tüm seçenekler işaretli kalsın
 
-“Install” butonuna bas
+3. “Install” butonuna bas
 
 Kurulum birkaç dakika sürecek.
 
@@ -70,22 +71,27 @@ Kurulum birkaç dakika sürecek.
 
 Windows arama kısmına:
 
+```
 cmd
-
+```
 
 Komut satırı açıldıktan sonra:
 
+```
 python --version
-
+```
 
 Beklenen çıktı:
 
+```
 Python 3.10.x
-
+```
 
 Ardından pip’i test et:
 
+```
 pip --version
+```
 
 🟦 6. İlk Python Kodunu Çalıştıralım
 
@@ -95,24 +101,29 @@ test.py
 
 İçine yaz:
 
+```
 print("Python çalışıyor!")
-
+```
 
 Komut satırında dosyanın olduğu klasöre gidip çalıştır:
 
+```
 python test.py
-
+```
 
 Beklenen çıktı:
 
+```
 Python çalışıyor!
+```
 
 🟦 7. Python İçin Gerekli Ek Kütüphaneleri Kurma
 
 İlk etapta temel veri bilimi paketlerini kuralım:
 
+```
 pip install numpy pandas matplotlib
-
+```
 
 Yapay zeka kütüphanelerini sonraki derslerde conda ortamıyla kuracağız.
 

@@ -97,7 +97,9 @@ Conda ortamı aktifken istediğiniz paketleri kurabilirsiniz:
 pip ile:
 ```
 pip install numpy pandas matplotlib
+```
 conda ile:
+```
 conda install numpy pandas -y
 ```
 

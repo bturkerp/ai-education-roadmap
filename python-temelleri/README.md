@@ -145,10 +145,10 @@ Branch'inizi push edin (git push origin feature/yeni-ozellik)
 Pull Request oluşturun
 
 📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
+Bu proje Palamutçuoğlu lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
 
 👨‍💻 Yazar
-[Adınız] - GitHub Profiliniz
+[Öğr. Gör. Dr. B. Türker PALAMUTÇUOĞLU] - https://github.com/bturkerp
 
 🙏 Teşekkürler
 Python Yazılım Vakfı

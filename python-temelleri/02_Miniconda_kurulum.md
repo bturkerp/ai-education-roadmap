@@ -1,4 +1,4 @@
-#📘 Miniconda Kurulum Rehberi (Windows)
+# 📘 Miniconda Kurulum Rehberi (Windows)
 
 Bu derste Windows üzerinde Miniconda kurulumunu sıfırdan yapıyoruz. Miniconda, Python ortamlarınızı (environment) yönetmek için en hafif, en temiz çözümdür.
 

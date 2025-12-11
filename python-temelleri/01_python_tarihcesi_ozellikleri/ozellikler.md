@@ -9,10 +9,12 @@ Python, insan diline yakın bir sözdizimine sahiptir.
 - Bakımı kolay
 
 **Python Örneği:**
-```python
+```
+python
 sayilar = [1, 2, 3, 4, 5]
 toplam = sum(sayilar)
-ortalama = toplam / len(sayilar)```
+ortalama = toplam / len(sayilar)
+```
 
 ## 2. Yorumlanan Dil
 Python kodu satır satır yorumlanır.
@@ -54,7 +56,6 @@ x = [1, 2, 3]   # list
 ```
 Avantajları:
 - Esneklik
-
 - Hızlı prototipleme
 
 Dezavantajları:
@@ -81,35 +82,36 @@ Python tamamen açık kaynaklıdır.
 
 Özellikleri:
 
-Ücretsiz kullanım
+- Ücretsiz kullanım
 
-Kaynak kodları açık
+- Kaynak kodları açık
 
-Topluluk katkısı
+- Topluluk katkısı
 
 6. Zengin Standart Kütüphane
 200+ modül standart olarak gelir.
 
 Önemli Modüller:
-
+```
 python
 import os        # İşletim sistemi
 import json      # JSON işlemleri
 import datetime  # Tarih-zaman
 import math      # Matematik
 import re        # Düzenli ifadeler
+```
 7. Geniş Topluluk
 Büyük ve aktif geliştirici topluluğu.
 
 Kaynaklar:
 
-Stack Overflow
+- Stack Overflow
 
-GitHub
+- GitHub
 
-Python Türkiye
+- Python Türkiye
 
-PyPI
+- PyPI
 
 8. Çoklu Paradigma
 Farklı programlama yaklaşımlarını destekler.
@@ -117,26 +119,29 @@ Farklı programlama yaklaşımlarını destekler.
 Desteklenen Paradigmalar:
 
 Yordamsal
-
+```
 python
 def topla(a, b):
     return a + b
+```
 Nesne Yönelimli
-
+```
 python
 class Hesap:
     def topla(self, a, b):
         return a + b
+```
 Fonksiyonel
-
+```
 python
 from functools import reduce
 toplam = reduce(lambda x, y: x + y, [1, 2, 3])
+```
 9. Duck Typing
 "Eğer ördek gibi yürüyor ve vaklıyorsa, o bir ördektir."
 
 Örnek:
-
+```
 python
 class Kedi:
     def ses(self):
@@ -147,11 +152,12 @@ def ses_cikar(hayvan):
 
 kedi = Kedi()
 ses_cikar(kedi)  # Miyav
+```
 10. List Comprehensions
 Kompakt liste oluşturma.
 
 Örnek:
-
+```
 python
 # Geleneksel
 kareler = []
@@ -160,21 +166,23 @@ for x in range(10):
 
 # Pythonic
 kareler = [x**2 for x in range(10)]
+```
 11. Otomatik Bellek Yönetimi
 Garbage Collection otomatik çalışır.
 
 Örnek:
-
+```
 python
 import gc
 liste = [1, 2, 3]
 liste = None  # Bellek otomatik temizlenir
 gc.collect()  # Manuel temizleme
+```
 12. Decorator'lar
 Fonksiyonları genişletme.
 
 Örnek:
-
+```
 python
 def zaman_olc(func):
     import time
@@ -188,13 +196,13 @@ def zaman_olc(func):
 @zaman_olc
 def islem():
     time.sleep(1)
-
+```
 islem()  # Süre: 1.00s
 13. Generator'lar
 Bellek dostu iterasyon.
 
 Örnek:
-
+```
 python
 def sayi_uret(n):
     for i in range(n):
@@ -203,38 +211,41 @@ def sayi_uret(n):
 for sayi in sayi_uret(1000000):
     # Bellekte tüm liste tutulmaz
     print(sayi)
+```
 14. Context Manager'lar
 Kaynak yönetimi.
 
 Örnek:
-
+```
 python
 with open('dosya.txt', 'r') as f:
     icerik = f.read()
+```
 # Dosya otomatik kapanır
 15. Geniş Ekosistem
 PyPI'da 400,000+ paket.
 
 Popüler Paketler:
-
+```
 bash
 pip install django      # Web
 pip install numpy       # Bilimsel
 pip install pandas      # Veri analizi
 pip install tensorflow  # Makine öğrenmesi
+```
 16. Entegrasyon
 Diğer dillerle uyumlu.
 
 Entegrasyonlar:
 
-C/C++ (Cython)
+- C/C++ (Cython)
 
-Java (Jython)
+- Java (Jython)
 
-.NET (IronPython)
+- .NET (IronPython)
 
-Özet
-Python'un Güçlü Yönleri:
+**Özet**
+**Python'un Güçlü Yönleri:**
 ✅ Kolay öğrenilir
 
 ✅ Zengin kütüphane
@@ -245,7 +256,7 @@ Python'un Güçlü Yönleri:
 
 ✅ Hızlı geliştirme
 
-Zayıf Yönleri:
+**Zayıf Yönleri:**
 ❌ Performans sınırlı
 
 ❌ Mobil geliştirme zayıf
@@ -254,7 +265,7 @@ Zayıf Yönleri:
 
 ❌ Runtime hataları
 
-Kullanım Alanları:
+**Kullanım Alanları:**
 İyi: Web, veri bilimi, AI, otomasyon
 
 Orta: Oyun geliştirme

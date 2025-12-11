@@ -91,8 +91,8 @@ python-projelerim
 3. Sol üstte **New File** → `test.py` oluştur  
 4. İçine yaz:
 
-```python
-print("VS Code çalışıyor!")```
+python
+print("VS Code çalışıyor!")
 
 Çalıştırmak için:
 

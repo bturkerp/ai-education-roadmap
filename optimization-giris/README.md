@@ -1,0 +1,1 @@
+"# Optimizasyona Giriü" 

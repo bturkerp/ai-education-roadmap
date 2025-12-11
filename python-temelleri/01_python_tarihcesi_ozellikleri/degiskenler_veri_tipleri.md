@@ -45,7 +45,8 @@ python
 x = 42
 y = -1000
 z = 0
-print(type(x))  # <class 'int'>```
+print(type(x))  # <class 'int'>
+```
 
     Python 3'te long tipi yoktur; int sonsuz duyarlılıkta çalışır.
 

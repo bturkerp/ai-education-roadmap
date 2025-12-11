@@ -4,7 +4,7 @@ Bu derste Windows üzerinde Miniconda kurulumunu sıfırdan yapıyoruz. Minicond
 
 Tüm eğitim boyunca model eğitimi, yapay zekâ, veri bilimi projelerinde Conda ortamları kullanacağız.
 
-🟦 1. Miniconda Nedir?
+## 🟦 1. Miniconda Nedir?
 
 Miniconda, Anaconda'nın hafif sürümüdür:
 
@@ -20,7 +20,7 @@ Miniconda, Anaconda'nın hafif sürümüdür:
 
 Bu nedenle Python’u direkt sisteme kurmak yerine Conda ortamına kurmak her zaman daha iyidir.
 
-🟦 2. Miniconda’yı İndir
+## 🟦 2. Miniconda’yı İndir
 
 Resmî indirme sayfası: https://docs.anaconda.com/miniconda/
 
@@ -35,7 +35,7 @@ Genelde isim şöyle olur:
 Miniconda3-latest-Windows-x86_64.exe
 ```
 
-🟦 3. Kurulum Adımları
+## 🟦 3. Kurulum Adımları
 
 Kurulum dosyasını açınca:
 
@@ -51,7 +51,7 @@ PATH'e eklemiyoruz çünkü sorun çıkarır. Conda zaten kendi terminaliyle PAT
 
 Install → Kurulum 1 dakika sürer.
 
-🟦 4. Kurulum Sonrası Test
+## 🟦 4. Kurulum Sonrası Test
 
 Başlat → Anaconda Prompt (Miniconda3) açın.
 
@@ -71,9 +71,9 @@ Python sürümünü test edin:
 python --version
 ```
 
-🟦 5. Pip & Conda Paketleri Kurma
+## 🟦 5. Pip & Conda Paketleri Kurma
 
-🟦 A) CPU Kullanacaklar İçin Ortam (Önerilen)
+### 🟦 A) CPU Kullanacaklar İçin Ortam (Önerilen)
 
 TensorFlow ≥ 2.11 Windows’da GPU çalışmaz, bu yüzden CPU tercih edenler için en sorunsuz yol:
 
@@ -104,7 +104,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn jupyterlab
 python -c "import tensorflow as tf; print(tf.__version__); print(tf.config.list_physical_devices())"
 ```
 
-🟦 B) GPU Kullanacaklar İçin Ortam (Windows – NVIDIA)
+### 🟦 B) GPU Kullanacaklar İçin Ortam (Windows – NVIDIA)
 
 Bu bölüm yalnızca TensorFlow 2.10 ve altı için geçerlidir.
 Resmî TensorFlow belgesi:
@@ -152,17 +152,17 @@ Beklenen çıktı:
 [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
 ```
 
-🟦 6. Ortamları Listelemek
+## 🟦 6. Ortamları Listelemek
 ```
 conda env list
 ```
 
-🟦 7. Ortam Silmek
+## 🟦 7. Ortam Silmek
 ```
 conda remove -n tfgpu --all
 ```
 
-🟦 8. Doğru Kurulum Stratejisi (En Temizi)
+## 🟦 8. Doğru Kurulum Stratejisi (En Temizi)
 
 ✔ ML/AI çalışacaksan: CPU ortamı
 ✔ XAI, CV, DL çalışacaksan: PyTorch GPU ortamı

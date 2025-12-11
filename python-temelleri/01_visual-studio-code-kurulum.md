@@ -91,9 +91,9 @@ python-projelerim
 3. Sol üstte **New File** → `test.py` oluştur  
 4. İçine yaz:
 
-python
+```python 
 print("VS Code çalışıyor!")
-
+```
 Çalıştırmak için:
 
 Üst menü → Terminal → New Terminal

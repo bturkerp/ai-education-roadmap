@@ -78,23 +78,31 @@ python --version
 TensorFlow ≥ 2.11 Windows’da GPU çalışmaz, bu yüzden CPU tercih edenler için en sorunsuz yol:
 
 ✔ Python 3.10 CPU ortamı oluştur
-conda create -n mlcpu python=3.10 -y
-conda activate mlcpu
-
+```
+conda create -n tfcpu python=3.10 -y
+conda activate tfcpu
+```
 ✔ CPU sürümleri:
 1. TensorFlow CPU
+```
 pip install tensorflow==2.15
+```
 
-2. PyTorch CPU
+3. PyTorch CPU
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
 
-3. Bilimsel paketler
+5. Bilimsel paketler
+```
 pip install numpy pandas matplotlib seaborn scikit-learn jupyterlab
-
+```
 
 Çalışıyor mu?
 
+```
 python -c "import tensorflow as tf; print(tf.__version__); print(tf.config.list_physical_devices())"
+```
 
 🟦 B) GPU Kullanacaklar İçin Ortam (Windows – NVIDIA)
 
@@ -105,43 +113,54 @@ Resmî TensorFlow belgesi:
 👉 https://www.tensorflow.org/install/pip?hl=tr#windows-native
 
 ✔ 1. Ortamı Oluştur (Python 3.10)
+```
 conda create -n tfgpu python=3.10 -y
 conda activate tfgpu
-
+```
 ✔ 2. CUDA 11.2 + cuDNN 8.1 (Conda’dan temiz kurulum)
+```
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y
-
+```
 
 Bu kurulum yalnızca TensorFlow 2.10 için uygundur.
 
 ✔ 3. TensorFlow GPU (2.10 ve altı)
+```
 pip install "tensorflow<2.11"
-
+```
 
 Bu otomatik olarak doğru GPU sürümünü kurar.
 
 ✔ 4. PyTorch GPU (CUDA 12 destekli)
 
 PyTorch, Windows’ta CUDA 12 ile sorunsuz çalışıyor.
-
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
 
 ✔ 5. Bilimsel paketler
+```
 pip install numpy pandas matplotlib seaborn scikit-learn jupyterlab
-
+```
 ✔ Test – TensorFlow GPU
+```
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-
+```
 
 Beklenen çıktı:
-
+```
 [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+```
 
 🟦 6. Ortamları Listelemek
+```
 conda env list
+```
 
 🟦 7. Ortam Silmek
+```
 conda remove -n tfgpu --all
+```
 
 🟦 8. Özet Tablo
 Senaryo	Python	TensorFlow	PyTorch	Not

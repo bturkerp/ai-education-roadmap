@@ -349,5 +349,25 @@ print(a)  # [1, 2, 3, 4] → çünkü a ve b aynı nesneyi gösterir
 # Kimlik (bellek adresi)
 print(id(a) == id(b))  # True
 ```
+Değiştirilebilir nesnelerde dikkat! Kopya almak için:
+```
+python
+
+import copy
+b = copy.deepcopy(a)
+```
+
+🎯 Özet Tablosu
+
+| Kategori           | Tip(ler)                              | Değiştirilebilir mi? | Sıralı mı? | Yinelenen Elemanlara İzin Verir mi? |
+|--------------------|----------------------------------------|----------------------|------------|--------------------------------------|
+| Sayısal            | `int`, `float`, `complex`             | Hayır                | –          | –                                    |
+| Metin              | `str`                                 | Hayır                | Evet       | Evet                                 |
+| Mantıksal          | `bool`                                | Hayır                | –          | –                                    |
+| Sıralı             | `list`, `tuple`, `range`              | `list`: Evet<br>`tuple`, `range`: Hayır | Evet       | `list`, `tuple`: Evet<br>`range`: Evet (otomatik ardışık) |
+| Eşleme             | `dict`                                | Evet                 | Python 3.7+: Evet | Anahtar: Hayır<br>Değer: Evet          |
+| Küme               | `set`, `frozenset`                    | `set`: Evet<br>`frozenset`: Hayır | Hayır      | Hayır                                |
+| İkili (Binary)     | `bytes`, `bytearray`, `memoryview`    | `bytes`: Hayır<br>`bytearray`, `memoryview`: Evet | Evet | Evet                                 |
+| Boş (Null)         | `None` (`NoneType`)                   | –                    | –          | –                                    |
 
 

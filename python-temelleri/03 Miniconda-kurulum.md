@@ -15,6 +15,8 @@ Miniconda, Anaconda'nın hafif sürümüdür:
 - Ortam yönetimi mükemmel
 
 - CUDA, PyTorch, TensorFlow ortamlarını izole kurabilirsiniz
+  
+- GPU destekli ortamlar sorunsuz çalışır
 
 Bu nedenle Python’u direkt sisteme kurmak yerine Conda ortamına kurmak her zaman daha iyidir.
 
@@ -69,67 +71,85 @@ Python sürümünü test edin:
 python --version
 ```
 
-🟦 5. Conda Ortamı Oluşturma (ÖNEMLİ)
+🟦 5. Pip & Conda Paketleri Kurma
 
-Her projede ayrı ortam kullanılır.
+🟦 A) CPU Kullanacaklar İçin Ortam (Önerilen)
 
-Örnek: Python 3.10 ortamı oluşturma:
-```
-conda create -n tf python=3.10 -y
-```
-Ortamı aktifleştir:
-```
-conda activate tf
-```
-Doğru çalıştığını kontrol edin:
-```
-python --version
-```
-Beklenen çıktı: 
-```
-Python 3.10.x
-```
+TensorFlow ≥ 2.11 Windows’da GPU çalışmaz, bu yüzden CPU tercih edenler için en sorunsuz yol:
 
-🟦 6. Pip & Conda Paketleri Kurma
+✔ Python 3.10 CPU ortamı oluştur
+conda create -n mlcpu python=3.10 -y
+conda activate mlcpu
 
-Conda ortamı aktifken istediğiniz paketleri kurabilirsiniz:
+✔ CPU sürümleri:
+1. TensorFlow CPU
+pip install tensorflow==2.15
 
-pip ile:
-```
-pip install numpy pandas matplotlib
-```
-conda ile:
-```
-conda install numpy pandas -y
-```
+2. PyTorch CPU
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
-CUDA destekli PyTorch veya TensorFlow kurmayı da ileride işleyeceğiz.
+3. Bilimsel paketler
+pip install numpy pandas matplotlib seaborn scikit-learn jupyterlab
 
-🟦 7. Ortamları Listeleme & Silme
 
-Mevcut ortamları listele:
-```
+Çalışıyor mu?
+
+python -c "import tensorflow as tf; print(tf.__version__); print(tf.config.list_physical_devices())"
+
+🟦 B) GPU Kullanacaklar İçin Ortam (Windows – NVIDIA)
+
+Bu bölüm yalnızca TensorFlow 2.10 ve altı için geçerlidir.
+Resmî TensorFlow belgesi:
+✔ “Windows native GPU only works up to TensorFlow 2.10”
+
+👉 https://www.tensorflow.org/install/pip?hl=tr#windows-native
+
+✔ 1. Ortamı Oluştur (Python 3.10)
+conda create -n tfgpu python=3.10 -y
+conda activate tfgpu
+
+✔ 2. CUDA 11.2 + cuDNN 8.1 (Conda’dan temiz kurulum)
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y
+
+
+Bu kurulum yalnızca TensorFlow 2.10 için uygundur.
+
+✔ 3. TensorFlow GPU (2.10 ve altı)
+pip install "tensorflow<2.11"
+
+
+Bu otomatik olarak doğru GPU sürümünü kurar.
+
+✔ 4. PyTorch GPU (CUDA 12 destekli)
+
+PyTorch, Windows’ta CUDA 12 ile sorunsuz çalışıyor.
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+✔ 5. Bilimsel paketler
+pip install numpy pandas matplotlib seaborn scikit-learn jupyterlab
+
+✔ Test – TensorFlow GPU
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+
+Beklenen çıktı:
+
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+🟦 6. Ortamları Listelemek
 conda env list
-```
-Ortam silme:
-```
-conda remove -n tf --all
-```
-🟦 8. VS Code ile Conda Bağlantısı
 
-VS Code → sol alt köşedeki Python sürümüne tıklayın.
+🟦 7. Ortam Silmek
+conda remove -n tfgpu --all
 
-Açılan listeden conda ortamını seçin:
+🟦 8. Özet Tablo
+Senaryo	Python	TensorFlow	PyTorch	Not
+CPU kullanacağım	3.10	2.15 (CPU)	CPU	En güncel ve sorunsuz
+GPU (TensorFlow)	3.10	≤ 2.10	CUDA 11.2 cuDNN 8.1	Resmî olarak desteklenen tek yol
+GPU (PyTorch)	3.10	CPU	CUDA 12 destekli wheel	TF ile karıştırmadan kullanılabilir
+🟦 9. Doğru Kurulum Stratejisi (En Temizi)
 
-tf (Python 3.12)
-
-VS Code artık o projeyi bu ortamla çalıştırır.
-
-🟦 9. Bu Derste Öğrendikleriniz
-
-✔ Miniconda indirildi
-✔ PATH ayarları doğru şekilde yapıldı
-✔ Conda ortamı oluşturuldu
-✔ Ortam aktif edildi
-✔ Pip/Conda paket yönetimi öğrenildi
-✔ VS Code ile entegrasyon ayarlandı
+✔ ML/AI çalışacaksan: CPU ortamı
+✔ XAI, CV, DL çalışacaksan: PyTorch GPU ortamı
+✔ Sadece TF GPU gerekirse: tfgpu ortamı (TF 2.10)

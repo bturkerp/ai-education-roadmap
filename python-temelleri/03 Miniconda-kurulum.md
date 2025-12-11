@@ -162,12 +162,7 @@ conda env list
 conda remove -n tfgpu --all
 ```
 
-🟦 8. Özet Tablo
-Senaryo	Python	TensorFlow	PyTorch	Not
-CPU kullanacağım	3.10	2.15 (CPU)	CPU	En güncel ve sorunsuz
-GPU (TensorFlow)	3.10	≤ 2.10	CUDA 11.2 cuDNN 8.1	Resmî olarak desteklenen tek yol
-GPU (PyTorch)	3.10	CPU	CUDA 12 destekli wheel	TF ile karıştırmadan kullanılabilir
-🟦 9. Doğru Kurulum Stratejisi (En Temizi)
+🟦 8. Doğru Kurulum Stratejisi (En Temizi)
 
 ✔ ML/AI çalışacaksan: CPU ortamı
 ✔ XAI, CV, DL çalışacaksan: PyTorch GPU ortamı

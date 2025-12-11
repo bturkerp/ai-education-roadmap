@@ -206,10 +206,28 @@ r3 = range(0, 10, 2)  # 0, 2, 4, 6, 8
 print(list(r3))  # [0, 2, 4, 6, 8]
 ```
 
+## 2.5 Eşleme Tipi: dict (Sözlük)
+- Anahtar-değer (key-value) çiftleriyle çalışır.
+- Anahtarlar değiştirilemez olmalı (str, int, tuple olabilir).
+- Değiştirilebilir, sırasız (Python 3.7+’da ekleme sırasına göre sıralı).
 
+```
+python
 
+kullanıcı = {
+    "isim": "Türker",
+    "yas": 28,
+    "aktif": True
+}
 
+print(kullanıcı["isim"])  # Türker
 
+# Yeni anahtar ekleme
+kullanıcı["şehir"] = "İstanbul"
+
+# .get ile güvenli erişim
+print(kullanıcı.get("telefon", "Belirtilmemiş"))  # Belirtilmemiş
+```
 
 
 

@@ -101,19 +101,20 @@ print("VS Code çalışıyor!")
 Terminal’e yaz:
 
 ```
-python
 python test.py
 ```
 Eğer çıktı şu geliyorsa kurulum başarılıdır:
 
-```VS Code çalışıyor!
+```
+VS Code çalışıyor!
 ```
 
 🟦 7. Python Terminali Ayarını Kontrol Et
 
 VS Code sağ alt köşede kullandığı Python sürümünü gösterir:
 
-```Python 3.x (64-bit)
+```
+Python 3.x (64-bit)
 ```
 Bu kısım, ileride conda ortamları bağlarken önemli olacak.
 

@@ -192,6 +192,28 @@ boş_tuple = ()
 # koordinat[0] = 15 → TypeError
 ```
 
+## range – Aralık
+- Bellek verimli ardışık sayı üretir.
+- Genellikle döngülerde kullanılır.
+
+```
+python
+
+r = range(5)        # 0, 1, 2, 3, 4
+r2 = range(2, 8)    # 2, 3, 4, 5, 6, 7
+r3 = range(0, 10, 2)  # 0, 2, 4, 6, 8
+
+print(list(r3))  # [0, 2, 4, 6, 8]
+```
+
+
+
+
+
+
+
+
+
 
 
 

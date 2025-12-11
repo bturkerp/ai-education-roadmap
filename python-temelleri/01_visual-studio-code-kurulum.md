@@ -1,127 +1,133 @@
-# 📘 Visual Studio Code Kurulum Rehberi (Windows)
+📘 Visual Studio Code Kurulum Rehberi (Windows)
 
-Bu derste Windows işletim sisteminde **Visual Studio Code (VS Code)** kurulumunu sıfırdan yapıyoruz.
+Bu derste Windows işletim sisteminde Visual Studio Code (VS Code) kurulumunu sıfırdan yapıyoruz.
 
 VS Code, Python, veri bilimi, makine öğrenmesi ve yapay zeka çalışmalarında en çok kullanılan kod editörlerinden biridir.
 
----
-
-## 🟦 1. VS Code’u Neden Kullanıyoruz?
+🟦 1. VS Code’u Neden Kullanıyoruz?
 
 VS Code’un avantajları:
 
-- Ücretsiz
-- Çok hızlı
-- Python eklentileri mükemmel
-- Jupyter destekli
-- Git/GitHub ile kusursuz entegre
-- Kod yazmayı kolaylaştıran binlerce eklenti var
+Ücretsiz
+
+Çok hızlı
+
+Python eklentileri mükemmel
+
+Jupyter destekli
+
+Git/GitHub ile kusursuz entegre
+
+Kod yazmayı kolaylaştıran binlerce eklenti var
 
 Bu nedenle tüm eğitim sürecinde VS Code kullanacağız.
 
----
-
-## 🟦 2. VS Code’u İndir
+🟦 2. VS Code’u İndir
 
 Aşağıdaki bağlantıya git:
 
 👉 https://code.visualstudio.com/
 
-Sayfada **Windows x64 Installer** otomatik olarak görünür.  
-Tıklayıp dosyayı indir.
+Sayfada Windows x64 Installer otomatik çıkacaktır.
+Tıklayıp indir.
 
-İndirilen dosya genelde şu isimde olur:
+İndirilen dosya genelde şöyle olur:
 
 VSCodeUserSetup-x64-<sürüm>.exe
 
+🟦 3. Kurulum Adımları
 
----
+“I accept the agreement” → işaretle
 
-## 🟦 3. Kurulum Adımları
+Aşağıdaki 3 kutuyu mutlaka işaretle:
 
-1. “I accept the agreement” → işaretle  
-2. Aşağıdaki 3 kutuyu mutlaka işaretle:
+✔ Add to PATH
 
-   - ✔ Add to PATH  
-   - ✔ Register Code as editor  
-   - ✔ Add "Open with Code" action (context menu)
+✔ Register Code as editor
 
-3. **Install** → Kurulum başlar.
+✔ Add "Open with Code" action
+
+Install → Kurulum başlar.
 
 Bu ayarlar sayesinde VS Code her yerde kullanılabilir.
 
----
+🟦 4. İlk Açılış
 
-## 🟦 4. İlk Açılış
+Kurulum tamamlandığında VS Code açılır.
+Aşağıdaki ekran görünür:
 
-Kurulum tamamlandığında VS Code açılır ve şu şekilde bir ekran görülür:
+Sol tarafta menüler
 
-- Sol tarafta menüler  
-- Ortada boş çalışma alanı  
-- Üstte komut paleti  
+Ortada boş çalışma alanı
 
-İstersen tema seçebilirsin:  
-**Ayarlar → Color Theme**
+Üstte komut paleti
 
----
+Tema değiştirmek istersen:
 
-## 🟦 5. Gerekli Eklentilerin Kurulumu
+Ayarlar → Color Theme
 
-Sol taraftan **Extensions** bölümüne (veya Ctrl + Shift + X) gir.
+🟦 5. Gerekli Eklentilerin Kurulumu
 
-Aşağıdaki eklentileri kur:
+Sol menü → Extensions (Ctrl + Shift + X)
 
-- ⭐ **Python** (Microsoft)
-- ⭐ **Pylance**
-- ⭐ **Jupyter**
-- ⭐ **GitLens**
-- ⭐ **Material Icon Theme**
+Aşağıdaki eklentileri ara ve kur:
 
-Bu beş eklenti tüm eğitim boyunca yeterli olacak.
+⭐ Python (Microsoft)
 
----
+⭐ Pylance
 
-## 🟦 6. VS Code’da İlk Python Dosyası Oluşturma
+⭐ Jupyter
 
-1. Masaüstüne yeni klasör oluştur:  
-   **python-projelerim**
+⭐ GitLens
 
-2. VS Code → *File → Open Folder* → bu klasörü seç  
-3. Sol üstte *New File* → `test.py` oluştur  
-4. İçine yaz:
+⭐ Material Icon Theme
 
-```python
+Bu beş eklenti tüm eğitim için yeterli.
+
+🟦 6. İlk Python Dosyasını Oluşturma
+
+Masaüstüne klasör aç:
+
+python-projelerim
+
+
+VS Code → File → Open Folder → klasörü seç
+
+Sol üst → New File → test.py
+
+İçine yaz:
+
 print("VS Code çalışıyor!")
+
 
 Çalıştırmak için:
 
 Üst menü → Terminal → New Terminal
-
-Terminal’e yaz:
+Terminal'e yaz:
 
 python test.py
 
 
-Eğer çıktı şu geliyorsa kurulum başarılıdır:
+Çıktı:
 
 VS Code çalışıyor!
 
-🟦 7. Python Terminali Ayarını Kontrol Et
+🟦 7. Python Terminali Ayarı
 
-VS Code sağ alt köşede kullandığı Python sürümünü gösterir:
+VS Code sağ alt köşede hangi Python’un seçili olduğunu gösterir:
 
 Python 3.x (64-bit)
 
-Bu kısım, ileride conda ortamları bağlarken çok önemli olacak.
+Bu, ileride conda ortamları bağlarken önemli olacak.
 
 🟦 8. Bu Derste Öğrendiklerimiz
 
-✔ VS Code indirildi
+VS Code indirildi
 
-✔ Kurulum ayarları yapıldı
+Kurulum ayarları yapıldı
 
-✔ Gerekli eklentiler kuruldu
+Gerekli eklentiler kuruldu
 
-✔ İlk Python dosyası yazıldı
+İlk Python dosyası yazıldı
 
-✔ Terminalde çalıştırma test edildi
+Terminalde başarıyla çalıştırıldı

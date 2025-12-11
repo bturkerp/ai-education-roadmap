@@ -122,3 +122,77 @@ print(s[0])    # 'P'
 print(s[-1])   # 'n'
 print(s[1:4])  # 'yth'
 ```
+
+### String Formatlama
+
+- .format()
+- f-string (Python 3.6+)
+    
+```
+python
+
+isim = "Türker"
+yas = 28
+
+# f-string (önerilen)
+print(f"Merhaba, ben {isim}, {yas} yaşındayım.")
+
+# .format()
+print("Merhaba, ben {}, {} yaşındayım.".format(isim, yas))
+```
+
+## 2.3 Mantıksal Tip: bool
+Sadece iki değeri vardır: True ve False (büyük harfle!).
+
+```
+python
+
+aktif = True
+pasif = False
+print(type(aktif))  # <class 'bool'>
+```
+    Not: Python’da her nesne "doğru" (truthy) veya "yanlış" (falsy) olarak değerlendirilebilir:
+- False, 0, 0.0, "", [], {}, None → falsy
+- Geri kalan her şey → truthy
+
+```
+python
+
+print(bool(0))       # False
+print(bool(" "))     # True (boş değil!)
+print(bool([]))      # False
+```
+
+## 2.4 Sıralı (Sequence) Tipler
+
+### list – Liste
+    Değiştirilebilir, sıralı, yinelenen elemanlara izin verir.
+
+```
+python
+
+renkler = ["kırmızı", "yeşil", "mavi"]
+sayılar = [1, 2, 3, 2]  # yinelenen olabilir
+karışık = ["Türker", 28, True]
+
+# Eleman ekleme
+renkler.append("sarı")
+print(renkler)  # ['kırmızı', 'yeşil', 'mavi', 'sarı']
+```
+
+### tuple – Demet
+```
+python
+
+koordinat = (10, 20)
+tek_eleman = (5,)  # Virgül şart!
+boş_tuple = ()
+
+# Değiştirilemez!
+# koordinat[0] = 15 → TypeError
+```
+
+
+
+
+

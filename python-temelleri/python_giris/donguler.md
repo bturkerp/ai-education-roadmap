@@ -51,6 +51,7 @@ for i in range(2, 10, 2):
 
 ##While Döngüsü
 while döngüsü, koşul doğru olduğu sürece çalışır.
+### Basit While Döngüsü
 ```
 x = 0
 
@@ -66,3 +67,33 @@ while x < 5:
 3
 4
 ```
+### Koşul ve break
+```
+x = 0
+
+while True:
+    print(x)
+    x += 1
+    if x == 3:
+        break
+```
+Çıktı:
+```
+0
+1
+2
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

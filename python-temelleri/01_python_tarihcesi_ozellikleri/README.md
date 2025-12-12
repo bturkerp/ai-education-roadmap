@@ -3,7 +3,7 @@
 ## 📋 İçindekiler
 - [Python Tarihçesi](tarihce.md)
 - [Python Özellikleri](ozellikler.md)
-- [Python 2 vs Python 3](python2_vs_python3.md)
+- [Python 2 vs Python 3](python2vspython3.md)
 - [Python Kullanım Alanları](kullanim_alanlari.md)
 
 ## 📚 Kaynak Dosyalar

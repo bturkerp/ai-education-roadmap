@@ -114,8 +114,7 @@ python 01_python_tarihcesi_ozellikleri/merhaba.py
 
 # 📝 Proje Yapısı
 Her bölüm aşağıdaki yapıyı içerir:
-```
-bolum_adi/
+```bolum_adi/
 ├── README.md              # Konu anlatımı ve teorik bilgiler
 ├── ornekler.py            # Kod örnekleri
 ├── alistirmalar.py        # Pratik alıştırmalar

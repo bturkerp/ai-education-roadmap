@@ -41,7 +41,7 @@ for i in range(5):
 for i in range(2, 10, 2):
     print(i)
 ```
-Koşula uyan sayılar 2 ve 4 olduğu için Çıktı:
+Çıktı:
 ```
 2
 4
@@ -155,7 +155,7 @@ sayilar = [1, 2, 3, 4, 5]
 kareler = [x**2 for x in sayilar if x % 2 == 0]
 print(kareler)
 ```
-Çıktı:
+Koşula uyan sayılar 2 ve 4 olduğu için Çıktı:
 
 ```
 [4, 16]

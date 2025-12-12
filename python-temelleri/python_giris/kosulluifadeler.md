@@ -261,3 +261,30 @@ match nokta:
 ```
 x=0, y=5
 ```
+nokta = (3, 7) olduğunda "Başka nokta" çıktısı verecektir. nokta (0,5) veya (1,0) olduğunda ise sırasıyla x=0, y=5 ve x=1, y=0 çıktısı verir. 
+
+**Örnek 8: Koşullu Atama ile Fonksiyon Kullanımı**
+```
+def merhaba():
+    return "Merhaba!"
+
+x = True
+mesaj = merhaba() if x else "Görüşürüz"
+print(mesaj)
+```
+Çıktı:
+```
+Merhaba!
+```
+**Örnek 10: Hata Kontrolü ile Koşul**
+```
+try:
+    sayi = int(input("Sayı girin: "))
+    print("Pozitif" if sayi > 0 else "Negatif veya sıfır")
+except ValueError:
+    print("Geçerli bir sayı girmediniz")
+```
+Çıktı:
+```
+Pozitif
+```

@@ -196,5 +196,32 @@ x=4 olduğunda break komutu çalışarak döngüyü kırmasa bu döngü sonsuza 
 1
 2
 ```
+### Döngü ve Dictionary
+```
+ogrenciler = {"Ali": 90, "Ayşe": 85, "Mehmet": 70}
 
+for isim, notu in ogrenciler.items():
+    print(f"{isim} -> {notu}")
+```
+Çıktı:
+```
+Ali -> 90
+Ayşe -> 85
+Mehmet -> 70
+```
+### Döngü ile String İşleme
+```
+kelime = "Python"
 
+for harf in kelime:
+    print(harf)
+```
+Çıktı:
+```
+P
+y
+t
+h
+o
+n
+```

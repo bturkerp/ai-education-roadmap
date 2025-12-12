@@ -80,7 +80,21 @@ with open("tek_satir.json", "w", encoding="utf-8") as f:
     json.dump(veri, f, separators=(',', ':'))
 ```
 
+➕ JSON'a Veri Ekleme
+```
+import json
 
+# Mevcut veriyi oku
+with open("kisiler.json", "r", encoding="utf-8") as f:
+    kisiler = json.load(f)
+
+# Yeni veri ekle
+kisiler.append({"isim": "Zeynep", "yas": 28})
+
+# Geri yaz
+with open("kisiler.json", "w", encoding="utf-8") as f:
+    json.dump(kisiler, f, ensure_ascii=False, indent=2)
+```
 
 
 

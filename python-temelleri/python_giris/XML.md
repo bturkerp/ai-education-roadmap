@@ -157,4 +157,23 @@ Kategori: elektronik
 Ad: Laptop
 ```
 
+## 📋 XML'den Sözlüğe Çevirme
+```
+import xml.etree.ElementTree as ET
 
+def xml_to_dict(element):
+    """XML elementini sözlüğe çevir"""
+    result = {}
+    for child in element:
+        if len(child) == 0:  # Text içeriyorsa
+            result[child.tag] = child.text
+        else:  # Alt elementleri varsa
+            result[child.tag] = xml_to_dict(child)
+    return result
+
+# Kullanım
+tree = ET.parse("kisiler.xml")
+root = tree.getroot()
+veri_dict = xml_to_dict(root)
+print(veri_dict)
+```

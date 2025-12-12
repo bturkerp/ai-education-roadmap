@@ -17,3 +17,17 @@ with open("kisi.json", "w", encoding="utf-8") as f:
     json.dump(veri, f, ensure_ascii=False, indent=4)
 ```
 
+📖 JSON'dan Okuma
+```
+import json
+
+with open("kisi.json", "r", encoding="utf-8") as f:
+    veri = json.load(f)
+
+print(veri["isim"])  # Ali
+print(veri["hobiler"][0])  # spor
+```
+Çıktı:
+```
+
+```

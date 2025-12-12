@@ -125,3 +125,20 @@ b\c
 ('C:', '/Windows')
 ```
 
+#### ⚙️ Sistem Bilgileri
+```
+import os
+
+# İşletim sistemi
+print(os.name)  # nt (Windows), posix (Linux/Mac)
+print(os.environ)  # Çevre değişkenleri
+print(os.environ.get("PATH"))  # PATH değişkeni
+print(os.getlogin())  # Kullanıcı adı
+
+# Satır sonu karakteri
+print(repr(os.linesep))  # '\n' veya '\r\n'
+```
+Çıktı:
+```
+
+```

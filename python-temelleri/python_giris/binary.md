@@ -37,12 +37,31 @@ with open("ornek.bin", "rb") as f:
     metin_hal = icerik.decode("utf-8")
     print(metin_hal)
 ```
-Öıktı:
+çıktı:
 ```
 Merhaba Python!
 Binary dosya örneği.
 ```
 
+## 📋 Binary Dosya Kopyalama
+```
+# Küçük dosyalar için
+with open("ornek.bin", "rb") as kaynak:
+    icerik = kaynak.read()
+
+with open("kopya_ornek.bin", "wb") as hedef:
+    hedef.write(icerik)
+
+# Büyük dosyalar için (bellek dostu)
+with open("buyuk_dosya.bin", "rb") as kaynak, \
+     open("kopya_buyuk.bin", "wb") as hedef:
+    
+    while True:
+        bolum = kaynak.read(4096)  # 4KB bloklar halinde oku
+        if not bolum:
+            break
+        hedef.write(bolum)
+```
 
 
 

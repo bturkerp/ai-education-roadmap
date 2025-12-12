@@ -380,7 +380,30 @@ Text dosyası: yeni_dosya.txt
 Dizin: yeni_klasor
 ```
 
+### 🧩 Path Manipülasyonu
+```
+from pathlib import Path
 
+# Path birleştirme
+p = Path("/home/user")
+yeni_yol = p / "dosyalar" / "resim.jpg"
+
+# Parent ile gezinme
+p = Path("/a/b/c/d.txt")
+print(p.parent)  # /a/b/c
+print(p.parent.parent)  # /a/b
+
+# Relative path
+p1 = Path("/home/user/dosyalar")
+p2 = Path("/home/user/dosyalar/resimler/foto.jpg")
+print(p2.relative_to(p1))  # resimler/foto.jpg
+
+# Path'i değiştir
+p = Path("/home/user/eski.txt")
+yeni_p = p.with_name("yeni.txt")  # isim değiştir
+yeni_p = p.with_suffix(".jpg")  # uzantı değiştir
+yeni_p = p.with_stem("yenibaslik")  # stem değiştir
+```
 
 
 

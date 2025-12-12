@@ -17,10 +17,44 @@ selamla()
 ```
 Merhaba!
 ```
-# Parametre Alan Fonksiyon
-
+# 2. Parametre Alan Fonksiyon
+```
 def selamla(isim):
     print(f"Merhaba, {isim}!")
 
 selamla("Ali")
 selamla("Ayşe")
+```
+Çıktı:
+```
+Merhaba, Ali!
+Merhaba, Ayşe!
+```
+
+# 3. Return ile Değer Döndüren Fonksiyon
+```
+def kare(x):
+    return x ** 2
+
+sonuc = kare(5)
+print(sonuc)
+```
+Çıktı:
+```
+25
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -58,7 +58,7 @@ Merhaba, Kullanıcı!
 Merhaba, Mehmet!
 ```
 
-## Anahtar argümanlar (Keyword Arguments)
+## 5. Anahtar argümanlar (Keyword Arguments)
 ```
 def bilgiler(isim, yas):
     print(f"{isim} {yas} yaşında")
@@ -74,7 +74,7 @@ Mehmet 50 yaşında
 Hülya 20 yaşında
 ```
 
-## *args – Belirsiz Sayıda Pozisyonel Parametre
+## 6. *args – Belirsiz Sayıda Pozisyonel Parametre
 ```
 def toplam(*sayilar):
     return sum(sayilar)
@@ -88,7 +88,7 @@ print(toplam(4, 5))
 9
 ```
 
-## **kwargs – Belirsiz Sayıda Anahtar Kelime Parametre
+## 7. **kwargs – Belirsiz Sayıda Anahtar Kelime Parametre
 ```
 def bilgiler(**kwargs):
     for key, value in kwargs.items():
@@ -106,7 +106,7 @@ isim: Ayşe
 yas: 15
 ```
 
-## Lambda Fonksiyonları (Anonim Fonksiyon)
+## 8. Lambda Fonksiyonları (Anonim Fonksiyon)
 ```
 kare = lambda x: x**2
 topla = lambda a, b: a+b
@@ -119,7 +119,7 @@ print(topla(3, 7))
 25
 10
 ```
-## Nested (İç İçe) Fonksiyonlar
+## 9. Nested (İç İçe) Fonksiyonlar
 ```
 def dis_fonksiyon(x):
     def ic_fonksiyon(y):
@@ -134,7 +134,7 @@ print(dis_fonksiyon(5))
 26
 ```
 
-## Recursion (Özyinelemeli Fonksiyon)
+## 10. Recursion (Özyinelemeli Fonksiyon)
 - Fonksiyon kendisini çağırır.
 - Örnek: Faktöriyel hesaplama
 ```
@@ -151,7 +151,7 @@ print(faktoriyel(5))
 120
 ```
 
-## Fonksiyon ile Liste İşleme
+## 11. Fonksiyon ile Liste İşleme
 ```
 def kareler(liste):
     return [x**2 for x in liste]
@@ -164,7 +164,7 @@ print(kareler(sayilar))
 [1, 4, 9, 16]
 ```
 
-## Fonksiyonları Başka Fonksiyonlara Parametre Olarak Gönderme
+## 12. Fonksiyonları Başka Fonksiyonlara Parametre Olarak Gönderme
 ```
 def selamla():
     return "Merhaba!"
@@ -179,7 +179,7 @@ mesaj(selamla)
 Merhaba! Python!
 ```
 
-## Fonksiyon İle Koşullu İşlem
+## 13. Fonksiyon İle Koşullu İşlem
 ```
 def buyukten_kucuge(a, b):
     if a > b:

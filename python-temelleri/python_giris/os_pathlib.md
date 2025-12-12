@@ -365,7 +365,148 @@ for dosya in Path(".").iterdir():
     elif dosya.is_dir():
         print(f"Dizin: {dosya}")
 ```
-
+Çıktı:
+```
+-1.14-windows.xml
+.android
+.conda
+.cupy
+.gitconfig
+.keras
+.lesshst
+.matplotlib
+.ms-ad
+.ssh
+.vscode
+.wslconfig
+2699855_0.err
+2699855_0.out
+2699855_10.err
+2699855_11.err
+a
+ai-education-roadmap
+ansel
+AppData
+Application Data
+Belgelerim
+best_densenet_cifar100.h5
+best_resnet50_cifar100.h5
+buyuk.bin
+Contacts
+Cookies
+dizin
+Documents
+dosya.bin
+Downloads
+farkli.csv
+Favorites
+finetuned_mobilenet_base_for_cifar100.h5
+finetuned_mobilenet_for_cifar100.h5
+finetuned_vgg16 for cifar100.h5
+finetuned_vgg16 full for cifar100.h5
+finetuned_vgg16_base_for_cifar100.h5
+finetuned_vgg16_for_cifar100.h5
+finetuned_vgg19_base_for_cifar100.h5
+finetuned_vgg19_for_cifar100.h5
+girintili.json
+Intel
+job.sh
+job2.sh
+kisi.json
+kisiler.csv
+kisiler.json
+kisiler.xml
+kisiler_dict.csv
+kisiler_duzenli.csv
+kisiler_guncel.xml
+kisiler_silindi.xml
+kopya.bin
+kopya.jpg
+kopya_buyuk.bin
+kopya_ornek.bin
+Links
+Local Settings
+merge.py
+miniconda.sh
+mnist results.csv
+Music
+NetHood
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{f785e8bc-8a71-11f0-9bd6-eae3a1d89c3a}.TM.blf
+NTUSER.DAT{f785e8bc-8a71-11f0-9bd6-eae3a1d89c3a}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{f785e8bc-8a71-11f0-9bd6-eae3a1d89c3a}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+OneDrive
+optimal_params.json
+ornek.bin
+PrintHood
+problemli.csv
+problemli.json
+Recent
+resnet50_finetuned_full.h5
+resnet50_finetuned_full_Öncesi.h5
+results.csv
+Saved Games
+Searches
+SendTo
+sirali.json
+source
+Start Menu
+tek_satir.json
+Templates
+tuner_dir
+turkish_example.bin
+veri.csv
+veri.tsv
+Videos
+vscode-remote-wsl
+weights
+yeni_dosya.txt
+yeni_kisiler.csv
+yeni_klasor
+Dizin: .android
+Dizin: .conda
+Dizin: .cupy
+Dizin: .keras
+Dizin: .matplotlib
+Dizin: .ms-ad
+Dizin: .ssh
+Dizin: .vscode
+Dizin: a
+Dizin: ai-education-roadmap
+Dizin: ansel
+Dizin: AppData
+Dizin: Application Data
+Dizin: Belgelerim
+Dizin: Contacts
+Dizin: Cookies
+Dizin: dizin
+Dizin: Documents
+Dizin: Downloads
+Dizin: Favorites
+Dizin: Intel
+Dizin: Links
+Dizin: Local Settings
+Dizin: Music
+Dizin: NetHood
+Dizin: OneDrive
+Dizin: PrintHood
+Dizin: Recent
+Dizin: Saved Games
+Dizin: Searches
+Dizin: SendTo
+Dizin: source
+Dizin: Start Menu
+Dizin: Templates
+Dizin: tuner_dir
+Dizin: Videos
+Dizin: vscode-remote-wsl
+Dizin: weights
+Text dosyası: yeni_dosya.txt
+Dizin: yeni_klasor
+```
 
 
 

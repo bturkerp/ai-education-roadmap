@@ -62,4 +62,28 @@ with open("kisiler_dict.csv", "r", encoding="utf-8") as f:
     for kayit in okuyucu:
         print(f"{kayit['isim']} - {kayit['yas']} - {kayit['sehir']}")
 ```
+Çıktı
+```
+Ali - 25 - İstanbul
+Ayşe - 30 - Ankara
+```
 
+🔧 Özel Ayraç Kullanma
+```
+import csv
+# Noktalı virgül ile
+with open("veri.csv", "w", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f, delimiter=";")
+    yazici.writerow(["İsim", "Yaş"])
+    yazici.writerow(["Ali", "25"])
+
+# Tab ile
+with open("veri.tsv", "w", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f, delimiter="\t")
+    yazici.writerow(["İsim", "Yaş"])
+    yazici.writerow(["Ali", "25"])
+```
+Çıktı:
+```
+
+```

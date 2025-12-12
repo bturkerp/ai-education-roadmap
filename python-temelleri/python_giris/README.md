@@ -66,7 +66,7 @@ print(x or y)   # Mantıksal VEYA
 print(not x)    # Mantıksal DEĞİL
 ```
 
-## [7. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
+[## 7. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
 ```
 sayi = 10
 

@@ -371,17 +371,9 @@ for dosya in Path(".").iterdir():
 .android
 .conda
 .cupy
-.gitconfig
-.keras
-.lesshst
-.matplotlib
-.ms-ad
-.ssh
 .
 .
 .
-Dizin: tuner_dir
-Dizin: Videos
 Dizin: vscode-remote-wsl
 Dizin: weights
 Text dosyası: yeni_dosya.txt

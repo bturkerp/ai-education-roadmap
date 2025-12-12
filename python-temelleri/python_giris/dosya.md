@@ -156,7 +156,7 @@ with open("kopya_ornek.txt", "wb") as hedef:
 ```
 
 ## İleri Düzey Dosya İşlemleri
-- İkili Dosyalar (Binary Files)
+- [İkili Dosyalar (Binary Files) (Detay İçin Tıklayın Lütfen)](binary.md)
 - CSV Dosyalar
 - JSON Dosyalar
 - XML Dosyalar

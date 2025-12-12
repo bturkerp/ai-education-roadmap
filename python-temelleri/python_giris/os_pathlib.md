@@ -317,30 +317,54 @@ resim
 from pathlib import Path
 
 # Dizin oluştur
-Path("yeni_klasor").mkdir()
-Path("a/b/c").mkdir(parents=True, exist_ok=True)  # İç içe oluştur
+Path("d:/yeni_klasor").mkdir()
+Path("d:/a/b/c").mkdir(parents=True, exist_ok=True)  # İç içe oluştur
 
 # Dosya oluştur
-Path("dosya.txt").touch()  # Boş dosya
-Path("dosya.txt").write_text("Merhaba Dünya", encoding="utf-8")
+Path("d:/dosya.txt").touch()  # Boş dosya
+Path("d:/dosya.txt").write_text("Merhaba Dünya", encoding="utf-8")
 
 # Dosya okuma/yazma
-icerik = Path("dosya.txt").read_text(encoding="utf-8")
-Path("dosya.txt").write_text("Yeni içerik", encoding="utf-8")
+icerik = Path("d:/dosya.txt").read_text(encoding="utf-8")
+Path("d:/dosya.txt").write_text("Yeni içerik", encoding="utf-8")
 
 # Binary okuma/yazma
-data = Path("resim.jpg").read_bytes()
+data = Path("D:/COVID/CBU Dataset/Negatif/Non-Covid (1).jpg").read_bytes()
 Path("kopya.jpg").write_bytes(data)
 
 # Yeniden adlandır/taşı
-Path("eski.txt").rename("yeni.txt")
-Path("kaynak.txt").replace("hedef.txt")
+Path("d:/dosya.txt").rename("d:/yeni.txt")
+Path("d:/yeni.txt").replace("d:/hedef.txt")
 
 # Silme
-Path("dosya.txt").unlink()  # Dosya sil
-Path("bos_klasor").rmdir()  # Boş dizin sil
+Path("d:/hedef.txt").unlink()  # Dosya sil
+Path("d:/yeni_klasor").rmdir()  # Boş dizin sil
 ```
 
+### 🔍 Dosya Arama ve Filtreleme
+```
+from pathlib import Path
+
+# Tüm dosyaları listele
+for dosya in Path(".").iterdir():
+    print(dosya)
+
+# Sadece .txt dosyaları
+txt_dosyalari = list(Path(".").glob("*.txt"))
+
+# Rekürsif arama (alt dizinlerde)
+tum_txt_dosyalari = list(Path(".").rglob("*.txt"))
+
+# Pattern matching
+py_dosyalari = Path(".").glob("**/*.py")  # Tüm .py dosyaları
+
+# Filtreleme
+for dosya in Path(".").iterdir():
+    if dosya.is_file() and dosya.suffix == ".txt":
+        print(f"Text dosyası: {dosya}")
+    elif dosya.is_dir():
+        print(f"Dizin: {dosya}")
+```
 
 
 

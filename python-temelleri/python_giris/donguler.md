@@ -337,7 +337,21 @@ for index, isim in enumerate(isimler, start=1):
 4. Fatma
 ```
 
+**Örnek 7: Döngü + else + break ile Asal Sayı Kontrolü**
+```
+n = 17
 
+for i in range(2, n):
+    if n % i == 0:
+        print(f"{n} asal değil")
+        break
+else:
+    print(f"{n} asal sayı")
+```
+Çıktı:
+```
+17 asal sayı
+```
 
 
 

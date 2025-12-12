@@ -22,7 +22,8 @@ Metin dosyalarının aksine, binary dosyalar ham veri olarak okunur ve yazılır
 
 ```
 turkish_text = "Merhaba Python!\nBinary dosya örneği."
-data = turkish_text.encode("utf-8")with open("ornek.bin", "wb") as f:
+data = turkish_text.encode("utf-8")
+with open("ornek.bin", "wb") as f:
     f.write(data)
 ```
 Açıklama:

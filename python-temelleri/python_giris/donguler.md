@@ -257,7 +257,25 @@ while sayac < n:
 ```
 0 1 1 2 3 5 8 13 21 34
 ```
+**Örnek 3: Liste İçinde Liste (2D Matrix İşleme)**
+```
+matris = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
+for satir in matris:
+    for eleman in satir:
+        print(eleman, end=" ")
+    print()
+```
+Çıktı:
+```
+1 2 3 
+4 5 6 
+7 8 9 
+```
 
 
 

@@ -29,10 +29,27 @@ ET.SubElement(kisi2, "yas").text = "30"
 tree = ET.ElementTree(root)
 
 # Dosyaya yaz
-tree.write("d:\kisiler.xml", encoding="utf-8", xml_declaration=True)
+tree.write("kisiler.xml", encoding="utf-8", xml_declaration=True)
 ```
 
+## 📖 XML Okuma
+```
+import xml.etree.ElementTree as ET
 
+# XML dosyasını oku
+tree = ET.parse("kisiler.xml")
+root = tree.getroot()
+
+# Tüm kişileri listele
+for kisi in root.findall("kisi"):
+    isim = kisi.find("isim").text
+    yas = kisi.find("yas").text
+    print(f"İsim: {isim}, Yaş: {yas}")
+```
+
+```
+
+```
 
 
 

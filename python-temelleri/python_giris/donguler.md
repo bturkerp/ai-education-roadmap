@@ -41,7 +41,7 @@ for i in range(5):
 for i in range(2, 10, 2):
     print(i)
 ```
-Çıktı:
+Koşula uyan sayılar 2 ve 4 olduğu için Çıktı:
 ```
 2
 4

@@ -83,6 +83,22 @@ with open("veri.tsv", "w", newline="", encoding="utf-8") as f:
     yazici.writerow(["İsim", "Yaş"])
     yazici.writerow(["Ali", "25"])
 ```
+➕ CSV'ye Satır Ekleme
+```
+with open("kisiler.csv", "a", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f)
+    yazici.writerow(["Mehmet", "35", "İzmir"])
+```
+
+🔍 CSV Filtreleme
+```
+import csv
+with open("kisiler.csv", "r", encoding="utf-8") as f:
+    okuyucu = csv.reader(f)
+    for satir in okuyucu:
+        if satir[1] > "25":  # Yaşı 25'ten büyük olanlar
+            print(satir)
+```
 Çıktı:
 ```
 

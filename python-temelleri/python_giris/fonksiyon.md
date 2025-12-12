@@ -18,6 +18,7 @@ selamla()
 Merhaba!
 ```
 ## 2. Parametre Alan Fonksiyon
+Aynı işlemi farklı verilerle kullanmamızı sağlar.
 ```
 def selamla(isim):
     print(f"Merhaba, {isim}!")
@@ -32,6 +33,7 @@ Merhaba, Ayşe!
 ```
 
 ## 3. Return ile Değer Döndüren Fonksiyon
+Fonksiyonun sadece bir çıktı üretmesini ve bu çıktıyı başka işlemlerde kullanabilmeyi sağlar.
 ```
 def kare(x):
     return x ** 2
@@ -107,6 +109,8 @@ yas: 15
 ```
 
 ## 8. Lambda Fonksiyonları (Anonim Fonksiyon)
+Küçük, tek satırlık fonksiyonlar yazmak için idealdir.
+Genellikle map, filter veya kısa hesaplamalarda tercih edilir.
 ```
 kare = lambda x: x**2
 topla = lambda a, b: a+b
@@ -119,6 +123,10 @@ print(topla(3, 7))
 25
 10
 ```
+Neden lambda?
+- Fonksiyonu tekrar kullanmayacak ama kısa ve hızlı bir işlem yapmak istiyorsak
+- Kodun okunabilirliğini artırır, gereksiz def tanımı yapmamıza gerek kalmaz
+  
 ## 9. Nested (İç İçe) Fonksiyonlar
 ```
 def dis_fonksiyon(x):

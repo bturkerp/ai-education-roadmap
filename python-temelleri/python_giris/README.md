@@ -5,7 +5,11 @@ Python, öğrenmesi kolay, çok yönlü ve güçlü bir programlama dilidir. Web
 ---
 
 ##  İlk Python Programı
-Visual studio'yu açın. "File" menüsündeki "New File/Python File" seçin. Örnek kodu kopyalayıp visual studio'da oluşturduğunuz boş sayfaya yapıştırın. "File" menüsünden "Save" seçneği ile kaydedin. <img width="32" height="28" alt="image" src="https://github.com/user-attachments/assets/5dc9592a-d759-4414-b895-92a70d426f9c" /> tuşuna basarl kodu çalıştırın.
+1. Visual studio'yu açın. 
+2. "File" menüsündeki "New File/Python File" seçin.
+3. Örnek kodu kopyalayıp visual studio'da oluşturduğunuz boş sayfaya yapıştırın.
+4. "File" menüsünden "Save" seçneği ile kaydedin.
+5. <img width="32" height="28" alt="image" src="https://github.com/user-attachments/assets/5dc9592a-d759-4414-b895-92a70d426f9c"/> tuşuna basarl kodu çalıştırın.
 
 **Örnek: Merhaba Dünya**
 ```

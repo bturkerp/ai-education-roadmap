@@ -411,7 +411,23 @@ yeni_p = p.with_stem("yenibaslik")  # stem değiştir
 resimler\foto.jpg
 ```
 
+### 🔗 Sembolik Link İşlemleri
+```
+from pathlib import Path
 
+# Sembolik link oluştur
+hedef = Path("orjinal.txt")
+link = Path("link.txt")
+link.symlink_to(hedef)
+
+# Sembolik linki oku
+if link.is_symlink():
+    print(f"Link hedefi: {link.resolve()}")
+```
+Çıktı:
+```
+
+```
 
 
 

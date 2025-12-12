@@ -435,27 +435,38 @@ import os
 from pathlib import Path
 import os
 
-# ÖNCE 'x' DOSYASINI OLUŞTUR
-Path("x").write_text("test içerik", encoding="utf-8")
-Path("x").mkdir(exist_ok=True)  # x adında bir klasör de oluştur
+# Önce dosya oluştur
+Path("ornek.txt").touch()
 
-print("="*50)
-print("OS MODÜLÜ                        PATHLIB")
-print("="*50)
-print(f"os.path.exists('x')           {Path('x').exists()}")
-print(f"os.path.isfile('x')           {Path('x').is_file()}")
-print(f"os.path.isdir('x')            {Path('x').is_dir()}")
-print(f"os.path.getsize('x')          {Path('x').stat().st_size}")
-print(f"os.listdir('.')               {list(Path('.').iterdir())}")
-print(f"os.mkdir('x')                 Path('x').mkdir()")
-print(f"os.remove('x')                Path('x').unlink()")
+print("="*40)
+print("KARŞILAŞTIRMA")
+print("="*40)
+
+print(f"os.path.exists: {os.path.exists('ornek.txt')}")
+print(f"Path().exists:  {Path('ornek.txt').exists()}")
+
+print(f"\nos.path.isfile: {os.path.isfile('ornek.txt')}")
+print(f"Path().is_file:  {Path('ornek.txt').is_file()}")
+
+print(f"\nos.path.getsize: {os.path.getsize('ornek.txt')}")
+print(f"Path().stat:      {Path('ornek.txt').stat().st_size}")
 
 # Temizlik
-Path("x").unlink(missing_ok=True)
+Path("ornek.txt").unlink()
 ```
 Çıktı:
 ```
+========================================
+KARŞILAŞTIRMA
+========================================
+os.path.exists: True
+Path().exists:  True
 
+os.path.isfile: True
+Path().is_file:  True
+
+os.path.getsize: 0
+Path().stat:      0
 ```
 
 

@@ -76,6 +76,27 @@ python
 for i in range(5):  # Hafıza dostu iterable
     print(i)
 ```
+Python 3’te xrange yoktur, range generator benzeri çalışır.
+
+## 5. Hata Yönetimi (Exception)
+**Python 2:**
+```
+python
+
+try:
+    1/0
+except ZeroDivisionError, e:
+    print e
+```
+**Python 3:**
+```
+python
+
+try:
+    1/0
+except ZeroDivisionError as e:
+    print(e)
+```
 
 
 

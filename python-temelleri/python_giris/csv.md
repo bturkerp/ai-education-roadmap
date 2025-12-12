@@ -165,7 +165,13 @@ with open("kisiler_duzenli.csv", "w", newline="", encoding="utf-8") as f:
 3. **DictReader/DictWriter** sütun isimleriyle çalışmayı kolaylaştırır  
 4. **Pandas** büyük CSV dosyaları için daha hızlıdır
 
-
+## 1. Özel Karakter Problemleri
+```
+# Tırnak işareti içeren veriler
+with open("problemli.csv", "w", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f, quoting=csv.QUOTE_ALL)  # Tüm alanları tırnak içine al
+    yazici.writerow(['Ali "Büyük"', '25,5 yaş', 'İstanbul;Kadıköy'])
+```
 
 
 

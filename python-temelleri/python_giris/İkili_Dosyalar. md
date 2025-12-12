@@ -52,6 +52,7 @@ print(icerik.decode("utf-8"))
 Merhaba Python!
 Binary dosya örneği.
 ```
+
 ## 4️⃣ Binary Dosya Kopyalama
 ```
 # Mevcut binary dosyayı kopyalama

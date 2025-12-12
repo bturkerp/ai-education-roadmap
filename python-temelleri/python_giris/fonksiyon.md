@@ -119,6 +119,20 @@ print(topla(3, 7))
 25
 10
 ```
+## Nested (İç İçe) Fonksiyonlar
+```
+def dis_fonksiyon(x):
+    def ic_fonksiyon(y):
+        return y**2
+    return ic_fonksiyon(x) + 1
+
+print(dis_fonksiyon(5))
+
+```
+Çıktı:
+```
+26
+```
 
 
 

@@ -131,8 +131,20 @@ match meyve:
 Elma seçildi
 ```
 
+### match-case ile tuple eşleştirme
+```
+python
 
+nokta = (0, 1)
 
-
-
+match nokta:
+    case (0, 0):
+        print("Orijin")
+    case (0, y):
+        print(f"x=0, y={y}")
+    case (x, 0):
+        print(f"x={x}, y=0")
+    case _:
+        print("Başka nokta")
+```
 

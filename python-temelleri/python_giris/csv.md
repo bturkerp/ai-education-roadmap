@@ -43,6 +43,7 @@ with open("kisiler.csv", "r", encoding="utf-8") as f:
 
 📋 Sözlük Formatında Okuma/Yazma
 ```
+import csv
 # Yazma
 kisiler = [
     {"isim": "Ali", "yas": 25, "sehir": "İstanbul"},

@@ -66,20 +66,24 @@ Dosyalar: ['Best Model.docx', ..., '~$st Model.docx', '~$Sunu1.pptx', '~WRD0122.
 import os
 
 # Dizin oluştur
-os.mkdir("yeni_klasor")  # Tek dizin
-os.makedirs("a/b/c")  # İç içe dizinler (recursive)
-os.makedirs("dizin", exist_ok=True)  # Varsa hata vermez
+os.mkdir("d:/yeni_klasor")  # Tek dizin
+os.makedirs("d:/a/b/c")  # İç içe dizinler (recursive)
+os.makedirs("d:/dizin", exist_ok=True)  # Varsa hata vermez
 
 # Dosya oluştur
-with open("yeni_dosya.txt", "w") as f:
+with open("d:/yeni_dosya.txt", "w") as f:
     f.write("Merhaba")
 
 # Dosya/dizin sil
-os.remove("dosya.txt")  # Dosya sil
-os.rmdir("bos_klasor")  # Boş dizin sil
-os.removedirs("a/b/c")  # İç içe boş dizinleri sil
+os.remove("d:/yeni_dosya.txt")  # Dosya sil
+os.rmdir("d:/yeni_klasor")  # Boş dizin sil
+os.removedirs("d:/a/b/c")  # İç içe boş dizinleri sil
+with open("d:/eski.txt", "w") as f:
+    f.write("Merhaba")
+with open("d:/kaynak.txt", "w") as f:
+    f.write("Merhaba")
 
 # Yeniden adlandır/taşı
-os.rename("eski.txt", "yeni.txt")
-os.replace("kaynak.txt", "hedef.txt")  # Üzerine yazar
+os.rename("d:/eski.txt", "d:/yeni.txt")
+os.replace("d:/kaynak.txt", "d:/hedef.txt")  # Üzerine yazar
 ```

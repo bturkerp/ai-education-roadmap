@@ -20,7 +20,7 @@ Profesyonel ve akademik çalışmalara hazırlık yapmak
 
 Bu repo, hem ders materyali olarak hem de kendi kendine öğrenme yolculuğunda rehber olarak kullanılabilir.
 
-📂 Klasör Yapısı
+# 📂 Klasör Yapısı
 ai-education-roadmap/
 │
 ├─ python-temelleri/

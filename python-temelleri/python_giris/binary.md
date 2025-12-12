@@ -99,9 +99,20 @@ Toplam byte: 38
 İlk 10 byte (decimal): [77, 101, 114, 104, 97, 98, 97, 32, 80, 121]
 ```
 
+⚠️ Dikkat Edilmesi Gerekenler
+1. Encoding/Decoding: Binary veriyi metne çevirirken doğru encoding'i kullanın
+2. Büyük Dosyalar: Büyük binary dosyaları bloklar halinde okuyun
+3. Dosya Modları: "wb" modu dosyayı sıfırdan yazar, mevcut içeriği siler
 
 
+## ✅ Özet
 
+| İşlem | Fonksiyon/Metot | Notlar |
+|-------|----------------|--------|
+| **Yazma** | `open(..., "wb")`, `write()` | `b""` ile bytes veri hazırla |
+| **Okuma** | `open(..., "rb")`, `read()` | Sonuç `bytes` tipinde olur |
+| **Çevirme** | `decode("utf-8")` | Bytes → String |
+| **Kopyalama** | Bloklar halinde oku/yaz | Büyük dosyalar için |
 
 
 

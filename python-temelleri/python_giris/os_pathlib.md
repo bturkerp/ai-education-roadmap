@@ -312,6 +312,35 @@ resim
 ('\\', 'home', 'user', 'dosyalar', 'resim.jpg')
 ```
 
+### 📝 Dosya/Dizin İşlemleri
+```
+from pathlib import Path
+
+# Dizin oluştur
+Path("yeni_klasor").mkdir()
+Path("a/b/c").mkdir(parents=True, exist_ok=True)  # İç içe oluştur
+
+# Dosya oluştur
+Path("dosya.txt").touch()  # Boş dosya
+Path("dosya.txt").write_text("Merhaba Dünya", encoding="utf-8")
+
+# Dosya okuma/yazma
+icerik = Path("dosya.txt").read_text(encoding="utf-8")
+Path("dosya.txt").write_text("Yeni içerik", encoding="utf-8")
+
+# Binary okuma/yazma
+data = Path("resim.jpg").read_bytes()
+Path("kopya.jpg").write_bytes(data)
+
+# Yeniden adlandır/taşı
+Path("eski.txt").rename("yeni.txt")
+Path("kaynak.txt").replace("hedef.txt")
+
+# Silme
+Path("dosya.txt").unlink()  # Dosya sil
+Path("bos_klasor").rmdir()  # Boş dizin sil
+```
+
 
 
 

@@ -297,9 +297,45 @@ for i in range(1, 21):
 14
 ```
 
+**Örnek 5: Dictionary + Döngü + Koşul**
+Öğrenci notlarına göre harf notu atama
+```
+ogrenciler = {"Ali": 92, "Ayşe": 75, "Mehmet": 64, "Fatma": 58}
+harf_notu = {}
 
+for isim, notu in ogrenciler.items():
+    if notu >= 90:
+        harf_notu[isim] = "AA"
+    elif notu >= 80:
+        harf_notu[isim] = "BA"
+    elif notu >= 70:
+        harf_notu[isim] = "BB"
+    elif notu >= 60:
+        harf_notu[isim] = "CB"
+    else:
+        harf_notu[isim] = "FF"
 
+print(harf_notu)
+```
+Çıktı:
+```
+{'Ali': 'AA', 'Ayşe': 'BB', 'Mehmet': 'CB', 'Fatma': 'FF'}
+```
 
+**Örnek 6: Döngü + enumerate ile İndeks Kullanımı**
+```
+isimler = ["Ali", "Ayşe", "Mehmet", "Fatma"]
+
+for index, isim in enumerate(isimler, start=1):
+    print(f"{index}. {isim}")
+```
+Çıktı:
+```
+1. Ali
+2. Ayşe
+3. Mehmet
+4. Fatma
+```
 
 
 

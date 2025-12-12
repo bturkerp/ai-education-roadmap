@@ -160,6 +160,6 @@ with open("kopya_ornek.txt", "wb") as hedef:
 - [CSV Dosyalar (Detay İçin Tıklayın Lütfen)](csv.md)
 - [JSON Dosyalar (Detay İçin Tıklayın Lütfen)](json.md)
 - [XML Dosyalar(Detay İçin Tıklayın Lütfen)](XML.md)
-- os ve pathlib kullanımı
+- [os ve pathlib kullanımı (Detay İçin Tıklayın Lütfen)](os_pathlib.md)
 - Dosya Okuma Optimzasyonu
 - Context manager (with) kullanımı

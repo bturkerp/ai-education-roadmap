@@ -353,8 +353,16 @@ else:
 17 asal sayı
 ```
 
-
-
+**Örnek 8: List Comprehension ile Koşullu Döngü
+```
+sayilar = list(range(1, 21))
+kareler = [x**2 for x in sayilar if x % 3 == 0]
+print(kareler)
+```
+Program sayilar dizisinde 3'ün katları olan sayıların karesini alarak yazdırırır. Çıktı:
+```
+[9, 36, 81, 144, 225, 324]
+```
 
 
 

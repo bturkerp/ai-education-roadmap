@@ -10,8 +10,9 @@ Bu Bölümde öncelikle python çalışma ortamını kurmak için gerekli uygula
 
 ## [Mini Conda Kurulumu, Ortam Oluşturma ve Gerekli Kütüphanelerin Kuruluşu](02_Miniconda_kurulum.md)
 
-## [Pyhton Temelleei, tarihçesi ve Özellikleri](01_python_tarihcesi_ozellikleri/README.md)
+## [Pyhton Temelleri, tarihçesi ve Özellikleri](01_python_tarihcesi_ozellikleri/README.md)
 
+## [Python Programlamaya Giriş ](02_python_giris/README.md)
 
 Ardından python ile kodlama, örneklerle açıklanmıştır. 
 

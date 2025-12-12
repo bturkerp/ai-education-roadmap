@@ -242,3 +242,19 @@ csv_kontrol_et("yeni_kisiler.csv")
 ✅ Dosya düzgün
 ```
 
+## 6. CSV'den JSON'a Dönüşüm
+```
+import csv
+import json
+
+def csv_to_json(csv_dosya, json_dosya):
+    with open(csv_dosya, "r", encoding="utf-8") as f:
+        okuyucu = csv.DictReader(f)
+        veriler = list(okuyucu)
+    
+    with open(json_dosya, "w", encoding="utf-8") as f:
+        json.dump(veriler, f, ensure_ascii=False, indent=2)
+```
+
+
+

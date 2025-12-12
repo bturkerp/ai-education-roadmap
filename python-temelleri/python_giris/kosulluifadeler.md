@@ -19,8 +19,6 @@ Python'da temel koşul ifadeleri `if`, `elif` ve `else` ile yapılır.
 ### Basit if-else
 
 ```
-python
-
 x = 10
 
 if x > 0:
@@ -33,8 +31,6 @@ else:
 
 ### if-elif-else ile çoklu kontrol
 ```
-python
-
 x=int(input("Lütfen bir tamsayı giriniz: "))
 if x>0: 
     print("pozitif")
@@ -46,8 +42,6 @@ else:
 
 ### Mantıksal operatörler ile koşullar
 ```
-python
-
 a = 5
 b = 10
 
@@ -67,8 +61,6 @@ a negatif değil
 
 ## İç içe if kullanımı
 ```
-python
-
 x = 15
 
 if x > 0:
@@ -93,8 +85,6 @@ Tek sayı
 
 ### Basit match-case kullanımı
 ```
-python
-
 x = 2
 
 match x:
@@ -114,8 +104,6 @@ match x:
 
 ### String ile match-case
 ```
-python
-
 meyve = "elma"
 
 match meyve:
@@ -133,8 +121,6 @@ Elma seçildi
 
 ### match-case ile tuple eşleştirme
 ```
-python
-
 nokta = (0, 1)
 
 match nokta:
@@ -152,11 +138,30 @@ match nokta:
 x=0, y=1
 ```
 
+### match-case + guard kullanımı
+```
+x = 7
 
+match x:
+    case x if x % 2 == 0:
+        print("Çift sayı")
+    case x if x % 2 != 0:
+        print("Tek sayı")
+```
+Çıktı: 
+```
+Tek sayı
+```
 
+## Özet
 
+| Konu                | Python ≤3.9               | Python ≥3.10                   |
+|--------------------|--------------------------|--------------------------------|
+| Çoklu koşul         | if-elif-else            | if-elif-else veya match-case   |
+| match-case          | Yok                     | Mevcut                         |
+| case anahtar kelimesi | Yok                    | match-case içinde kullanılabilir |
 
-
+> ⚠️ Not: `match-case` ve `case` yalnızca **Python 3.10 ve üzeri** sürümlerde çalışır.
 
 
 

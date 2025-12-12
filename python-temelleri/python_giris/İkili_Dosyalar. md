@@ -1,56 +1,144 @@
-# 🗄️ Python İkili Dosyalar (Binary Files)
-Python’da ikili dosyalar (binary files), genellikle resim, ses, video veya özel veri formatları için kullanılır.  
+🗄️ Python İkili Dosyalar (Binary Files)
+Python’da ikili dosyalar (binary files), genellikle resim, ses, video veya özel veri formatları için kullanılır.
 Metin dosyalarının aksine, binary dosyalar ham veri olarak okunur ve yazılır.
----
-## Binary Dosya Açma Modları
-| Mod  | Açıklama |
-|------|----------|
-| "rb" | Binary okuma |
-| "wb" | Binary yazma (varsa üzerine yazar) |
-| "ab" | Binary ekleme (append) |
-> Not: Binary modda okuma/yazma yapılırken veriler `bytes` tipindedir.
----
-## Binary Dosyaya Yazma
-```
+
+📂 Binary Dosya Açma Modları
+Mod	Açıklama
+"rb"	Binary okuma (read binary)
+"wb"	Binary yazma (write binary) - varsa üzerine yazar
+"ab"	Binary ekleme (append binary)
+"rb+"	Binary okuma ve yazma
+Not: Binary modda okuma/yazma yapılırken veriler bytes tipindedir.
+
+✍️ Binary Dosyaya Yazma
+python
 data = b"Merhaba Python!\nBinary dosya örneği."
 with open("ornek.bin", "wb") as f:
     f.write(data)
-```
 Açıklama:
-- b → byte literal, binary veriyi temsil eder.
-- "wb" → dosya yoksa oluşturur, varsa üzerine yazar.
 
-## Binary Dosyadan Okuma
-```
+b → byte literal, binary veriyi temsil eder
+
+"wb" → dosya yoksa oluşturur, varsa üzerine yazar
+
+with kullanımı dosyanın otomatik kapanmasını sağlar
+
+📖 Binary Dosyadan Okuma
+python
 with open("ornek.bin", "rb") as f:
     icerik = f.read()
     print(icerik)
-```
-Çıktı: 
-```
-b'Merhaba Python!\nBinary dosya örneği.'
-```
-Açıklama:
-- Binary veriler bytes tipinde okunur.
-- decode() metodu ile metin olarak çevrilebilir:
-```
-print(icerik.decode("utf-8"))
-```
 Çıktı:
-```
+
+text
+b'Merhaba Python!\nBinary dosya örneği.'
+Açıklama:
+
+Binary veriler bytes tipinde okunur
+
+Terminalde b'...' şeklinde görünmesi normaldir (binary old
+
+md dosyaya senin rastgeşle yazdıklarını koyarsam istediğim sonucu alamam doğru şekilde md formatında yazılmalı
+🗄️ Python İkili Dosyalar (Binary Files)
+Python'da ikili dosyalar (binary files), genellikle resim, ses, video veya özel veri formatları için kullanılır.
+Metin dosyalarının aksine, binary dosyalar ham veri olarak okunur ve yazılır.
+
+📂 Binary Dosya Açma Modları
+Mod	Açıklama
+"rb"	Binary okuma (read binary)
+"wb"	Binary yazma (write binary) - varsa üzerine yazar
+"ab"	Binary ekleme (append binary)
+"rb+"	Binary okuma ve yazma
+Not: Binary modda okuma/yazma yapılırken veriler bytes tipindedir.
+
+✍️ Binary Dosyaya Yazma
+python
+data = b"Merhaba Python!\nBinary dosya örneği."
+with open("ornek.bin", "wb") as f:
+    f.write(data)
+Açıklama:
+
+b → byte literal, binary veriyi temsil eder
+
+"wb" → dosya yoksa oluşturur, varsa üzerine yazar
+
+with kullanımı dosyanın otomatik kapanmasını sağlar
+
+📖 Binary Dosyadan Okuma
+python
+with open("ornek.bin", "rb") as f:
+    icerik = f.read()
+    print(icerik)
+Çıktı:
+
+text
+b'Merhaba Python!\nBinary dosya örneği.'
+Açıklama:
+
+Binary veriler bytes tipinde okunur
+
+Terminalde b'...' şeklinde görünmesi normaldir (binary olduğunu gösterir)
+
+🔄 Binary Veriyi Metne Çevirme
+python
+with open("ornek.bin", "rb") as f:
+    icerik = f.read()
+    metin_hal = icerik.decode("utf-8")
+    print(metin_hal)
+Çıktı:
+
+text
 Merhaba Python!
 Binary dosya örneği.
-```
-
-## Binary Dosya Kopyalama
-```
+📋 Binary Dosya Kopyalama
+python
+# Küçük dosyalar için
 with open("ornek.bin", "rb") as kaynak:
     icerik = kaynak.read()
 
 with open("kopya_ornek.bin", "wb") as hedef:
     hedef.write(icerik)
-```
-Açıklama:
-Binary dosyalar resim, video veya özel veri dosyalarında aynı şekilde kopyalanabilir.
 
+# Büyük dosyalar için (bellek dostu)
+with open("buyuk_dosya.bin", "rb") as kaynak, \
+     open("kopya_buyuk.bin", "wb") as hedef:
+    
+    while True:
+        bolum = kaynak.read(4096)  # 4KB bloklar halinde oku
+        if not bolum:
+            break
+        hedef.write(bolum)
+🖼️ Resim Dosyası İşleme
+python
+# Resmi binary olarak kopyalama
+with open("resim.jpg", "rb") as kaynak:
+    resim_verisi = kaynak.read()
 
+with open("kopya_resim.jpg", "wb") as hedef:
+    hedef.write(resim_verisi)
+🔍 Binary Veriyi Analiz Etme
+python
+with open("ornek.bin", "rb") as f:
+    icerik = f.read()
+    
+    # Byte sayısı
+    print(f"Toplam byte: {len(icerik)}")
+    
+    # İlk 10 byte'ı hex olarak göster
+    print(f"İlk 10 byte (hex): {icerik[:10].hex()}")
+    
+    # İlk 10 byte'ı decimal olarak göster
+    print(f"İlk 10 byte (decimal): {list(icerik[:10])}")
+⚠️ Dikkat Edilmesi Gerekenler
+Encoding/Decoding: Binary veriyi metne çevirirken doğru encoding'i kullanın
+
+Büyük Dosyalar: Büyük binary dosyaları bloklar halinde okuyun
+
+Dosya Modları: "wb" modu dosyayı sıfırdan yazar, mevcut içeriği siler
+
+✅ Özet
+İşlem	Fonksiyon/Metot	Notlar
+Yazma	open(..., "wb"), write()	b"" ile bytes veri hazırla
+Okuma	open(..., "rb"), read()	Sonuç bytes tipinde olur
+Çevirme	decode("utf-8")	Bytes → String
+Kopyalama	Bloklar halinde oku/yaz	Büyük dosyalar için

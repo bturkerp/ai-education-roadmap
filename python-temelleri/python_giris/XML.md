@@ -29,7 +29,7 @@ ET.SubElement(kisi2, "yas").text = "30"
 tree = ET.ElementTree(root)
 
 # Dosyaya yaz
-tree.write("kisiler.xml", encoding="utf-8", xml_declaration=True)
+tree.write("d:\kisiler.xml", encoding="utf-8", xml_declaration=True)
 ```
 
 

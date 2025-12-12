@@ -77,6 +77,8 @@ Hülya 20 yaşında
 ```
 
 ## 6. *args – Belirsiz Sayıda Pozisyonel Parametre
+Fonksiyonun belirsiz sayıda parametre almasını sağlar.
+*args → pozisyonel parametreleri listeler
 ```
 def toplam(*sayilar):
     return sum(sayilar)
@@ -91,6 +93,8 @@ print(toplam(4, 5))
 ```
 
 ## 7. **kwargs – Belirsiz Sayıda Anahtar Kelime Parametre
+Fonksiyonun belirsiz sayıda parametre almasını sağlar.
+**kwargs → anahtar kelime parametreleri dictionary olarak alır
 ```
 def bilgiler(**kwargs):
     for key, value in kwargs.items():
@@ -128,6 +132,7 @@ Neden lambda?
 - Kodun okunabilirliğini artırır, gereksiz def tanımı yapmamıza gerek kalmaz
   
 ## 9. Nested (İç İçe) Fonksiyonlar
+Fonksiyon içinde fonksiyon tanımlayarak, lokal bir hesaplama veya yardımcı işlevi kapsülleyebiliriz.
 ```
 def dis_fonksiyon(x):
     def ic_fonksiyon(y):
@@ -143,6 +148,8 @@ print(dis_fonksiyon(5))
 ```
 
 ## 10. Recursion (Özyinelemeli Fonksiyon)
+Bir işlemi kendi kendini çağırarak çözmek.
+Örnek: Faktöriyel, Fibonacci, ağaç veya dizin yapısı işleme.
 - Fonksiyon kendisini çağırır.
 - Örnek: Faktöriyel hesaplama
 ```
@@ -160,6 +167,7 @@ print(faktoriyel(5))
 ```
 
 ## 11. Fonksiyon ile Liste İşleme
+List comprehension ve fonksiyonları birleştirerek daha temiz ve kısa kod yazabiliriz.
 ```
 def kareler(liste):
     return [x**2 for x in liste]
@@ -173,6 +181,8 @@ print(kareler(sayilar))
 ```
 
 ## 12. Fonksiyonları Başka Fonksiyonlara Parametre Olarak Gönderme
+Fonksiyonları başka fonksiyonlara argüman olarak gönderebiliriz.
+Bu, yüksek seviyeli fonksiyonlar veya callback mantığı için kullanışlıdır.
 ```
 def selamla():
     return "Merhaba!"

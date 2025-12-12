@@ -193,6 +193,20 @@ if sozluk:
 Liste boş
 Sözlük dolu
 ```
+**Örnek 3: String İçerik Kontrolü**
+```
+mesaj = "Merhaba, Python!"
+
+if "Python" in mesaj:
+    print("Mesaj Python içeriyor")
+if "Java" not in mesaj:
+    print("Mesaj Java içermiyor")
+```
+Çıktı:
+```
+Mesaj Python içeriyor
+Mesaj Java içermiyor
+```
 
 
 

@@ -125,3 +125,39 @@ buyuk_25 = df[df["Yaş"] > 25]
 0   Ali   25  İstanbul
 1  Ayşe   30    Ankara
 ```
+
+🛠️ CSV Düzenleme
+```
+import csv
+
+# Verileri oku
+satirlar = []
+with open("kisiler.csv", "r", encoding="utf-8") as f:
+    okuyucu = csv.reader(f)
+    for satir in okuyucu:
+        # Her satıra "Ülke" sütunu ekle
+        satir.append("Türkiye")
+        satirlar.append(satir)
+
+# Düzenlenmiş veriyi yaz
+with open("kisiler_duzenli.csv", "w", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f)
+    yazici.writerows(satirlar)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -167,13 +167,20 @@ with open("kisiler_duzenli.csv", "w", newline="", encoding="utf-8") as f:
 
 ## 1. Özel Karakter Problemleri
 ```
+import csv
 # Tırnak işareti içeren veriler
 with open("problemli.csv", "w", newline="", encoding="utf-8") as f:
     yazici = csv.writer(f, quoting=csv.QUOTE_ALL)  # Tüm alanları tırnak içine al
     yazici.writerow(['Ali "Büyük"', '25,5 yaş', 'İstanbul;Kadıköy'])
 ```
 
-
+## 2. Farklı CSV Formatları
+```
+import csv
+# quotechar: Tırnak karakterini değiştirme
+with open("farkli.csv", "w", newline="", encoding="utf-8") as f:
+    yazici = csv.writer(f, delimiter=";", quotechar="'", quoting=csv.QUOTE_MINIMAL)
+```
 
 
 

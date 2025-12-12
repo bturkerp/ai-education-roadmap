@@ -63,10 +63,7 @@ with open("kopya_ornek.bin", "wb") as hedef:
 ```
 Açıklama:
 Binary dosyalar resim, video veya özel veri dosyalarında aynı şekilde kopyalanabilir.
-## 
-```
 
-```
 
 
 

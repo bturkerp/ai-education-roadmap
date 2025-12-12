@@ -164,9 +164,35 @@ Tek sayı
 > ⚠️ Not: `match-case` ve `case` yalnızca **Python 3.10 ve üzeri** sürümlerde çalışır.
 
 
+## ÖRNEKLER
+**Örnek 1:**
+```
+x = -3
+durum = "Pozitif" if x > 0 else "Negatif veya sıfır"
+print(durum)
+```
+Çıktı: 
+```
+Negatif veya sıfır
+```
+**Örnek 2: Mantıksal Nesne Kontrolü**
+```
+liste = []
+sozluk = {"isim": "Ali"}
 
+if liste:
+    print("Liste dolu")
+else:
+    print("Liste boş")
 
-
+if sozluk:
+    print("Sözlük dolu")
+```
+Çıktı
+```
+Liste boş
+Sözlük dolu
+```
 
 
 

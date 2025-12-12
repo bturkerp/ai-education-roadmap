@@ -301,7 +301,15 @@ print(p.parts)  # ('/', 'home', 'user', 'dosyalar', 'resim.jpg')
 ```
 Çıktı:
 ```
-
+resim.jpg
+resim
+.jpg
+['.jpg']
+\home\user\dosyalar
+\home\user\dosyalar
+\home\user
+\
+('\\', 'home', 'user', 'dosyalar', 'resim.jpg')
 ```
 
 

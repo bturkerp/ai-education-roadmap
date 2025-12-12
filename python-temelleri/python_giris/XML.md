@@ -206,3 +206,23 @@ def xml_to_json(xml_dosya, json_dosya):
     with open(json_dosya, "w", encoding="utf-8") as f:
         json.dump(veri, f, ensure_ascii=False, indent=2)
 ```
+
+## ✅ Özet
+
+| İşlem | Fonksiyon/Metot | Açıklama |
+|-------|----------------|----------|
+| **Oluşturma** | `ET.Element()` | Kök element |
+| **Alt Element** | `ET.SubElement()` | Alt element ekle |
+| **Okuma** | `ET.parse()` | XML dosyasını oku |
+| **Bulma** | `find()`, `findall()` | Element bul |
+| **Yazma** | `write()` | Dosyaya yaz |
+| **Attribute** | `set()`, `get()` | Özellik ekle/oku |
+
+---
+
+## 💡 İpuçları
+
+1. XML **büyük/küçük harf duyarlıdır**  
+2. Türkçe karakterler için **`encoding="utf-8"`** kullan  
+3. **XPath** daha kompleks sorgular için kullanışlıdır  
+4. **`minidom`** okunaklı çıktı için faydalıdır

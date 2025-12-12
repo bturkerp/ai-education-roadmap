@@ -199,6 +199,17 @@ except csv.Error as e:
 Dosya bulunamadı!
 ```
 
+## 4. Büyük Dosyalarla Çalışma
+# Streaming ile okuma (hafıza dostu)
+def buyuk_csv_oku(dosya_adi):
+    with open(dosya_adi, "r", encoding="utf-8") as f:
+        okuyucu = csv.reader(f)
+        for satir in okuyucu:
+            yield satir  # Generator kullanımı
+
+# Kullanım
+for satir in buyuk_csv_oku("cok_buyuk.csv"):
+    print(satir)
 
 
 

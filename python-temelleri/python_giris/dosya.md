@@ -59,6 +59,15 @@ with open("veri.txt", "a") as f:
     f.write("Yeni bir satır eklendi.\n")
 ```
 
+## 6. Dosya Var mı Kontrol Etme (try-except)
+```
+try:
+    with open("olmayan.txt", "r") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("Dosya bulunamadı!")
+```
+Hata oluşursa program durmaz, istisna yakalanır.
 
 
 

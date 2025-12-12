@@ -29,7 +29,7 @@ ET.SubElement(kisi2, "yas").text = "30"
 tree = ET.ElementTree(root)
 
 # Dosyaya yaz
-tree.write("kisiler.xml", encoding="utf-8", xml_declaration=True)
+tree.write("d:\kisiler.xml", encoding="utf-8", xml_declaration=True)
 ```
 
 ## 📖 XML Okuma
@@ -37,7 +37,7 @@ tree.write("kisiler.xml", encoding="utf-8", xml_declaration=True)
 import xml.etree.ElementTree as ET
 
 # XML dosyasını oku
-tree = ET.parse("kisiler.xml")
+tree = ET.parse("d:\kisiler.xml")
 root = tree.getroot()
 
 # Tüm kişileri listele
@@ -56,7 +56,7 @@ for kisi in root.findall("kisi"):
 ```
 import xml.etree.ElementTree as ET
 
-tree = ET.parse("kisiler.xml")
+tree = ET.parse("d:\kisiler.xml")
 root = tree.getroot()
 
 # İlk kisi elementi
@@ -76,7 +76,7 @@ yas_25 = root.findall(".//kisi[yas='25']")
 ```
 import xml.etree.ElementTree as ET
 
-tree = ET.parse("kisiler.xml")
+tree = ET.parse("d:\kisiler.xml")
 root = tree.getroot()
 
 # Yeni kişi ekle
@@ -90,10 +90,23 @@ for kisi in root.findall("kisi"):
         kisi.find("yas").text = "26"
 
 # Kaydet
-tree.write("kisiler_guncel.xml", encoding="utf-8")
+tree.write("d:\kisiler_guncel.xml", encoding="utf-8")
 ```
 
+## 🗑️ Element Silme
+```
+import xml.etree.ElementTree as ET
 
+tree = ET.parse("kisiler.xml")
+root = tree.getroot()
+
+# İsmi Ali olan kişiyi sil
+for kisi in root.findall("kisi"):
+    if kisi.find("isim").text == "Ali":
+        root.remove(kisi)
+
+tree.write("kisiler_silindi.xml", encoding="utf-8")
+```
 
 
 

@@ -112,7 +112,7 @@ bash
 python 01_python_tarihcesi_ozellikleri/merhaba.py
 ```
 
-📝 Proje Yapısı
+# 📝 Proje Yapısı
 Her bölüm aşağıdaki yapıyı içerir:
 ```
 bolum_adi/

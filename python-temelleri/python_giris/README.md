@@ -4,7 +4,7 @@ Python, öğrenmesi kolay, çok yönlü ve güçlü bir programlama dilidir. Web
 
 ---
 
-##  İlk Python Programı
+##  1. İlk Python Programı
 1. Visual studio'yu açın. 
 2. "File" menüsündeki "New File/Python File" seçin.
 3. Örnek kodu kopyalayıp visual studio'da oluşturduğunuz boş sayfaya yapıştırın.
@@ -16,7 +16,7 @@ Python, öğrenmesi kolay, çok yönlü ve güçlü bir programlama dilidir. Web
 print("Merhaba, Dünya!")
 ```
 
-## 4. Yorum Satırları
+## 2. Yorum Satırları
 Python'da yorum satırları # ile başlar. Yorumda yazanlar program işletimi sırasında dikkate alınmaz. Sadece bilgi verme 
 amaçlı kullanılır. 
 ```
@@ -24,7 +24,7 @@ amaçlı kullanılır.
 print("Yorum satırları kodu etkilemez")
 ```
 
-## [5. Değişkenler ve Veri Tipleri (Lütfen Detay İçin Tıklayınız)](degiskenlerveveritipleri.md)
+## [3. Değişkenler ve Veri Tipleri (Lütfen Detay İçin Tıklayınız)](degiskenlerveveritipleri.md)
 Python’da değişkenler dinamik olarak oluşturulur ve veri tipleri otomatik atanır.
 **Temel veri tipleri:**
 - int → Tam sayılar
@@ -41,7 +41,7 @@ aktif = True  # bool
 print(x, y, isim, aktif)
 ```
 
-## [6. Operatörler (Lütfen Detay İçin Tıklayınız)](operatorler.md)
+## [4. Operatörler (Lütfen Detay İçin Tıklayınız)](operatorler.md)
 Python’da matematiksel ve mantıksal işlemler için operatörler kullanılır.
 **Matematiksel Operatörler:**
 ```
@@ -66,7 +66,7 @@ print(x or y)   # Mantıksal VEYA
 print(not x)    # Mantıksal DEĞİL
 ```
 
-[## 7. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
+[## 5. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
 ```
 sayi = 10
 

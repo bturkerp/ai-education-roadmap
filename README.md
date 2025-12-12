@@ -24,6 +24,7 @@ Bu repo, hem ders materyali olarak hem de kendi kendine öğrenme yolculuğunda 
 
 
 # 📂 Klasör Yapısı
+"""
 ai-education-roadmap/
 ├── python-temelleri/
 ├── numpy-ve-pandas/
@@ -33,7 +34,7 @@ ai-education-roadmap/
 ├── veri-artirma/
 ├── optimization-giris/
 └── quantum-giris/
-
+"""
 🧠 İçerik Açıklamaları
 📘 1. python-temelleri/
 

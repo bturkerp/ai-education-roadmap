@@ -56,7 +56,9 @@ with open("kisiler.json", "r", encoding="utf-8") as f:
 Çıktı:
 
 ```
-
+Ali 25
+Ayşe 30
+Mehmet 35
 ```
 
 

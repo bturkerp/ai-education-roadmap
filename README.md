@@ -37,7 +37,7 @@ ai-education-roadmap/
 ```
 🧠 İçerik Açıklamaları
 
-📘 1. python-temelleri/
+[📘 1. python-temelleri/](python-temelleri/README:md)
 
 Python programlama dilinin temelleri.
 Değişkenler, fonksiyonlar, döngüler, veri yapıları ve örnek uygulamalar içerir.

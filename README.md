@@ -22,14 +22,14 @@ Bu repo, hem ders materyali olarak hem de kendi kendine öğrenme yolculuğunda 
 
 # 📂 Klasör Yapısı
 ai-education-roadmap/
-|-- python-temelleri/
-|-- numpy-ve-pandas/
-|-- makine-ogrenmesi-temel/
-|-- derin-ogrenme-giris/
-|-- cnn-temelleri/
-|-- veri-artirma/
-|-- optimization-giris/
-`-- quantum-giris/
+├── python-temelleri/
+├── numpy-ve-pandas/
+├── makine-ogrenmesi-temel/
+├── derin-ogrenme-giris/
+├── cnn-temelleri/
+├── veri-artirma/
+├── optimization-giris/
+└── quantum-giris/
 
 🧠 İçerik Açıklamaları
 📘 1. python-temelleri/

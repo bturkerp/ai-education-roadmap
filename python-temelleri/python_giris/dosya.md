@@ -112,3 +112,54 @@ Bu bölümde, Python ile:
 - Dosya silme ve arama  
 
 gibi temel ve ileri düzey dosya işlemlerini öğrendik.
+## Örnek
+```
+import os
+import csv
+import json
+from pathlib import Path
+import shutil
+
+# 1️⃣ Basit Yazma ve Okuma
+with open("ornek.txt", "w") as f:
+    f.write("Python dosya işlemleri öğreniyorum.\n")
+    f.write("Bu satır ikinci satır.\n")
+
+with open("ornek.txt", "r") as f:
+    print("📄 Dosya içeriği:")
+    print(f.read())
+
+# 2️⃣ Satır Satır Okuma
+with open("ornek.txt", "r") as f:
+    print("📄 Satır satır okuma:")
+    for satir in f:
+        print(satir.strip())
+
+# 3️⃣ Dosyaya Ekleme
+with open("ornek.txt", "a") as f:
+    f.write("Bu bir ekleme satırıdır.\n")
+
+# 4️⃣ Dosya Var mı Kontrol Etme
+dosya = "ornek.txt"
+if os.path.exists(dosya):
+    print(f"{dosya} dosyası mevcut, boyutu: {os.path.getsize(dosya)} bytes")
+else:
+    print(f"{dosya} bulunamadı!")
+
+# 5️⃣ Binary Dosya İşlemi
+# Küçük örnek için aynı metin dosyasını binary olarak kopyalayalım
+with open("ornek.txt", "rb") as kaynak:
+    icerik = kaynak.read()
+
+with open("kopya_ornek.txt", "wb") as hedef:
+    hedef.write(icerik)
+```
+
+## İleri Düzey Dosya İşlemleri
+- İkili Dosyalar (Binary Files)
+- CSV Dosyalar
+- JSON Dosyalar
+- XML Dosyalar
+- os ve pathlib kullanımı
+- Dosya Okuma Optimzasyonu
+- Context manager (with) kullanımı

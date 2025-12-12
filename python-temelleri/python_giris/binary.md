@@ -63,6 +63,15 @@ with open("buyuk_dosya.bin", "rb") as kaynak, \
         hedef.write(bolum)
 ```
 
+## 🖼️ Resim Dosyası İşleme
+```
+# Resmi binary olarak kopyalama
+with open("resim.jpg", "rb") as kaynak:
+    resim_verisi = kaynak.read()
+
+with open("kopya_resim.jpg", "wb") as hedef:
+    hedef.write(resim_verisi)
+```
 
 
 

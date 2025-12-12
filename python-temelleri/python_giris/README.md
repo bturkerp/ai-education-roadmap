@@ -47,7 +47,7 @@ aktif = True  # bool
 print(x, y, isim, aktif)
 ```
 
-## 6. Operatörler
+## [6. Operatörler (Lütfen Detay İçin Tıklayınız)](operatorler.md)
 Python’da matematiksel ve mantıksal işlemler için operatörler kullanılır.
 **Matematiksel Operatörler:**
 ```

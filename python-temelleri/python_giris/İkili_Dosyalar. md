@@ -11,6 +11,7 @@ Metin dosyalarının aksine, binary dosyalar **ham veri** olarak okunur ve yazı
 > Not: Binary modda okuma/yazma yapılırken veriler `bytes` tipindedir.
 ---
 ## 2️⃣ Binary Dosyaya Yazma
+```
 data = b"Merhaba Python!\nBinary dosya örneği."
 with open("ornek.bin", "wb") as f:
     f.write(data)

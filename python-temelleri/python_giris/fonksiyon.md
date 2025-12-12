@@ -17,7 +17,7 @@ selamla()
 ```
 Merhaba!
 ```
-# 2. Parametre Alan Fonksiyon
+## 2. Parametre Alan Fonksiyon
 ```
 def selamla(isim):
     print(f"Merhaba, {isim}!")
@@ -31,7 +31,7 @@ Merhaba, Ali!
 Merhaba, Ayşe!
 ```
 
-# 3. Return ile Değer Döndüren Fonksiyon
+## 3. Return ile Değer Döndüren Fonksiyon
 ```
 def kare(x):
     return x ** 2
@@ -44,7 +44,7 @@ print(sonuc)
 25
 ```
 
-# 4. Varsayılan Parametreler (Default Arguments)
+## 4. Varsayılan Parametreler (Default Arguments)
 ```
 def selamla(isim="Kullanıcı"):
     print(f"Merhaba, {isim}!")
@@ -58,6 +58,19 @@ Merhaba, Kullanıcı!
 Merhaba, Mehmet!
 ```
 
+## Anahtar argümanlar (Keyword Arguments)
+```
+def bilgiler(isim, yas):
+    print(f"{isim} {yas} yaşında")
+
+bilgiler(yas=30, isim="Ayşe")
+bilgiler(isim="Mehmet", yas=50)
+```
+Çıktı:
+```
+Ayşe 30 yaşında
+Mehmet 50 yaşında
+```
 
 
 

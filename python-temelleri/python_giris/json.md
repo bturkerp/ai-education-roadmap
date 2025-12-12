@@ -32,3 +32,44 @@ print(veri["hobiler"][0])  # spor
 Ali
 spor
 ```
+
+📋 Liste Formatında JSON
+```
+import json
+
+kisiler = [
+    {"isim": "Ali", "yas": 25},
+    {"isim": "Ayşe", "yas": 30},
+    {"isim": "Mehmet", "yas": 35}
+]
+
+# Yazma
+with open("kisiler.json", "w", encoding="utf-8") as f:
+    json.dump(kisiler, f, ensure_ascii=False, indent=2)
+
+# Okuma
+with open("kisiler.json", "r", encoding="utf-8") as f:
+    kisiler_okunan = json.load(f)
+    for kisi in kisiler_okunan:
+        print(kisi["isim"], kisi["yas"])
+```
+Çıktı:
+
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

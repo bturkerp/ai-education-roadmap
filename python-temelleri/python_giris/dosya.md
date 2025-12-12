@@ -69,6 +69,46 @@ except FileNotFoundError:
 ```
 Hata oluşursa program durmaz, istisna yakalanır.
 
+## 7. Dosya Silme (os modülü)
+```
+import os
 
+if os.path.exists("veri.txt"):
+    os.remove("veri.txt")
+    print("Dosya silindi.")
+else:
+    print("Dosya bulunamadı.")
+```
+## 8. Dosya İçinde Arama
+```
+with open("veri.txt", "r") as f:
+    for satir in f:
+        if "Python" in satir:
+            print(satir.strip())
+```
+strip() → satır sonundaki \n karakterini temizler.
 
+## 9. Önemli Dosya Modları
 
+| Mod         | Açıklama                         |
+|------------|---------------------------------|
+| "r"        | Okuma                            |
+| "w"        | Yazma (varsa üzerine yazar)      |
+| "a"        | Ekleme                           |
+| "x"        | Oluşturma, dosya varsa hata verir |
+| "rb"/"wb"/"ab" | Binary modda okuma/yazma/ekleme |
+
+---
+
+## Özet
+
+Bu bölümde, Python ile:
+
+- Dosya açma ve kapama  
+- Okuma ve yazma  
+- Satır satır okuma  
+- Ekleme  
+- Hata yakalama  
+- Dosya silme ve arama  
+
+gibi temel ve ileri düzey dosya işlemlerini öğrendik.

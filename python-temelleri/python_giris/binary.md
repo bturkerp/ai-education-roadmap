@@ -65,6 +65,7 @@ with open("dosya.bin", "rb") as kaynak:
 with open("buyuk.bin", "rb") as kaynak, open("kopya_buyuk.bin", "wb") as hedef:
     while bolum := kaynak.read(4096):  # 4KB bloklar
         hedef.write(bolum)
+print("Kopyalama tamamlandı!")
 ```
 
 ## 🖼️ Resim Dosyası İşleme

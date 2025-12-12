@@ -95,6 +95,9 @@ while x < 5:
     x += 1
 ```
 
+## [6. Dosya İşlemleri (Lütfen Detay İçin Tıklayınız)](dosya.md)
+Python ile dosya açma, okuma, yazma ve ekleme işlemleri yapabilirsiniz.  
+Bu bölümde, temel dosya modları (`r`, `w`, `a`), okuma/yazma yöntemleri ve dosya kontrolü örnekleri gösterilmektedir.
 
 
 

@@ -219,5 +219,45 @@ print(pozitifler)
 [1, 3, 5]
 ```
 
+**Örnek 5: Dictionary ile Koşullu Değer Erişimi**
+```
+kullanici = {"isim": "Ayşe", "yas": 25}
 
+if kullanici.get("yas", 0) >= 18:
+    print("Reşit")
+else:
+    print("Reşit değil")
+```
+Çıktı: 
+```
+Reşit
+```
+**Örnek 6: İç İçe Koşullar + Mantıksal Operatörler**
+```
+a = 10
+b = 20
 
+if a > 0:
+    if b > 10:
+        print("a pozitif ve b 10'dan büyük")
+```
+Çıktı:
+```
+a pozitif ve b 10'dan büyük
+```
+**Örnek 7: match-case + Tuple Destructuring (Python 3.10+)**
+```
+nokta = (0, 5)
+
+match nokta:
+    case (0, y):
+        print(f"x=0, y={y}")
+    case (x, 0):
+        print(f"x={x}, y=0")
+    case _:
+        print("Başka nokta")
+```
+Çıktı: 
+```
+x=0, y=5
+```

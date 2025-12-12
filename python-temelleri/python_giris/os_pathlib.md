@@ -236,9 +236,51 @@ Traceback (most recent call last):
     raise NotImplementedError("Path.owner() is unsupported on this system")
 NotImplementedError: Path.owner() is unsupported on this system
 ```
+Windows’ta Path.owner() ve Path.group() çalışmaz. Python’ın pwd modülü yalnızca Linux / macOS içindir. 
+Windows’ta dosya sahibini öğrenmek için win32security (pywin32) kullanılır.
+Bunun için öncelikle conda ortamında "pywin32" kütüphanesi kurulmalıdır:
+```
+pip install pywin32
+```
+Kurulum tamamlanınca kodu aşağıdaki şekilde değiştirin:
+```
+from pathlib import Path
+import win32security
+import ntsecuritycon as con
+p = Path("d:/kisiler.xml")
 
+# Kontroller
+print(p.exists())  # Var mı?
+print(p.is_file())  # Dosya mı?
+print(p.is_dir())  # Dizin mi?
+print(p.is_absolute())  # Tam yol mu?
+print(p.is_symlink())  # Sembolik link mi?
 
+# Bilgiler
+print(p.stat().st_size)  # Boyut
+print(p.stat().st_mtime)  # Değişim zamanı
 
+def get_owner_windows(path):
+    path = str(path)
+    sd = win32security.GetFileSecurity(path, win32security.OWNER_SECURITY_INFORMATION)
+    owner_sid = sd.GetSecurityDescriptorOwner()
+    name, domain, type = win32security.LookupAccountSid(None, owner_sid)
+    return f"{domain}\\{name}"
+
+p = Path("ornek.bin")
+print("Dosya Sahibi:", get_owner_windows(p))
+```
+Çıktı:
+```
+True
+True
+False
+True
+False
+169
+1765555436.0935638
+Dosya Sahibi: TURKER\b_tur
+```
 
 
 

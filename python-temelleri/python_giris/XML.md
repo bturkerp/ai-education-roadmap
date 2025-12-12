@@ -97,7 +97,7 @@ tree.write("d:\kisiler_guncel.xml", encoding="utf-8")
 ```
 import xml.etree.ElementTree as ET
 
-tree = ET.parse("kisiler.xml")
+tree = ET.parse("d:\kisiler.xml")
 root = tree.getroot()
 
 # İsmi Ali olan kişiyi sil
@@ -108,7 +108,23 @@ for kisi in root.findall("kisi"):
 tree.write("kisiler_silindi.xml", encoding="utf-8")
 ```
 
+## 🎨 Görsel XML (pretty print)
+```
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
+def prettify(elem):
+    """XML'i okunaklı hale getir"""
+    rough_string = ET.tostring(elem, encoding="utf-8")
+    reparsed = minidom.parseString(rough_string)
+    return reparsed.toprettyxml(indent="  ")
+
+# Kullanım
+root = ET.Element("test")
+ET.SubElement(root, "child").text = "text"
+pretty_xml = prettify(root)
+print(pretty_xml)
+```
 
 
 

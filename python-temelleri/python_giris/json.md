@@ -144,6 +144,23 @@ csv_to_json("kisiler.csv", "kisiler.json")
 ✅ kisiler.csv → kisiler.json dönüştürüldü
 ```
 
+## 🔄 String ve JSON Dönüşümü
+```
+import json
+
+# Python dict → JSON string
+veri = {"isim": "Ali", "yas": 25}
+json_string = json.dumps(veri, ensure_ascii=False, indent=2)
+print("JSON String:", json_string)
+
+# JSON string → Python dict
+python_dict = json.loads(json_string)
+print("Python Dict:", python_dict)
+```
+Çıktı: 
+```
+
+```
 
 
 

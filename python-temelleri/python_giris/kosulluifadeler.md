@@ -16,7 +16,7 @@ Python'da temel koşul ifadeleri `if`, `elif` ve `else` ile yapılır.
 
 ---
 
-### Örnek 1: Basit if-else
+### Basit if-else
 
 ```
 python
@@ -31,7 +31,7 @@ else:
 
 Çıktı: Pozitif olacaktır. 
 
-### Örnek 2: if-elif-else ile çoklu kontrol
+### if-elif-else ile çoklu kontrol
 ```
 python
 
@@ -44,7 +44,7 @@ else:
     print("negatif")
 ```
 
-### Örnek 3: Mantıksal operatörler ile koşullar
+### Mantıksal operatörler ile koşullar
 ```
 python
 
@@ -65,6 +65,24 @@ En az biri pozitif
 a negatif değil
 ```
 
+## İç içe if kullanımı
+```
+python
+
+x = 15
+
+if x > 0:
+    print("Pozitif")
+    if x % 2 == 0:
+        print("Çift sayı")
+    else:
+        print("Tek sayı")
+```
+Çıktı: 
+```
+Pozitif
+Tek sayı
+```
 
 
 

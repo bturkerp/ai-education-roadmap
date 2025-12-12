@@ -61,3 +61,25 @@ Dizin: .
 Alt dizinler: []
 Dosyalar: ['Best Model.docx', ..., '~$st Model.docx', '~$Sunu1.pptx', '~WRD0122.tmp', '~WRL3927.tmp']
 ```
+#### 📝 Dosya/Dizin Oluşturma/Silme
+```
+import os
+
+# Dizin oluştur
+os.mkdir("yeni_klasor")  # Tek dizin
+os.makedirs("a/b/c")  # İç içe dizinler (recursive)
+os.makedirs("dizin", exist_ok=True)  # Varsa hata vermez
+
+# Dosya oluştur
+with open("yeni_dosya.txt", "w") as f:
+    f.write("Merhaba")
+
+# Dosya/dizin sil
+os.remove("dosya.txt")  # Dosya sil
+os.rmdir("bos_klasor")  # Boş dizin sil
+os.removedirs("a/b/c")  # İç içe boş dizinleri sil
+
+# Yeniden adlandır/taşı
+os.rename("eski.txt", "yeni.txt")
+os.replace("kaynak.txt", "hedef.txt")  # Üzerine yazar
+```

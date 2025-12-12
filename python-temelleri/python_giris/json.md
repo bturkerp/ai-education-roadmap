@@ -159,7 +159,11 @@ print("Python Dict:", python_dict)
 ```
 Çıktı: 
 ```
-
+JSON String: {
+  "isim": "Ali",
+  "yas": 25
+}
+Python Dict: {'isim': 'Ali', 'yas': 25}
 ```
 
 

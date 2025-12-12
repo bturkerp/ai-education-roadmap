@@ -213,7 +213,28 @@ print(p.group())  # Grubu
 ```
 Çıktı:
 ```
+True
+True
+False
+True
+False
+169
+1765555436.0935638
+Traceback (most recent call last):
+  File "C:\Users\b_tur\.conda\envs\tf\lib\pathlib.py", line 342, in owner
+    import pwd
+ModuleNotFoundError: No module named 'pwd'
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\input(x).py", line 15, in <module>
+    print(p.owner())  # Sahibi
+  File "C:\Users\b_tur\.conda\envs\tf\lib\pathlib.py", line 1103, in owner
+    return self._accessor.owner(self)
+  File "C:\Users\b_tur\.conda\envs\tf\lib\pathlib.py", line 345, in owner
+    raise NotImplementedError("Path.owner() is unsupported on this system")
+NotImplementedError: Path.owner() is unsupported on this system
 ```
 
 

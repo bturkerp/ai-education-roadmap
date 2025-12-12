@@ -170,3 +170,44 @@ print(os.stat("kisiler.xml").st_gid)  # Group ID
 0
 0
 ```
+
+## 🛣️ PATHLIB MODÜLÜ (Modern Yol İşlemleri)
+### 🎯 Path Objesi Oluşturma
+```
+from pathlib import Path
+
+# Path oluşturma yolları
+p1 = Path("dosya.txt")  # Mevcut dizinde
+p2 = Path("/home/user/dosya.txt")  # Tam yol
+p3 = Path("klasor") / "alt" / "dosya.txt"  # Zincirleme
+p4 = Path.cwd() / "dosya.txt"  # Mevcut dizinle birleştirme
+p5 = Path.home() / "Desktop" / "dosya.txt"  # Home dizini
+
+print(f"Home dizini: {Path.home()}")
+print(f"Mevcut dizin: {Path.cwd()}")
+```
+Çıktı:
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

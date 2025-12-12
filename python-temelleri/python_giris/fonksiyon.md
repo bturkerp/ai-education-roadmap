@@ -65,15 +65,46 @@ def bilgiler(isim, yas):
 
 bilgiler(yas=30, isim="Ayşe")
 bilgiler(isim="Mehmet", yas=50)
+bilgiler("Hülya", yas=20)
 ```
 Çıktı:
 ```
 Ayşe 30 yaşında
 Mehmet 50 yaşında
+Hülya 20 yaşında
 ```
 
+## *args – Belirsiz Sayıda Pozisyonel Parametre
+```
+def toplam(*sayilar):
+    return sum(sayilar)
 
+print(toplam(1, 2, 3))
+print(toplam(4, 5))
+```
+Çıktı:
+```
+6
+9
+```
 
+## **kwargs – Belirsiz Sayıda Anahtar Kelime Parametre
+```
+def bilgiler(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+bilgiler(isim="Ali", yas=25, sehir="İzmir")
+bilgiler(isim="Ayşe", yas=15)
+```
+Çıktı:
+```
+isim: Ali
+yas: 25
+sehir: İzmir
+isim: Ayşe
+yas: 15
+```
 
 
 

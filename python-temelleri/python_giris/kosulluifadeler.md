@@ -112,8 +112,24 @@ match x:
 İki
 ```
 
+### String ile match-case
+```
+python
 
+meyve = "elma"
 
+match meyve:
+    case "elma":
+        print("Elma seçildi")
+    case "armut":
+        print("Armut seçildi")
+    case _:
+        print("Başka bir meyve")
+```
+Çıktı:
+```
+Elma seçildi
+```
 
 
 

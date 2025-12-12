@@ -101,5 +101,7 @@ with open("kisiler.csv", "r", encoding="utf-8") as f:
 ```
 Çıktı:
 ```
-
+['İsim', 'Yaş', 'Şehir']
+['Ayşe', '30', 'Ankara']
 ```
+

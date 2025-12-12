@@ -147,4 +147,22 @@ match nokta:
     case _:
         print("Başka nokta")
 ```
+Çıktı:
+```
+x=0, y=1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -237,5 +237,8 @@ def csv_kontrol_et(dosya_adi):
 # Kullanım
 csv_kontrol_et("yeni_kisiler.csv")
 ```
-
+Çıktı:
+```
+✅ Dosya düzgün
+```
 

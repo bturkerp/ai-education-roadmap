@@ -46,21 +46,24 @@ Binary dosya örneği.
 
 ## 📋 Binary Dosya Kopyalama
 ```
-# Küçük dosyalar için
-with open("ornek.bin", "rb") as kaynak:
-    icerik = kaynak.read()
+buyuk_veri = b"X" * 10000  
+with open("buyuk.bin", "wb") as f:
+    f.write(buyuk_veri)
 
-with open("kopya_ornek.bin", "wb") as hedef:
-    hedef.write(icerik)
+data = b"Merhaba Python!"
+with open("dosya.bin", "wb") as f:
+    f.write(data)
 
-# Büyük dosyalar için (bellek dostu)
-with open("buyuk_dosya.bin", "rb") as kaynak, \
-     open("kopya_buyuk.bin", "wb") as hedef:
-    
-    while True:
-        bolum = kaynak.read(4096)  # 4KB bloklar halinde oku
-        if not bolum:
-            break
+with open("dosya.bin", "rb") as f:
+    okunan = f.read()
+    print(okunan)  
+
+with open("dosya.bin", "rb") as kaynak:
+    with open("kopya.bin", "wb") as hedef:
+        hedef.write(kaynak.read())
+
+with open("buyuk.bin", "rb") as kaynak, open("kopya_buyuk.bin", "wb") as hedef:
+    while bolum := kaynak.read(4096):  # 4KB bloklar
         hedef.write(bolum)
 ```
 

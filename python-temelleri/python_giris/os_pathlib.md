@@ -87,3 +87,28 @@ with open("d:/kaynak.txt", "w") as f:
 os.rename("d:/eski.txt", "d:/yeni.txt")
 os.replace("d:/kaynak.txt", "d:/hedef.txt")  # Üzerine yazar
 ```
+
+#### 🔗 Path İşlemleri (os.path)
+```
+import os
+
+dosya_yolu = "/home/user/dosyalar/resim.jpg"
+
+# Path parçalarını ayır
+print(os.path.split(dosya_yolu))  # ('/home/user/dosyalar', 'resim.jpg')
+print(os.path.dirname(dosya_yolu))  # /home/user/dosyalar
+print(os.path.basename(dosya_yolu))  # resim.jpg
+print(os.path.splitext(dosya_yolu))  # ('/home/user/dosyalar/resim', '.jpg')
+
+# Path birleştirme
+print(os.path.join("klasor", "alt", "dosya.txt"))  # klasor/alt/dosya.txt
+
+# Path normalleştirme
+print(os.path.normpath("a/./b/../c"))  # a/c
+print(os.path.abspath("goreceli/yol"))  # Tam yol
+print(os.path.relpath("/a/b/c", "/a"))  # b/c (relative path)
+
+# Sürücü bilgisi (Windows)
+if os.name == 'nt':  # Windows
+    print(os.path.splitdrive("C:/Windows"))  # ('C:', '/Windows')
+```

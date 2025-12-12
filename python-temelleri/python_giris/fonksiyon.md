@@ -47,6 +47,8 @@ print(sonuc)
 ```
 
 ## 4. Varsayılan Parametreler (Default Arguments)
+- Fonksiyon parametresine bir değer atarsak, fonksiyon çağrılırken bu parametre verilmezse varsayılan değeri kullanır.  
+- Bu, özellikle opsiyonel parametreler için idealdir.
 ```
 def selamla(isim="Kullanıcı"):
     print(f"Merhaba, {isim}!")
@@ -61,6 +63,8 @@ Merhaba, Mehmet!
 ```
 
 ## 5. Anahtar argümanlar (Keyword Arguments)
+Fonksiyon çağrılırken parametreleri anahtar = değer şeklinde vermek.
+Parametre sırasını değiştirebilme esnekliği sağlar.
 ```
 def bilgiler(isim, yas):
     print(f"{isim} {yas} yaşında")
@@ -75,7 +79,10 @@ Ayşe 30 yaşında
 Mehmet 50 yaşında
 Hülya 20 yaşında
 ```
-
+Açıklama:
+- Sıra fark etmez, hangi argümanın hangi parametreye karşılık geldiğini açıkça gösterir.
+- Özellikle çok parametreli fonksiyonlarda okunabilirliği artırır.
+  
 ## 6. *args – Belirsiz Sayıda Pozisyonel Parametre
 Fonksiyonun belirsiz sayıda parametre almasını sağlar.
 *args → pozisyonel parametreleri listeler
@@ -198,6 +205,8 @@ Merhaba! Python!
 ```
 
 ## 13. Fonksiyon İle Koşullu İşlem
+Fonksiyon içinde koşullar kullanarak farklı senaryoları yönetmek.
+Eğer kullanıcı farklı parametreler gönderirse farklı sonuçlar üretmek için idealdir.
 ```
 def buyukten_kucuge(a, b):
     if a > b:

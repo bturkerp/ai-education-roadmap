@@ -52,9 +52,46 @@ for kisi in root.findall("kisi"):
 İsim: Ayşe, Yaş: 30
 ```
 
+## 🔍 Element Bulma
+```
+import xml.etree.ElementTree as ET
 
+tree = ET.parse("kisiler.xml")
+root = tree.getroot()
 
+# İlk kisi elementi
+ilk_kisi = root.find("kisi")
 
+# Tüm kisi elementleri
+tum_kisiler = root.findall("kisi")
+
+# İsmi Ali olan kişi
+ali = root.find(".//kisi[isim='Ali']")
+
+# XPath kullanarak
+yas_25 = root.findall(".//kisi[yas='25']")
+```
+
+## ✏️ XML Düzenleme
+```
+import xml.etree.ElementTree as ET
+
+tree = ET.parse("kisiler.xml")
+root = tree.getroot()
+
+# Yeni kişi ekle
+yeni_kisi = ET.SubElement(root, "kisi")
+ET.SubElement(yeni_kisi, "isim").text = "Mehmet"
+ET.SubElement(yeni_kisi, "yas").text = "35"
+
+# Yaşını güncelle
+for kisi in root.findall("kisi"):
+    if kisi.find("isim").text == "Ali":
+        kisi.find("yas").text = "26"
+
+# Kaydet
+tree.write("kisiler_guncel.xml", encoding="utf-8")
+```
 
 
 

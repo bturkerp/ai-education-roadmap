@@ -159,7 +159,7 @@ bash
 |--------------------|--------------------------|-------------------------------|
 | Print              | `print "Merhaba"`        | `print("Merhaba")`           |
 | Bölme `/`           | Integer bölme            | Float bölme                  |
-| String             | ASCII default, `u""`     | Unicode default              |
+| String             | ASCII default     | Unicode default              |
 | Range              | `range/xrange`           | `range` (generator)          |
 | input/raw_input     | `input/raw_input`        | `input` (string)             |
 | Exception          | `except E, e`            | `except E as e`              |

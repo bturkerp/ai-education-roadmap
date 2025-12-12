@@ -141,10 +141,10 @@ ET.SubElement(urun1, "fiyat").text = "5000"
 
 # Attribute'ları oku
 tree = ET.ElementTree(root)
-tree.write("urunler.xml", encoding="utf-8")
+tree.write("d:\\urunler.xml", encoding="utf-8")
 
 # Okuma
-tree = ET.parse("urunler.xml")
+tree = ET.parse("d:\\urunler.xml")
 for urun in tree.findall("urun"):
     print(f"ID: {urun.get('id')}")
     print(f"Kategori: {urun.get('kategori')}")

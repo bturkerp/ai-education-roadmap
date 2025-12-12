@@ -5,6 +5,7 @@ Python, öğrenmesi kolay, çok yönlü ve güçlü bir programlama dilidir. Web
 ---
 
 ##  İlk Python Programı
+Visual studio'yu açın. "File" menüsündeki "New File/Python File" seçin. Örnek kodu yazın. 
 Python kodlarını `.py` uzantılı dosyalarda yazabilir veya interaktif olarak çalıştırabilirsiniz.
 **Örnek: Merhaba Dünya**
 ```

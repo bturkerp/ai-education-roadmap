@@ -31,7 +31,7 @@ else:
 
 Çıktı: Pozitif olacaktır. 
 
-Biraz daha karmaşık bir örnek 
+### Örnek 2: if-elif-else ile çoklu kontrol
 ```
 python
 
@@ -43,3 +43,37 @@ elif x==0:
 else:
     print("negatif")
 ```
+
+### Örnek 3: Mantıksal operatörler ile koşullar
+```
+python
+
+a = 5
+b = 10
+
+if a > 0 and b > 0:
+    print("Her ikisi de pozitif")
+if a > 0 or b < 0:
+    print("En az biri pozitif")
+if not a < 0:
+    print("a negatif değil")
+```
+Çıktı:
+```
+Her ikisi de pozitif
+En az biri pozitif
+a negatif değil
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

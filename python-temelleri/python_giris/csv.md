@@ -25,5 +25,12 @@ with open("kisiler.csv", "w", newline="", encoding="utf-8") as f:
     yazici.writerows(veriler)
 ```
 
+📖 CSV'den Okuma
+```
+import csv
 
-
+with open("kisiler.csv", "r", encoding="utf-8") as f:
+    okuyucu = csv.reader(f)
+    for satir in okuyucu:
+        print(satir)
+```

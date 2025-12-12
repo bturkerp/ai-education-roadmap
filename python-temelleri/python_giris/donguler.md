@@ -179,5 +179,22 @@ Merhaba, Ayşe!
 Merhaba, Mehmet!
 ```
 
+### Sonsuz Döngü
+- while True: ile sonsuz döngü oluşturulur.
+- break ile sonlandırılır.
+```
+x = 0
+while True:
+    print(x)
+    x += 1
+    if x >= 3:
+        break
+```
+x=4 olduğunda break komutu çalışarak döngüyü kırmasa bu döngü sonsuza kadar çalışırdı. Çıktı:
+```
+0
+1
+2
+```
 
 

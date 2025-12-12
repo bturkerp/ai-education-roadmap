@@ -61,8 +61,24 @@ Ayşe 30
 Mehmet 35
 ```
 
+🔧 JSON Ayarları
+```
+import json
 
+veri = {"isim": "Ali", "yas": 25}
 
+# 1. İndent (girinti) ile yazma
+with open("girintili.json", "w", encoding="utf-8") as f:
+    json.dump(veri, f, indent=4, ensure_ascii=False)
+
+# 2. Sıralı yazma
+with open("sirali.json", "w", encoding="utf-8") as f:
+    json.dump(veri, f, sort_keys=True, indent=2)
+
+# 3. Tek satırda yazma
+with open("tek_satir.json", "w", encoding="utf-8") as f:
+    json.dump(veri, f, separators=(',', ':'))
+```
 
 
 

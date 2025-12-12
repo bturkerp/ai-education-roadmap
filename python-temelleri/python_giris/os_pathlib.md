@@ -29,3 +29,29 @@ False
 1765556124.344498
 1765555225.5427828
 ```
+
+### 📂 Dizin İşlemleri
+```
+import os
+
+# Çalışma dizinini değiştir
+os.chdir("C:/Users")  # Windows
+os.chdir("/home/user")  # Linux/Mac
+
+# Mevcut çalışma dizini
+print(os.getcwd())
+
+# Dizin içeriğini listele
+print(os.listdir("."))  # Mevcut dizin
+print(os.listdir(".."))  # Üst dizin
+
+# Tüm dosyaları listele (alt dizinlerle)
+for kok, dizinler, dosyalar in os.walk("."):
+    print(f"Dizin: {kok}")
+    print(f"Alt dizinler: {dizinler}")
+    print(f"Dosyalar: {dosyalar}")
+```
+Çıktı:
+```
+
+```

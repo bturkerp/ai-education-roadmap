@@ -282,7 +282,27 @@ False
 Dosya Sahibi: TURKER\b_tur
 ```
 
+### 📂 Path Parçaları
+```
+from pathlib import Path
 
+p = Path("/home/user/dosyalar/resim.jpg")
+
+# Parçalara ayırma
+print(p.name)  # resim.jpg
+print(p.stem)  # resim (uzantısız)
+print(p.suffix)  # .jpg
+print(p.suffixes)  # ['.tar', '.gz'] (birden fazla uzantı)
+print(p.parent)  # /home/user/dosyalar
+print(p.parents[0])  # Bir üst: /home/user/dosyalar
+print(p.parents[1])  # İki üst: /home/user
+print(p.anchor)  # Kök: / (Linux) veya C:\ (Windows)
+print(p.parts)  # ('/', 'home', 'user', 'dosyalar', 'resim.jpg')
+```
+Çıktı:
+```
+
+```
 
 
 

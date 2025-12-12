@@ -44,6 +44,19 @@ print(sonuc)
 25
 ```
 
+# 4. Varsayılan Parametreler (Default Arguments)
+```
+def selamla(isim="Kullanıcı"):
+    print(f"Merhaba, {isim}!")
+
+selamla()
+selamla("Mehmet")
+```
+Çıktı:
+```
+Merhaba, Kullanıcı!
+Merhaba, Mehmet!
+```
 
 
 

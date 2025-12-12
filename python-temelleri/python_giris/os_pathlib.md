@@ -88,7 +88,7 @@ os.rename("d:/eski.txt", "d:/yeni.txt")
 os.replace("d:/kaynak.txt", "d:/hedef.txt")  # Üzerine yazar
 ```
 
-#### 🔗 Path İşlemleri (os.path)
+### 🔗 Path İşlemleri (os.path)
 ```
 import os
 
@@ -125,7 +125,7 @@ b\c
 ('C:', '/Windows')
 ```
 
-#### ⚙️ Sistem Bilgileri
+### ⚙️ Sistem Bilgileri
 ```
 import os
 
@@ -145,4 +145,26 @@ environ({'ACSETUPSVCPORT': '23210', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDA
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.0\;C:\Program Files\Git\cmd;C:\Users\b_tur\AppData\Local\Microsoft\WindowsApps;C:\Users\b_tur\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\b_tur\.conda\envs\tf210;C:\Users\b_tur\.conda\envs\tf210\Scripts;C:\Users\b_tur\.conda\envs\tf210\Library\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;
 b_tur
 '\r\n'
+```
+
+### 🔐 Dosya İzinleri
+```
+import os
+import stat
+
+# İzinleri değiştir
+os.chmod("dosya.txt", stat.S_IRWXU)  # Sahibi: tüm izinler
+os.chmod("dosya.txt", stat.S_IRUSR | stat.S_IWUSR)  # Sahibi: okuma+yazma
+
+# İzinleri oku
+izinler = os.stat("dosya.txt").st_mode
+print(stat.filemode(izinler))  # -rw-r--r--
+
+# Sahip bilgisi
+print(os.stat("dosya.txt").st_uid)  # User ID
+print(os.stat("dosya.txt").st_gid)  # Group ID
+```
+Çıktı: 
+```
+
 ```

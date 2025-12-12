@@ -66,7 +66,7 @@ print(x or y)   # Mantıksal VEYA
 print(not x)    # Mantıksal DEĞİL
 ```
 
-[## 5. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
+## [5. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
 ```
 sayi = 10
 
@@ -79,7 +79,7 @@ else:
 ```
 Eğer sayı 0'dan büyükse "Sayı pozitifdir" eğer sayı 0 ise "Sayı sıfırdır" eksi halde "Sayı negatifdir" yazar.
 
-[## 8. Döngüler](donguler.md)
+## [6. Döngüler](donguler.md)
 **For Döngüsü:**
 ```
 for i in range(5):

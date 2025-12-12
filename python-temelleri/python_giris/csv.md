@@ -40,3 +40,25 @@ with open("kisiler.csv", "r", encoding="utf-8") as f:
 ['Ali', '25', 'İstanbul']
 ['Ayşe', '30', 'Ankara']
 ```
+
+📋 Sözlük Formatında Okuma/Yazma
+```
+# Yazma
+kisiler = [
+    {"isim": "Ali", "yas": 25, "sehir": "İstanbul"},
+    {"isim": "Ayşe", "yas": 30, "sehir": "Ankara"}
+]
+
+with open("kisiler_dict.csv", "w", newline="", encoding="utf-8") as f:
+    alanlar = ["isim", "yas", "sehir"]
+    yazici = csv.DictWriter(f, fieldnames=alanlar)
+    yazici.writeheader()
+    yazici.writerows(kisiler)
+
+# Okuma
+with open("kisiler_dict.csv", "r", encoding="utf-8") as f:
+    okuyucu = csv.DictReader(f)
+    for kayit in okuyucu:
+        print(f"{kayit['isim']} - {kayit['yas']} - {kayit['sehir']}")
+```
+

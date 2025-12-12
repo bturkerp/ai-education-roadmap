@@ -432,6 +432,13 @@ from pathlib import Path
 import os
 
 # OS vs Pathlib karşılaştırması
+from pathlib import Path
+import os
+
+# ÖNCE 'x' DOSYASINI OLUŞTUR
+Path("x").write_text("test içerik", encoding="utf-8")
+Path("x").mkdir(exist_ok=True)  # x adında bir klasör de oluştur
+
 print("="*50)
 print("OS MODÜLÜ                        PATHLIB")
 print("="*50)
@@ -442,6 +449,9 @@ print(f"os.path.getsize('x')          {Path('x').stat().st_size}")
 print(f"os.listdir('.')               {list(Path('.').iterdir())}")
 print(f"os.mkdir('x')                 Path('x').mkdir()")
 print(f"os.remove('x')                Path('x').unlink()")
+
+# Temizlik
+Path("x").unlink(missing_ok=True)
 ```
 Çıktı:
 ```

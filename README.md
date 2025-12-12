@@ -42,19 +42,19 @@ ai-education-roadmap/
 Python programlama dilinin temelleri.
 Değişkenler, fonksiyonlar, döngüler, veri yapıları ve örnek uygulamalar içerir.
 
-📗 2. numpy-ve-pandas/
+[📗 2. numpy-ve-pandas/](numpy-ve-pandas/README.md)
 
 Bilimsel hesaplama için gerekli diziler, matris işlemleri, veri çerçeveleri ve temel veri manipülasyonu.
 
-📙 3. makine-ogrenmesi-temel/
+[📙 3. makine-ogrenmesi-temel/](makine-ogrenmesi-temel/README.md)
 
 Regresyon, sınıflandırma, train/test ayrımı, model değerlendirme metrikleri, temel ML algoritmaları.
 
-📕 4. derin-ogrenme-giris/
+[📕 4. derin-ogrenme-giris/](derin-ogrenme-giris/README.md)
 
 Yapay sinir ağları, aktivasyon fonksiyonları, katman tipleri ve basit model kurulumları.
 
-📒 5. cnn-temelleri/
+[📒 5. cnn-temelleri/](cnn-temelleri/README.md)
 
 Convolution mantığı, pooling katmanları, basit CNN modeli eğitimi, CIFAR örnekleri.
 

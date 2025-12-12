@@ -14,7 +14,8 @@ print("Merhaba, Dünya!")
 ```
 
 ## 4. Yorum Satırları
-Python'da yorum satırları # ile başlar.
+Python'da yorum satırları # ile başlar. Yorumda yazanlar program işletimi sırasında dikkate alınmaz. Sadece bilgi verme 
+amaçlı kullanılır. 
 ```
 python
 

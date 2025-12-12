@@ -166,7 +166,25 @@ JSON String: {
 Python Dict: {'isim': 'Ali', 'yas': 25}
 ```
 
+## ✅ Özet
 
+| İşlem | Fonksiyon | Açıklama |
+|-------|----------|----------|
+| **Yazma** | `json.dump()` | Dosyaya yazar |
+| **Okuma** | `json.load()` | Dosyadan okur |
+| **String Yazma** | `json.dumps()` | String'e çevirir |
+| **String Okuma** | `json.loads()` | String'den okur |
+| **Türkçe Karakter** | `ensure_ascii=False` | Türkçe için gerekli |
+| **Format** | `indent=2` | Okunaklı yazar |
+
+---
+
+## 💡 İpuçları
+
+1. **`ensure_ascii=False`** Türkçe karakterler için şart  
+2. **`indent`** parametresi okunabilirliği artırır  
+3. JSON sadece belirli tipleri destekler: `dict`, `list`, `str`, `int`, `float`, `bool`, `None`  
+4. Datetime gibi özel tipler JSON'a direk yazılamaz, string'e çevrilmeli
 
 
 

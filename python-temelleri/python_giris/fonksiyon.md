@@ -164,4 +164,32 @@ print(kareler(sayilar))
 [1, 4, 9, 16]
 ```
 
+## Fonksiyonları Başka Fonksiyonlara Parametre Olarak Gönderme
+```
+def selamla():
+    return "Merhaba!"
 
+def mesaj(fonk):
+    print(fonk() + " Python!")
+
+mesaj(selamla)
+```
+Çıktı:
+```
+Merhaba! Python!
+```
+
+## Fonksiyon İle Koşullu İşlem
+```
+def buyukten_kucuge(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+print(buyukten_kucuge(10, 20))
+```
+Çıktı:
+```
+20
+```

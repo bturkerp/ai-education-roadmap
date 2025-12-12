@@ -161,7 +161,23 @@ Koşula uyan sayılar 2 ve 4 olduğu için Çıktı:
 [4, 16]
 ```
 
+### Döngüde Fonksiyon Kullanımı
+```
+def selamla(isim):
+    return f"Merhaba, {isim}!"
 
+isimler = ["Ali", "Ayşe", "Mehmet"]
+
+for isim in isimler:
+    print(selamla(isim))
+
+```
+Çıktı:
+```
+Merhaba, Ali!
+Merhaba, Ayşe!
+Merhaba, Mehmet!
+```
 
 
 

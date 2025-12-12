@@ -105,3 +105,17 @@ with open("kisiler.csv", "r", encoding="utf-8") as f:
 ['Ayşe', '30', 'Ankara']
 ```
 
+📊 Pandas ile CSV İşlemleri
+```
+import pandas as pd
+
+# Okuma
+df = pd.read_csv("kisiler.csv")
+print(df)
+
+# Yazma
+df.to_csv("yeni_kisiler.csv", index=False)
+
+# Filtreleme
+buyuk_25 = df[df["Yaş"] > 25]
+```

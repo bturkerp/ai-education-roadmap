@@ -23,7 +23,7 @@ python
 print("Yorum satırları kodu etkilemez")
 ```
 
-## 5. Değişkenler ve Veri Tipleri (degiskenlerveveritipleri.md)
+## [5. Değişkenler ve Veri Tipleri](degiskenlerveveritipleri.md)
 Python’da değişkenler dinamik olarak oluşturulur ve veri tipleri otomatik atanır.
 **Temel veri tipleri:**
 - int → Tam sayılar

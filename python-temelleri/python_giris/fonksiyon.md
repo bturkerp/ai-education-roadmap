@@ -151,6 +151,17 @@ print(faktoriyel(5))
 120
 ```
 
+## Fonksiyon ile Liste İşleme
+```
+def kareler(liste):
+    return [x**2 for x in liste]
 
+sayilar = [1, 2, 3, 4]
+print(kareler(sayilar))
+```
+Çıktı:
+```
+[1, 4, 9, 16]
+```
 
 

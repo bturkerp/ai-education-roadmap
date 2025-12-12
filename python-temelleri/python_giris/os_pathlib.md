@@ -92,7 +92,7 @@ os.replace("d:/kaynak.txt", "d:/hedef.txt")  # Üzerine yazar
 ```
 import os
 
-dosya_yolu = "/home/user/dosyalar/resim.jpg"
+dosya_yolu = "D:/COVID/CBU Dataset/Pozitif/Covid (1).jpg"
 
 # Path parçalarını ayır
 print(os.path.split(dosya_yolu))  # ('/home/user/dosyalar', 'resim.jpg')
@@ -111,4 +111,16 @@ print(os.path.relpath("/a/b/c", "/a"))  # b/c (relative path)
 # Sürücü bilgisi (Windows)
 if os.name == 'nt':  # Windows
     print(os.path.splitdrive("C:/Windows"))  # ('C:', '/Windows')
+```
+Çıktı:
+```
+('D:/COVID/CBU Dataset/Pozitif', 'Covid (1).jpg')
+D:/COVID/CBU Dataset/Pozitif
+Covid (1).jpg
+('D:/COVID/CBU Dataset/Pozitif/Covid (1)', '.jpg')
+klasor\alt\dosya.txt
+a\c
+C:\Users\b_tur\goreceli\yol
+b\c
+('C:', '/Windows')
 ```

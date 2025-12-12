@@ -53,6 +53,11 @@ Dosya işlemleri çok kolay!
 ['Python öğreniyorum.\n', 'Dosya işlemleri çok kolay!\n']
 ```
 
+## Dosyaya Ekleme (append)
+```
+with open("veri.txt", "a") as f:
+    f.write("Yeni bir satır eklendi.\n")
+```
 
 
 

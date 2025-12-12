@@ -58,15 +58,15 @@ Yapay sinir ağları, aktivasyon fonksiyonları, katman tipleri ve basit model k
 
 Convolution mantığı, pooling katmanları, basit CNN modeli eğitimi, CIFAR örnekleri.
 
-📘 6. veri-artirma/
+[📘 6. veri-artirma/](veri-artirma/README.md)
 
 Görüntü artırma teknikleri, tf.keras ve ImageDataGenerator kullanımı, veri hazırlama pipeline'ları.
 
-📗 7. optimization-giris/
+[📗 7. optimizasyon-giris/](optimization-giris/README.md)
 
 Optimizasyon algoritmalarına giriş: GA, PSO gibi yöntemler için temel kavramlar ve örnek problemler.
 
-📙 8. quantum-giris/
+[📙 8. quantum-giris/](quantum-giris/README.md)
 
 Qubit nedir, kapılar nedir, kuantum devreleri ve basit bir kuantum makine öğrenmesi (QNN) tanıtımı.
 

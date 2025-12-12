@@ -119,3 +119,9 @@ df.to_csv("yeni_kisiler.csv", index=False)
 # Filtreleme
 buyuk_25 = df[df["Yaş"] > 25]
 ```
+Çıktı:
+```
+   İsim  Yaş     Şehir
+0   Ali   25  İstanbul
+1  Ayşe   30    Ankara
+```

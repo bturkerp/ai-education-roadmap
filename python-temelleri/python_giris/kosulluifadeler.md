@@ -208,6 +208,16 @@ Mesaj Python içeriyor
 Mesaj Java içermiyor
 ```
 
+**Örnek 4: Liste Elemanlarını Koşullu Filtreleme**
+```
+sayilar = [1, -2, 3, -4, 5]
+pozitifler = [x for x in sayilar if x > 0]
+print(pozitifler)
+```
+Çıktı:
+```
+[1, 3, 5]
+```
 
 
 

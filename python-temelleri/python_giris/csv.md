@@ -34,3 +34,9 @@ with open("kisiler.csv", "r", encoding="utf-8") as f:
     for satir in okuyucu:
         print(satir)
 ```
+Çıktı:
+```
+['İsim', 'Yaş', 'Şehir']
+['Ali', '25', 'İstanbul']
+['Ayşe', '30', 'Ankara']
+```

@@ -36,6 +36,7 @@ ai-education-roadmap/
 └── quantum-giris/
 ```
 🧠 İçerik Açıklamaları
+
 📘 1. python-temelleri/
 
 Python programlama dilinin temelleri.

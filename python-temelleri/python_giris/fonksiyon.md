@@ -106,8 +106,19 @@ isim: Ayşe
 yas: 15
 ```
 
+## Lambda Fonksiyonları (Anonim Fonksiyon)
+```
+kare = lambda x: x**2
+topla = lambda a, b: a+b
 
-
+print(kare(5))
+print(topla(3, 7))
+```
+Çıktı:
+```
+25
+10
+```
 
 
 

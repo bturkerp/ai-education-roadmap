@@ -48,7 +48,8 @@ for kisi in root.findall("kisi"):
 ```
 
 ```
-
+İsim: Ali, Yaş: 25
+İsim: Ayşe, Yaş: 30
 ```
 
 

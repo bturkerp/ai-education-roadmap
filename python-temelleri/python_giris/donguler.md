@@ -36,3 +36,33 @@ for i in range(5):
 3
 4
 ```
+### range(start, stop, step)
+```
+for i in range(2, 10, 2):
+    print(i)
+```
+Çıktı:
+```
+2
+4
+6
+8
+```
+
+##While Döngüsü
+while döngüsü, koşul doğru olduğu sürece çalışır.
+```
+x = 0
+
+while x < 5:
+    print(x)
+    x += 1
+```
+Çıktı:
+```
+0
+1
+2
+3
+4
+```

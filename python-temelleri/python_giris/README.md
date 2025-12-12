@@ -83,8 +83,18 @@ elif sayi == 0:
 else:
     print("Sayı negatiftir")
 ```
+Eğer sayı 0'dan büyükse "Sayı pozitifdir" eğer sayı 0 ise "Sayı sıfırdır" eksi halde "Sayı negatifdir" yazar.
 
+## 8. Döngüler
+**For Döngüsü:**
+```
+python
 
+for i in range(5):
+    print("Sayı:", i)
+```
+
+While Döngüsü:
 
 
 

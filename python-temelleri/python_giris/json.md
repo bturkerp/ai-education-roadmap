@@ -115,7 +115,7 @@ json_kontrol(json_string)
 ```
 Çıktı: 
 ```
-
+✅ Geçerli JSON
 ```
 
 

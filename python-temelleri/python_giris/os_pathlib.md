@@ -153,18 +153,20 @@ import os
 import stat
 
 # İzinleri değiştir
-os.chmod("dosya.txt", stat.S_IRWXU)  # Sahibi: tüm izinler
-os.chmod("dosya.txt", stat.S_IRUSR | stat.S_IWUSR)  # Sahibi: okuma+yazma
+os.chmod("kisiler.xml", stat.S_IRWXU)  # Sahibi: tüm izinler
+os.chmod("kisiler.xml", stat.S_IRUSR | stat.S_IWUSR)  # Sahibi: okuma+yazma
 
 # İzinleri oku
-izinler = os.stat("dosya.txt").st_mode
+izinler = os.stat("kisiler.xml").st_mode
 print(stat.filemode(izinler))  # -rw-r--r--
 
 # Sahip bilgisi
-print(os.stat("dosya.txt").st_uid)  # User ID
-print(os.stat("dosya.txt").st_gid)  # Group ID
+print(os.stat("kisiler.xml").st_uid)  # User ID
+print(os.stat("kisiler.xml").st_gid)  # Group ID
 ```
 Çıktı: 
 ```
-
+-rw-rw-rw-
+0
+0
 ```

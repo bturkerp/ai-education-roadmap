@@ -21,7 +21,7 @@ Metin dosyalarının aksine, binary dosyalar ham veri olarak okunur ve yazılır
 ## ✍️ Binary Dosyaya Yazma
 
 ```
-data = b"Merhaba Python!\nBinary dosya örneği."
+data = b"Hello Python!\nBinary file example."
 with open("ornek.bin", "wb") as f:
     f.write(data)
 ```

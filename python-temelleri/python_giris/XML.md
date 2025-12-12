@@ -150,7 +150,11 @@ for urun in tree.findall("urun"):
     print(f"Kategori: {urun.get('kategori')}")
     print(f"Ad: {urun.find('ad').text}")
 ```
-
-
+Çıktı:
+```
+ID: 1
+Kategori: elektronik
+Ad: Laptop
+```
 
 

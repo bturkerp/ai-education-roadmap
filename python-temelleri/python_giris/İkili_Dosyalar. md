@@ -41,6 +41,7 @@ print(icerik.decode("utf-8"))
 Merhaba Python!
 Binary dosya örneği.
 ```
+
 ## 4️⃣ Binary Dosya Kopyalama
 ```
 with open("ornek.bin", "rb") as kaynak:
@@ -51,17 +52,5 @@ with open("kopya_ornek.bin", "wb") as hedef:
 ```
 Açıklama:
 Binary dosyalar resim, video veya özel veri dosyalarında aynı şekilde kopyalanabilir.
-
-
-
-
-
-
-
-
-
-
-
-
 
 

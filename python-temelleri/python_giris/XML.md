@@ -177,3 +177,7 @@ root = tree.getroot()
 veri_dict = xml_to_dict(root)
 print(veri_dict)
 ```
+Çıktı:
+```
+{'kisi': {'isim': 'Ayşe', 'yas': '30'}}
+```

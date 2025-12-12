@@ -277,7 +277,25 @@ for satir in matris:
 7 8 9 
 ```
 
-
+**Örnek 4: Break ve Continue ile Karmaşık Koşul**
+```
+for i in range(1, 21):
+    if i == 15:
+        break
+    if i % 2 != 0:
+        continue
+    print(i)
+```
+Çıktı:
+```
+2
+4
+6
+8
+10
+12
+14
+```
 
 
 

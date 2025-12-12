@@ -404,7 +404,12 @@ yeni_p = p.with_name("yeni.txt")  # isim değiştir
 yeni_p = p.with_suffix(".jpg")  # uzantı değiştir
 yeni_p = p.with_stem("yenibaslik")  # stem değiştir
 ```
-
+Çıktı:
+```
+\a\b\c
+\a\b
+resimler\foto.jpg
+```
 
 
 

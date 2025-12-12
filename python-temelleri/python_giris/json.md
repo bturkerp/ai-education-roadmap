@@ -1,7 +1,7 @@
-📄 Python JSON Dosya İşlemleri Rehberi
+# 📄 Python JSON Dosya İşlemleri Rehberi
 JSON (JavaScript Object Notation), veri alışverişi için hafif bir format.
 
-📝 JSON'a Yazma
+## 📝 JSON'a Yazma
 ```
 import json
 
@@ -12,12 +12,11 @@ veri = {
     "hobiler": ["spor", "müzik", "kitap"]
 }
 
-# JSON dosyasına yaz
 with open("kisi.json", "w", encoding="utf-8") as f:
     json.dump(veri, f, ensure_ascii=False, indent=4)
 ```
 
-📖 JSON'dan Okuma
+## 📖 JSON'dan Okuma
 ```
 import json
 
@@ -33,7 +32,7 @@ Ali
 spor
 ```
 
-📋 Liste Formatında JSON
+## 📋 Liste Formatında JSON
 ```
 import json
 
@@ -61,7 +60,7 @@ Ayşe 30
 Mehmet 35
 ```
 
-🔧 JSON Ayarları
+## 🔧 JSON Ayarları
 ```
 import json
 
@@ -80,7 +79,7 @@ with open("tek_satir.json", "w", encoding="utf-8") as f:
     json.dump(veri, f, separators=(',', ':'))
 ```
 
-➕ JSON'a Veri Ekleme
+## ➕ JSON'a Veri Ekleme
 ```
 import json
 
@@ -96,6 +95,28 @@ with open("kisiler.json", "w", encoding="utf-8") as f:
     json.dump(kisiler, f, ensure_ascii=False, indent=2)
 ```
 
+## 🔍 JSON Doğrulama (Validasyon)
+```
+import json
+
+json_string = '{"isim": "Ali", "yas": 25}'
+
+# Geçerli JSON mu kontrol et
+def json_kontrol(json_str):
+    try:
+        json.loads(json_str)
+        print("✅ Geçerli JSON")
+        return True
+    except json.JSONDecodeError as e:
+        print(f"❌ JSON hatası: {e}")
+        return False
+
+json_kontrol(json_string)
+```
+Çıktı: 
+```
+
+```
 
 
 

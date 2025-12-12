@@ -214,6 +214,19 @@ for satir in buyuk_csv_oku("cok_buyuk.csv"):
     print(satir)
 ```
 
-
+## 5. CSV Doğrulama (Validasyon)
+```
+def csv_kontrol_et(dosya_adi):
+    with open(dosya_adi, "r", encoding="utf-8") as f:
+        okuyucu = csv.reader(f)
+        satirlar = list(okuyucu)
+        
+        # Tüm satırlar aynı sayıda sütuna sahip mi?
+        sutun_sayisi = len(satirlar[0])
+        for i, satir in enumerate(satirlar[1:], start=2):
+            if len(satir) != sutun_sayisi:
+                print(f"Uyarı: {i}. satırda sütun sayısı farklı!")
+csv_kontrol_et(yeni_kisiler.csv)
+```
 
 

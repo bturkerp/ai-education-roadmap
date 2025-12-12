@@ -84,8 +84,33 @@ Pozitif
 Tek sayı
 ```
 
+## 2. match-case (Python 3.10+)
+| Yapı     | Açıklama                             |
+|----------|-------------------------------------|
+| match    | Değişkeni kontrol eder               |
+| case     | Belirli değere eşleşirse çalışır     |
+| case _   | Hiçbir case eşleşmezse çalışır (default) |
 
+### Basit match-case kullanımı
+```
+python
 
+x = 2
+
+match x:
+    case 1:
+        print("Bir")
+    case 2:
+        print("İki")
+    case 3:
+        print("Üç")
+    case _:
+        print("Diğer")
+```
+Çıktı:
+```
+İki
+```
 
 
 

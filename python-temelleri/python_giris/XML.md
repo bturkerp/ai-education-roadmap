@@ -181,3 +181,28 @@ print(veri_dict)
 ```
 {'kisi': {'isim': 'Ayşe', 'yas': '30'}}
 ```
+
+## 🔄 XML ↔ JSON Dönüşümü
+```
+import json
+import xml.etree.ElementTree as ET
+
+def xml_to_json(xml_dosya, json_dosya):
+    """XML'i JSON'a çevir"""
+    tree = ET.parse(xml_dosya)
+    root = tree.getroot()
+    
+    def elem_to_dict(elem):
+        result = {}
+        for child in elem:
+            if len(child) == 0:
+                result[child.tag] = child.text
+            else:
+                result[child.tag] = elem_to_dict(child)
+        return result
+    
+    veri = elem_to_dict(root)
+    
+    with open(json_dosya, "w", encoding="utf-8") as f:
+        json.dump(veri, f, ensure_ascii=False, indent=2)
+```

@@ -18,10 +18,28 @@ Python'da temel koşul ifadeleri `if`, `elif` ve `else` ile yapılır.
 
 ### Örnek 1: Basit if-else
 
-```python
+```
+python
+
 x = 10
 
 if x > 0:
     print("Pozitif")
 else:
     print("Negatif veya Sıfır")
+```
+
+Çıktı: Pozitif olacaktır. 
+
+Biraz daha karmaşık bir örnek 
+```
+python
+
+x=int(input("Lütfen bir tamsayı giriniz: "))
+if x>0: 
+    print("pozitif")
+elif x==0:
+    print("sıfır")
+else:
+    print("negatif")
+```

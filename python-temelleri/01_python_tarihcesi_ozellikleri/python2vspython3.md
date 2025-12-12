@@ -40,3 +40,52 @@ print(5 // 2)  # 2
 Python 3’te / her zaman float döner, tam sayı bölme için // kullanılır.
 
 
+## 3. Unicode ve Stringler
+
+**Python 2:**
+```
+python
+
+s = "merhaba"       # ASCII string
+u = u"merhaba"      # Unicode string
+```
+
+**Python 3:**
+```
+python
+
+s = "merhaba"       # Unicode string (varsayılan)
+b = b"merhaba"      # Byte string
+```
+
+## 4. Range ve Xrange
+**Python 2:**
+```
+python
+
+for i in range(5):  # Liste döndürür
+    print(i)
+
+for i in xrange(5): # Hafıza dostu generator
+    print(i)
+```
+
+**Python 3:**
+```
+python
+for i in range(5):  # Hafıza dostu iterable
+    print(i)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

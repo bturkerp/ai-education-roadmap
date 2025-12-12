@@ -136,18 +136,27 @@ print(C)
 - Socket programlama
 - HTTP istekleri (requests kütüphanesi)
 - REST API istemcileri ve sunucuları
+**Örnek: HTTP isteği**
+```
+Python
 
+import requests
 
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.json())
+```
 
+## 8. Siber Güvenlik ve Pentesting
+Python, güvenlik testleri ve otomasyon için de kullanılır:
+- Scapy → Paket oluşturma ve analiz
+- Paramiko → SSH bağlantıları
+- Impacket → Ağ protokol testleri
 
+## 9. Robotik ve Nesnelerin Interneti (IoT)
+- Raspberry Pi ve MicroPython ile robotik ve IoT projeleri geliştirilebilir.
+- Sensör okumaları, cihaz kontrolü ve otomasyon yapılabilir.
 
-
-
-
-
-
-
-
-
-
-
+## 10. Eğitim ve Araştırma
+- Kolay öğrenilebilirliği nedeniyle eğitimde tercih edilir.
+- Akademik araştırmalarda veri analizi ve simülasyon için yaygın kullanılır.

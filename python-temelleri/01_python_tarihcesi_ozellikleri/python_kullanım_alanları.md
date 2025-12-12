@@ -73,3 +73,81 @@ model = LinearRegression()
 model.fit(X, y)
 print(model.predict([[5]]))  # Tahmin: 10
 ```
+
+## 4. Otomasyon ve Scripting
+Python, günlük işleri otomatikleştirmek için çok uygundur:
+- Dosya ve klasör işlemleri
+- Web scraping (BeautifulSoup, Selenium)
+- Excel ve PDF otomasyonu (openpyxl, PyPDF2)
+Örnek: Dosya adı değiştirme
+```
+Python
+
+import os
+
+for filename in os.listdir("."):
+    if filename.endswith(".txt"):
+        new_name = filename.replace(".txt", "_yeni.txt")
+        os.rename(filename, new_name)
+
+```
+
+## 5. Oyun Geliştirme
+Python, oyun geliştirme ve prototip oluşturmak için kullanılır:
+- Pygame → 2D oyun geliştirme
+- Godot-Python → Godot motoru entegrasyonu
+Örnek: Basit Pygame pencere
+```
+Python
+
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 300))
+pygame.display.set_caption("Python Oyun")
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+pygame.quit()
+```
+
+## 6. Bilimsel ve Mühendislik Uygulamaları
+- SymPy → Sembolik matematik
+- SciPy → Bilimsel hesaplamalar
+- NumPy → Lineer cebir ve sayısal hesaplamalar
+- Matplotlib / Mayavi → Veri görselleştirme
+Örnek: Matris çarpımı
+```
+Python
+
+import numpy as np
+
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+C = np.dot(A, B)
+print(C)
+```
+## 7. Ağ Programlama ve İnternet Uygulamaları
+- Socket programlama
+- HTTP istekleri (requests kütüphanesi)
+- REST API istemcileri ve sunucuları
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

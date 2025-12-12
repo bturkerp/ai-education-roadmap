@@ -157,7 +157,7 @@ with open("kopya_ornek.txt", "wb") as hedef:
 
 ## İleri Düzey Dosya İşlemleri
 - [İkili Dosyalar (Binary Files) (Detay İçin Tıklayın Lütfen)](binary.md)
-- CSV Dosyalar
+- [CSV Dosyalar (Detay İçin Tıklayın Lütfen)](CSV.md)
 - JSON Dosyalar
 - XML Dosyalar
 - os ve pathlib kullanımı

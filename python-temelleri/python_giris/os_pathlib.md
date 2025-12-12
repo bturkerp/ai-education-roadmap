@@ -426,48 +426,35 @@ if link.is_symlink():
     print(f"Link hedefi: {link.resolve()}")
 ```
 
-## 📊 Özellik Özeti
-```
-from pathlib import Path
-import os
+## ✅ Özet Tablosu
 
-# OS vs Pathlib karşılaştırması
-from pathlib import Path
-import os
+| İşlem | OS Modülü | Pathlib | Açıklama |
+|-------|-----------|---------|----------|
+| **Varlık kontrol** | `os.path.exists()` | `Path().exists()` | Dosya/dizin var mı? |
+| **Dosya mı?** | `os.path.isfile()` | `Path().is_file()` | Dosya kontrolü |
+| **Dizin mi?** | `os.path.isdir()` | `Path().is_dir()` | Dizin kontrolü |
+| **Boyut** | `os.path.getsize()` | `Path().stat().st_size` | Dosya boyutu |
+| **Listeleme** | `os.listdir()` | `Path().iterdir()` | Dizin içeriği |
+| **Dizin oluştur** | `os.mkdir()` | `Path().mkdir()` | Yeni dizin |
+| **Dosya sil** | `os.remove()` | `Path().unlink()` | Dosya sil |
+| **Dizin sil** | `os.rmdir()` | `Path().rmdir()` | Boş dizin sil |
+| **Yeniden adlandır** | `os.rename()` | `Path().rename()` | İsim değiştir |
+| **Path birleştir** | `os.path.join()` | `Path() / "alt"` | Zincirleme |
+| **Üst dizin** | `os.path.dirname()` | `Path().parent` | Bir üst dizin |
+| **Dosya adı** | `os.path.basename()` | `Path().name` | Dosya ismi |
+| **Uzantı** | `os.path.splitext()` | `Path().suffix` | Dosya uzantısı |
+| **Tam yol** | `os.path.abspath()` | `Path().resolve()` | Mutlak yol |
+| **Pattern arama** | `glob.glob()` | `Path().glob()` | Pattern match |
 
-# Önce dosya oluştur
-Path("ornek.txt").touch()
+---
 
-print("="*40)
-print("KARŞILAŞTIRMA")
-print("="*40)
+## 🏆 Öneriler
 
-print(f"os.path.exists: {os.path.exists('ornek.txt')}")
-print(f"Path().exists:  {Path('ornek.txt').exists()}")
-
-print(f"\nos.path.isfile: {os.path.isfile('ornek.txt')}")
-print(f"Path().is_file:  {Path('ornek.txt').is_file()}")
-
-print(f"\nos.path.getsize: {os.path.getsize('ornek.txt')}")
-print(f"Path().stat:      {Path('ornek.txt').stat().st_size}")
-
-# Temizlik
-Path("ornek.txt").unlink()
-```
-Çıktı:
-```
-========================================
-KARŞILAŞTIRMA
-========================================
-os.path.exists: True
-Path().exists:  True
-
-os.path.isfile: True
-Path().is_file:  True
-
-os.path.getsize: 0
-Path().stat:      0
-```
+1. **Yeni projelerde Pathlib kullanın** - Daha modern ve Pythonic  
+2. **OS modülünü** eski kodlar veya spesifik sistem çağrıları için kullanın  
+3. **Cross-platform** uyumluluk için Pathlib tercih edin  
+4. **Performans** için büyük dizinlerde `os.scandir()` kullanın  
+5. **Pathlib + OS** kombinasyonu güçlü bir çözümdür
 
 
 

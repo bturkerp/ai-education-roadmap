@@ -78,6 +78,26 @@ with open("kopya_resim.jpg", "wb") as hedef:
     hedef.write(resim_verisi)
 ```
 
+## 🔍 Binary Veriyi Analiz Etme
+```
+with open("ornek.bin", "rb") as f:
+    icerik = f.read()
+    
+    # Byte sayısı
+    print(f"Toplam byte: {len(icerik)}")
+    
+    # İlk 10 byte'ı hex olarak göster
+    print(f"İlk 10 byte (hex): {icerik[:10].hex()}")
+    
+    # İlk 10 byte'ı decimal olarak göster
+    print(f"İlk 10 byte (decimal): {list(icerik[:10])}")
+```
+Çıktı: 
+```
+Toplam byte: 38
+İlk 10 byte (hex): 4d657268616261205079
+İlk 10 byte (decimal): [77, 101, 114, 104, 97, 98, 97, 32, 80, 121]
+```
 
 
 

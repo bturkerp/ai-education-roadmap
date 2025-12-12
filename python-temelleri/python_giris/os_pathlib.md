@@ -5,22 +5,27 @@
 import os
 
 # Dosya/dizin var mı?
-print(os.path.exists("dosya.txt"))  # True/False
+print(os.path.exists("kisiler.xml"))  # True/False
 
 # Dosya mı?
-print(os.path.isfile("dosya.txt"))  # True
+print(os.path.isfile("kisiler.xml"))  # True
 
 # Dizin mi?
 print(os.path.isdir("klasor"))  # True
 
 # Boyut (byte)
-print(os.path.getsize("dosya.txt"))  # 1024
+print(os.path.getsize("kisiler.xml"))  # 1024
 
 # Son erişim/değiştirme zamanı
-print(os.path.getatime("dosya.txt"))  # timestamp
-print(os.path.getmtime("dosya.txt"))
+print(os.path.getatime("kisiler.xml"))  # timestamp
+print(os.path.getmtime("kisiler.xml"))
 ```
 Çıktı:
 ```
-
+True
+True
+False
+169
+1765556124.344498
+1765555225.5427828
 ```

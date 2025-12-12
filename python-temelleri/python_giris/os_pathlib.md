@@ -414,15 +414,34 @@ resimler\foto.jpg
 ### 🔗 Sembolik Link İşlemleri
 ```
 from pathlib import Path
+import os
 
 # Sembolik link oluştur
-hedef = Path("orjinal.txt")
-link = Path("link.txt")
-link.symlink_to(hedef)
+hedef = Path("d:/urunler.xml")
+link = Path("d:/link.txt")
+os.link("d:/urunler.xml", "d:/link.txt")
 
 # Sembolik linki oku
 if link.is_symlink():
     print(f"Link hedefi: {link.resolve()}")
+```
+
+## 📊 Özellik Özeti
+```
+from pathlib import Path
+import os
+
+# OS vs Pathlib karşılaştırması
+print("="*50)
+print("OS MODÜLÜ                        PATHLIB")
+print("="*50)
+print(f"os.path.exists('x')           {Path('x').exists()}")
+print(f"os.path.isfile('x')           {Path('x').is_file()}")
+print(f"os.path.isdir('x')            {Path('x').is_dir()}")
+print(f"os.path.getsize('x')          {Path('x').stat().st_size}")
+print(f"os.listdir('.')               {list(Path('.').iterdir())}")
+print(f"os.mkdir('x')                 Path('x').mkdir()")
+print(f"os.remove('x')                Path('x').unlink()")
 ```
 Çıktı:
 ```

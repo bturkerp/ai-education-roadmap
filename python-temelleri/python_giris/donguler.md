@@ -378,4 +378,27 @@ for harf in kelime:
 PYTHON PROGRMMING
 ```
 
+**Örnek 10: Sonsuz Döngü + Kullanıcı Girişi**
+```
+while True:
+    sayi = input("Pozitif bir sayı girin (çıkmak için q): ")
+    if sayi.lower() == "q":
+        print("Döngüden çıkıldı")
+        break
+    if int(sayi) < 0:
+        print("Negatif sayı, tekrar deneyin")
+        continue
+    print(f"Girdiğiniz sayı: {sayi}")
 
+```
+Çıktı:
+```
+Pozitif bir sayı girin (çıkmak için q): -2
+Negatif sayı, tekrar deneyin
+Pozitif bir sayı girin (çıkmak için q): 5
+Girdiğiniz sayı: 5
+Pozitif bir sayı girin (çıkmak için q): 7
+Girdiğiniz sayı: 7
+Pozitif bir sayı girin (çıkmak için q): q
+Döngüden çıkıldı
+```

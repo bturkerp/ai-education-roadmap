@@ -1,32 +1,20 @@
 # 🗄️ Python İkili Dosyalar (Binary Files)
-
 Python’da ikili dosyalar (binary files), genellikle **resim, ses, video veya özel veri formatları** için kullanılır.  
 Metin dosyalarının aksine, binary dosyalar **ham veri** olarak okunur ve yazılır.
-
 ---
-
 ## 1️⃣ Binary Dosya Açma Modları
-
 | Mod  | Açıklama |
 |------|----------|
 | "rb" | Binary okuma |
 | "wb" | Binary yazma (varsa üzerine yazar) |
 | "ab" | Binary ekleme (append) |
-
 > Not: Binary modda okuma/yazma yapılırken veriler `bytes` tipindedir.
-
 ---
-
 ## 2️⃣ Binary Dosyaya Yazma
-
-```
-# Binary dosya yazma
 data = b"Merhaba Python!\nBinary dosya örneği."
-
 with open("ornek.bin", "wb") as f:
     f.write(data)
 ```
-
 Açıklama:
 - b → byte literal, binary veriyi temsil eder.
 - "wb" → dosya yoksa oluşturur, varsa üzerine yazar.
@@ -52,10 +40,8 @@ print(icerik.decode("utf-8"))
 Merhaba Python!
 Binary dosya örneği.
 ```
-
 ## 4️⃣ Binary Dosya Kopyalama
 ```
-# Mevcut binary dosyayı kopyalama
 with open("ornek.bin", "rb") as kaynak:
     icerik = kaynak.read()
 

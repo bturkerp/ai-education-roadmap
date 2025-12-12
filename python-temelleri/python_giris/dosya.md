@@ -159,7 +159,7 @@ with open("kopya_ornek.txt", "wb") as hedef:
 - [İkili Dosyalar (Binary Files) (Detay İçin Tıklayın Lütfen)](binary.md)
 - [CSV Dosyalar (Detay İçin Tıklayın Lütfen)](csv.md)
 - [JSON Dosyalar (Detay İçin Tıklayın Lütfen)](json.md)
-- XML Dosyalar
+- [XML Dosyalar(Detay İçin Tıklayın Lütfen)](XML.md)
 - os ve pathlib kullanımı
 - Dosya Okuma Optimzasyonu
 - Context manager (with) kullanımı

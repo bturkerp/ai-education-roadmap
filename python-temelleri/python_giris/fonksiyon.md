@@ -134,8 +134,22 @@ print(dis_fonksiyon(5))
 26
 ```
 
+## Recursion (Özyinelemeli Fonksiyon)
+- Fonksiyon kendisini çağırır.
+- Örnek: Faktöriyel hesaplama
+```
+def faktoriyel(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktoriyel(n-1)
 
-
+print(faktoriyel(5))
+```
+Çıktı:
+```
+120
+```
 
 
 

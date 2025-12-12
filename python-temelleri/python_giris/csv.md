@@ -194,7 +194,10 @@ except FileNotFoundError:
 except csv.Error as e:
     print(f"CSV okuma hatası: {e}")
 ```
-
+Çıktı:
+```
+Dosya bulunamadı!
+```
 
 
 

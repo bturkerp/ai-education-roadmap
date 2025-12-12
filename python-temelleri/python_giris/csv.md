@@ -145,7 +145,25 @@ with open("kisiler_duzenli.csv", "w", newline="", encoding="utf-8") as f:
     yazici.writerows(satirlar)
 ```
 
+## ✅ Özet
 
+| İşlem | Kütüphane/Fonksiyon | Notlar |
+|-------|-------------------|--------|
+| **Okuma** | `csv.reader()` | Satır listesi olarak okur |
+| **Okuma** | `csv.DictReader()` | Sözlük formatında okur |
+| **Yazma** | `csv.writer()` | Listeleri CSV'ye yazar |
+| **Yazma** | `csv.DictWriter()` | Sözlükleri CSV'ye yazar |
+| **Hızlı İşlem** | `pandas.read_csv()` | Büyük veriler için |
+| **Yazma** | `pandas.to_csv()` | DataFrame'den CSV'ye |
+
+---
+
+## 💡 İpuçları
+
+1. **`newline=""`** parametresi satır sonu sorunlarını önler  
+2. **`encoding="utf-8"`** Türkçe karakterler için gereklidir  
+3. **DictReader/DictWriter** sütun isimleriyle çalışmayı kolaylaştırır  
+4. **Pandas** büyük CSV dosyaları için daha hızlıdır
 
 
 

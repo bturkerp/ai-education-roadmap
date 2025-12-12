@@ -126,6 +126,30 @@ pretty_xml = prettify(root)
 print(pretty_xml)
 ```
 
+## 📝 Attribute ile XML
+```
+import xml.etree.ElementTree as ET
+
+# Attribute'lu XML oluştur
+root = ET.Element("urunler")
+
+urun1 = ET.SubElement(root, "urun")
+urun1.set("id", "1")
+urun1.set("kategori", "elektronik")
+ET.SubElement(urun1, "ad").text = "Laptop"
+ET.SubElement(urun1, "fiyat").text = "5000"
+
+# Attribute'ları oku
+tree = ET.ElementTree(root)
+tree.write("urunler.xml", encoding="utf-8")
+
+# Okuma
+tree = ET.parse("urunler.xml")
+for urun in tree.findall("urun"):
+    print(f"ID: {urun.get('id')}")
+    print(f"Kategori: {urun.get('kategori')}")
+    print(f"Ad: {urun.find('ad').text}")
+```
 
 
 

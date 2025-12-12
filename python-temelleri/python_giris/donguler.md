@@ -90,7 +90,7 @@ for i in range(5):
         continue
     print(i)
 ```
-
+Çıktı:
 ```
 0
 1
@@ -98,8 +98,37 @@ for i in range(5):
 4
 ```
 
+### for-else
+- else bloğu, döngü normal şekilde tamamlanırsa çalışır.
+- break ile çıkılırsa else çalışmaz.
+```
+for i in range(3):
+    print(i)
+else:
+    print("Döngü tamamlandı")
 
-
+```
+Çıktı:
+```
+0
+1
+2
+Döngü tamamlandı
+```
+break ile else atlama
+```
+for i in range(5):
+    if i == 2:
+        break
+    print(i)
+else:
+    print("Döngü tamamlandı")
+```
+Çıktı:
+```
+0
+1
+```
 
 
 

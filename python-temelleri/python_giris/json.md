@@ -29,5 +29,6 @@ print(veri["hobiler"][0])  # spor
 ```
 Çıktı:
 ```
-
+Ali
+spor
 ```

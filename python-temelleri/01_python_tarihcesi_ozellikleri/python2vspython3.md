@@ -98,12 +98,35 @@ except ZeroDivisionError as e:
     print(e)
 ```
 
+## 6. input ve raw_input
+**Python 2:**
 
+```
+python
 
+x = raw_input("Bir şey gir: ")  # String alır
+y = input("Bir sayı gir: ")     # Python ifadesi olarak alır
+```
 
+**Python 3:**
+```
+python
 
+x = input("Bir şey gir: ")      # Tüm girdiler string
+y = int(input("Bir sayı gir: ")) # Tip dönüşümü ile sayı
+```
 
+## 7. Modül İsimleri ve Fonksiyonları
 
+- Python 2: urllib, urllib2
+
+- Python 3: urllib.request, urllib.parse
+
+- Python 2: dict.iteritems()
+
+- Python 3: dict.items()
+
+- Python 3’e next() fonksiyonu eklendi (.next() yerine)
 
 
 

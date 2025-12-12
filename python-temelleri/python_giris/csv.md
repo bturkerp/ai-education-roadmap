@@ -254,6 +254,7 @@ def csv_to_json(csv_dosya, json_dosya):
     
     with open(json_dosya, "w", encoding="utf-8") as f:
         json.dump(veriler, f, ensure_ascii=False, indent=2)
+csv_to_json("problemli.csv", "problemli.json")
 ```
 
 

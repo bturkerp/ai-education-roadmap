@@ -284,7 +284,27 @@ try:
 except ValueError:
     print("Geçerli bir sayı girmediniz")
 ```
+Kullanıcı 5 girerse Çıktı: "Pozitif", "abc" girerse "Geçerli bir sayı girmediniz" şeklinde olur. 
+
+**Örnek 11: Koşullu Döngü Kontrolü**
+```
+sayilar = [1, 2, 3, 4, 5]
+
+for x in sayilar:
+    if x % 2 == 0:
+        print(f"{x} çift")
+    else:
+        print(f"{x} tek")
+```
 Çıktı:
 ```
-Pozitif
+1 tek
+2 çift
+3 tek
+4 çift
+5 tek
 ```
+
+
+
+

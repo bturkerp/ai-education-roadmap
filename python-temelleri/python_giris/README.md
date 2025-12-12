@@ -13,8 +13,6 @@ Python, öğrenmesi kolay, çok yönlü ve güçlü bir programlama dilidir. Web
 
 **Örnek: Merhaba Dünya**
 ```
-python
-
 print("Merhaba, Dünya!")
 ```
 
@@ -22,8 +20,6 @@ print("Merhaba, Dünya!")
 Python'da yorum satırları # ile başlar. Yorumda yazanlar program işletimi sırasında dikkate alınmaz. Sadece bilgi verme 
 amaçlı kullanılır. 
 ```
-python
-
 # Bu bir yorum satırıdır
 print("Yorum satırları kodu etkilemez")
 ```
@@ -37,8 +33,6 @@ Python’da değişkenler dinamik olarak oluşturulur ve veri tipleri otomatik a
 - bool → Doğru / Yanlış değerler
 Örnek: Değişkenler
 ```
-python
-
 x = 10        # int
 y = 3.14      # float
 isim = "Ali"  # str
@@ -51,8 +45,6 @@ print(x, y, isim, aktif)
 Python’da matematiksel ve mantıksal işlemler için operatörler kullanılır.
 **Matematiksel Operatörler:**
 ```
-python
-
 a = 10
 b = 3
 
@@ -66,8 +58,6 @@ print(a ** b) # Üs alma
 ```
 **Mantıksal Operatörler:**
 ```
-python
-
 x = True
 y = False
 
@@ -78,8 +68,6 @@ print(not x)    # Mantıksal DEĞİL
 
 ## [7. Koşul İfadeleri (Lütfen Detay İçin Tıklayınız)](kosulluifadeler.md)
 ```
-python
-
 sayi = 10
 
 if sayi > 0:
@@ -91,17 +79,21 @@ else:
 ```
 Eğer sayı 0'dan büyükse "Sayı pozitifdir" eğer sayı 0 ise "Sayı sıfırdır" eksi halde "Sayı negatifdir" yazar.
 
-## 8. Döngüler
+[## 8. Döngüler](donguler.md)
 **For Döngüsü:**
 ```
-python
-
 for i in range(5):
     print("Sayı:", i)
 ```
 
-While Döngüsü:
+**While Döngüsü:**
+```
+x = 0
 
+while x < 5:
+    print(x)
+    x += 1
+```
 
 
 

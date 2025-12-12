@@ -188,10 +188,33 @@ print(f"Mevcut dizin: {Path.cwd()}")
 ```
 Çıktı:
 ```
-
+Home dizini: C:\Users\b_tur
+Mevcut dizin: C:\Users\b_tur
 ```
 
+### 🔍 Kontrol ve Bilgi Alma
+```
+from pathlib import Path
 
+p = Path("dosya.txt")
+
+# Kontroller
+print(p.exists())  # Var mı?
+print(p.is_file())  # Dosya mı?
+print(p.is_dir())  # Dizin mi?
+print(p.is_absolute())  # Tam yol mu?
+print(p.is_symlink())  # Sembolik link mi?
+
+# Bilgiler
+print(p.stat().st_size)  # Boyut
+print(p.stat().st_mtime)  # Değişim zamanı
+print(p.owner())  # Sahibi
+print(p.group())  # Grubu
+```
+Çıktı:
+```
+
+```
 
 
 

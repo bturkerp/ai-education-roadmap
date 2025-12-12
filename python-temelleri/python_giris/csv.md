@@ -182,9 +182,18 @@ with open("farkli.csv", "w", newline="", encoding="utf-8") as f:
     yazici = csv.writer(f, delimiter=";", quotechar="'", quoting=csv.QUOTE_MINIMAL)
 ```
 
+## 3. Hata Yönetimi
+```
+import csv
 
-
-
+try:
+    with open("olmayan.csv", "r") as f:
+        okuyucu = csv.reader(f)
+except FileNotFoundError:
+    print("Dosya bulunamadı!")
+except csv.Error as e:
+    print(f"CSV okuma hatası: {e}")
+```
 
 
 

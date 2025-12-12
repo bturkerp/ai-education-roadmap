@@ -118,6 +118,31 @@ json_kontrol(json_string)
 ✅ Geçerli JSON
 ```
 
+## 📊 CSV'den JSON'a Dönüşüm
+```
+import csv
+import json
+
+def csv_to_json(csv_dosya, json_dosya):
+    veriler = []
+    
+    with open(csv_dosya, "r", encoding="utf-8") as f:
+        okuyucu = csv.DictReader(f)
+        for satir in okuyucu:
+            veriler.append(satir)
+    
+    with open(json_dosya, "w", encoding="utf-8") as f:
+        json.dump(veriler, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ {csv_dosya} → {json_dosya} dönüştürüldü")
+
+# Kullanım
+csv_to_json("kisiler.csv", "kisiler.json")
+```
+Çıktı: 
+```
+
+```
 
 
 

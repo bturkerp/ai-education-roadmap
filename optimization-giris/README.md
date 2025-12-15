@@ -1,167 +1,271 @@
-# 🚀 Optimizasyona Giriş – Eğitim Serisi
+# 🚀 Optimizasyona Giriş – Kapsamlı Eğitim ve Referans Reposu
 
-Bu GitHub deposu, **optimizasyon alanına sistematik, katmanlı ve uygulamalı bir giriş**
-sunmak amacıyla hazırlanmış bir **eğitim serisidir**.
+Bu GitHub deposu, **optimizasyon literatüründe yer alan sezgisel, sezgisel‑üstü (metaheuristic), popülasyon temelli ve üst‑sezgisel (hyper‑heuristic) algoritmaların tamamını** sistematik, eğitsel ve uygulanabilir bir biçimde sunmak amacıyla hazırlanmıştır.
 
-Amaç; kullanıcıyı **matematiksel optimizasyondan** başlayarak  
-**sezgisel**, **sezgisel-üstü (metaheuristic)**,  
-**popülasyon temelli sezgisel-üstü** ve  
-**üst-sezgisel (hyper-heuristic)** algoritmalara kadar  
-**basitten karmaşığa** doğru ilerleyen bir öğrenme yolculuğuna çıkarmaktır.
+Bu repo bir *uygulama demosu* değil; **ders materyali, akademik referans ve endüstriyel prototip kaynağı** olarak tasarlanmış **yaşayan bir eğitim serisidir**.
 
-> 🎯 **Temel ilke:**  
-> Her yöntem önce *en sade haliyle* öğretilir, ardından gerçek dünya problemleri,
-> paralel hesaplama, GPU hızlandırma ve performans analizi ile derinleştirilir.
+> 🎯 **Ana hedef:**
+> Optimizasyonu, *"hangi algoritma daha iyi?"* sorusundan önce
+> *"hangi problemde, hangi koşulda, hangi algoritma neden çalışır?"* düzeyinde öğretmek.
 
 ---
 
-## 📚 Eğitim Felsefesi
+## 📚 Temel Eğitim Felsefesi
 
-Bu repo bir kod arşivi değil, **öğreten bir yapı**dır.
+Repo boyunca **tek ve değişmeyen bir öğretim şablonu** izlenir:
 
-- 🔹 Teori + sezgisel açıklama + kod birlikte verilir
-- 🔹 Eğitim akışı **basitten karmaşığa** ilerler
-- 🔹 Aynı problem farklı algoritmalarla çözülerek **karşılaştırmalı öğrenme** sağlanır
-- 🔹 Performans sadece çözüm kalitesiyle değil:
-  - **Fitness (amaç fonksiyonu değeri)**
-  - **Çalışma süresi (CPU / GPU)**
-  - **Enerji tüketimi (Joule / mWh)**
-  metrikleriyle değerlendirilir
+1. Algoritma ailesinin **literatürdeki konumu**
+2. **Sezgisel / algoritmik mantık** (soyut ve sade)
+3. **Basit matematiksel fonksiyon optimizasyonu**
+4. **Kısıtların eklenmesi**
+5. **Gerçek dünya problemleri**
+6. **Paralel (CPU) ve GPU destekli uygulamalar**
+7. **Fitness – süre – enerji tüketimi** karşılaştırmaları
 
----
-
-## 🧭 Repo Kapsamı ve Yol Haritası
-
-### 1️⃣ Matematiksel Optimizasyon Yöntemleri
-
-Optimizasyonun **teorik ve matematiksel temeli**.
-
-**Kapsam**
-- Doğrusal Programlama (LP)
-- Tamsayılı Programlama (IP)
-- Karma Tamsayılı Programlama (MIP)
-- Kısıtlı / kısıtsız optimizasyon
-
-**Yaklaşım**
-1. Basit matematiksel fonksiyonların optimizasyonu
-2. Lineer ve lineer olmayan kısıtlar
-3. Gerçek problemler:
-   - Üretim planlama
-   - Temel çizelgeleme örnekleri
+Eğitim akışı **daima basitten karmaşığa** ilerler.
 
 ---
 
-### 2️⃣ Basit Sezgisel (Heuristic) Yöntemler
+## 🧭 Algoritma Sınıflandırması (Literatür Tabanlı)
 
-\"Optimal\" yerine **hızlı ve kabul edilebilir** çözümler.
-
-**Örnekler**
-- Greedy algoritmalar
-- Local Search
-- Hill Climbing
-- Nearest Neighbor
-
-**Problemler**
-- Fonksiyon optimizasyonu
-- Basit araç rotalama
-- Kural tabanlı çizelgeleme
+Aşağıda repo kapsamında ele alınacak **tüm ana algoritma sınıfları**, literatürde kabul gören biçimiyle sunulmuştur.
 
 ---
 
-### 3️⃣ Sezgisel-Üstü (Metaheuristic) Algoritmalar
+## 1️⃣ Basit Sezgisel Algoritmalar (Heuristics)
 
-Yerel minimumlardan kaçabilen **gelişmiş arama stratejileri**.
+Bu algoritmalar, genellikle **problem‑özel**, **hızlı** ve **düşük hesaplama maliyetli** çözümler üretir. Optimal garanti yoktur; amaç *makul çözüm*dür.
 
-**Algoritmalar**
-- Simulated Annealing (SA)
-- Tabu Search (TS)
-- Variable Neighborhood Search (VNS)
+### 1.1 Greedy Yaklaşımlar
 
-**Eğitim Akışı**
-1. Soyut algoritmik model
-2. Basit fonksiyon optimizasyonu
-3. Gerçek problemler:
-   - Job / Flow Shop Scheduling
-   - Hemşire çizelgeleme
+* En iyi görünen adımı anlık olarak seçer
+* Global optimum garanti edilmez
+* Çok hızlıdır
 
----
+**Örnekler:**
 
-### 4️⃣ Popülasyon Temelli Sezgisel-Üstü Algoritmalar
+* Greedy knapsack
+* Earliest Due Date (EDD)
+* Shortest Processing Time (SPT)
 
-**Tek çözüm yerine çözüm popülasyonu** yaklaşımı.
-
-**Algoritmalar**
-- Genetik Algoritmalar (GA)
-- Parçacık Sürü Optimizasyonu (PSO)
-- Diferansiyel Evrim (DE)
-- Karınca Kolonisi Optimizasyonu (ACO)
-
-**Problemler**
-- Araç Rotalama Problemi (VRP)
-- Üretim ve bakım çizelgeleme
-- Kombinatoryal optimizasyon
+🔗 Detaylar: `01_basic_heuristics/greedy/`
 
 ---
 
-### 5️⃣ Üst-Sezgisel (Hyper-Heuristic) Algoritmalar
+### 1.2 Kural Tabanlı Sezgiseller
 
-> “Hangi sezgiseli, ne zaman, nasıl kullanmalıyım?”
+* Önceden tanımlanmış karar kuralları
+* İnsan uzman bilgisini yansıtır
 
-**Kapsam**
-- Sezgisel seçimi
-- Sezgisel üretimi
-- Online / Offline hyper-heuristic yaklaşımlar
+**Örnekler:**
 
-**Amaç**
-- Algoritma tasarım yükünü azaltmak
-- Genelleştirilebilir optimizasyon çerçeveleri geliştirmek
+* IF–THEN çizelgeleme kuralları
+* Öncelik kuralı tabanlı atamalar
 
----
-
-## ⚙️ Paralel Hesaplama ve Hızlandırma
-
-Sezgisel-üstü ve üst-sezgisel yöntemler için:
-
-### 🔹 CPU
-- Single-thread (referans)
-- Multi-threading
-- Multiprocessing
-
-### 🔹 GPU
-- GPU destekli temel modeller
-- GPU + multiprocessing
-- CPU vs GPU karşılaştırmaları
-
-Her yapı için:
-- Fitness
-- Süre
-- Enerji tüketimi
-ölçülür ve raporlanır.
+🔗 Detaylar: `01_basic_heuristics/rule_based/`
 
 ---
 
-## 📊 Performans Değerlendirme Kriterleri
+### 1.3 Local Search Türevleri
 
-- 📈 En iyi / ortalama fitness
-- ⏱️ Toplam süre & iterasyon süresi
-- 🔋 Enerji tüketimi
-- ⚖️ Algoritmalar arası karşılaştırma tabloları
+* Tek çözüm üzerinden komşuluk araması
+* Yerel iyileştirme odaklıdır
+
+**Alt türler:**
+
+* Hill Climbing
+* Steepest Descent
+* First Improvement
+
+🔗 Detaylar: `01_basic_heuristics/local_search/`
 
 ---
 
-## 🗂️ Önerilen Klasör Yapısı
+### 1.4 Problem‑Özel Yapıcı Sezgiseller
 
-```text
-optimization-series/
-│
-├── 01_mathematical_optimization/
-├── 02_basic_heuristics/
-├── 03_metaheuristics/
-├── 04_population_based/
-├── 05_hyper_heuristics/
-│
-├── benchmarks/
-├── experiments/
-├── utils/
-└── README.md
+* Belirli bir problem için tasarlanır
+* Yüksek problem bilgisi içerir
 
+**Örnekler:**
+
+* VRP için yapıcı rotalama sezgiselleri
+* Çizelgeleme için sıralama sezgiselleri
+
+🔗 Detaylar: `01_basic_heuristics/constructive/`
+
+---
+
+## 2️⃣ Sezgisel‑Üstü Algoritmalar (Metaheuristics)
+
+Metaheuristics, **genel amaçlı**, **problem‑bağımsız** arama stratejileridir. Temel hedef, **yerel minimumlardan kaçabilmektir**.
+
+### 2.1 Trajectory‑Based Metaheuristics
+
+> ❗ Hayır, sadece SA–TS–VNS değildir.
+
+**Tanım:**
+
+* Tek çözüm üzerinde ilerler
+* Arama uzayında bir "yörünge" izler
+
+**Alt Türler ve Örnekler:**
+
+* Simulated Annealing (SA)
+* Tabu Search (TS)
+* Variable Neighborhood Search (VNS)
+* Iterated Local Search (ILS)
+* Guided Local Search (GLS)
+
+🔗 Detaylar: `02_metaheuristics/trajectory_based/`
+
+---
+
+### 2.2 Memory‑Based Metaheuristics
+
+* Geçmiş çözümleri kullanır
+* Uzun / kısa dönem hafıza içerir
+
+**Örnekler:**
+
+* Tabu Search (ileri seviye varyantlar)
+* Scatter Search
+
+---
+
+## 3️⃣ Popülasyon Temelli Sezgisel‑Üstü Algoritmalar
+
+Bu algoritmalar **tek çözüm yerine çözüm popülasyonu** ile çalışır.
+
+> ❗ Hayır, sadece GA ve PSO değildir.
+
+---
+
+### 3.1 Evrimsel Algoritmalar
+
+**Alt Türler:**
+
+* Genetic Algorithms (GA)
+* Differential Evolution (DE)
+* Evolution Strategies (ES)
+* Genetic Programming (GP)
+
+**Temel Bileşenler:**
+
+* Seçilim
+* Çaprazlama
+* Mutasyon
+
+🔗 Detaylar: `03_population_based/evolutionary/`
+
+---
+
+### 3.2 Sürü Zekâsı (Swarm Intelligence)
+
+**Örnekler:**
+
+* Particle Swarm Optimization (PSO)
+* Ant Colony Optimization (ACO)
+* Artificial Bee Colony (ABC)
+* Firefly Algorithm (FA)
+* Bat Algorithm
+
+🔗 Detaylar: `03_population_based/swarm/`
+
+---
+
+### 3.3 Biyolojik, Fiziksel ve Sosyal Metafor Tabanlı Algoritmalar
+
+Bu grup, doğa ve sosyal sistemlerden ilham alan geniş bir aileyi kapsar.
+
+**Biyolojik:**
+
+* Immune Algorithms
+* Bacterial Foraging
+
+**Fiziksel:**
+
+* Gravitational Search Algorithm
+* Simulated Annealing (fizik kökenli)
+
+**Sosyal:**
+
+* Teaching–Learning Based Optimization (TLBO)
+* Social Spider Algorithm
+
+🔗 Detaylar: `03_population_based/metaphor_based/`
+
+---
+
+## 4️⃣ Üst‑Sezgisel (Hyper‑Heuristic) Algoritmalar
+
+Hyper‑heuristics, **"sezgiseller üzerinde çalışan sezgiseller"**dir.
+
+### 4.1 Sezgisel Seçimi (Heuristic Selection)
+
+* Hangi sezgisel ne zaman seçilmeli?
+* Online / offline yaklaşımlar
+
+**Örnekler:**
+
+* Rule‑based hyper‑heuristics
+* Learning‑based selection
+
+---
+
+### 4.2 Sezgisel Üretimi (Heuristic Generation)
+
+* Yeni sezgiseller üretir
+
+**Örnekler:**
+
+* Genetic Programming tabanlı HH
+* Grammar‑based HH
+
+---
+
+### 4.3 Öğrenme Tabanlı Hyper‑Heuristics
+
+* Reinforcement Learning
+* Multi‑armed bandit
+* Neural hyper‑heuristics
+
+🔗 Detaylar: `04_hyper_heuristics/`
+
+---
+
+## ⚙️ Paralel ve GPU Destekli Uygulamalar
+
+Her algoritma için:
+
+* Single‑thread (referans)
+* Multi‑threading
+* Multiprocessing
+* GPU destekli sürümler
+
+karşılaştırmalı olarak sunulur.
+
+---
+
+## 📊 Performans Ölçütleri
+
+* Fitness
+* Süre
+* Enerji tüketimi
+* Ölçeklenebilirlik
+
+---
+
+## 🎓 Nihai Amaç
+
+Bu repo sonunda:
+
+* Akademik derslerde kullanılabilir
+* Q1 dergi deney altyapısı sunan
+* Endüstriyel problemlere uyarlanabilir
+* Literatürdeki algoritmaları **tek çatı altında toplayan**
+
+**referans bir optimizasyon deposu** oluşturulması hedeflenmektedir.
+
+---
+
+> ✨ *"Algoritmayı yazmak değil, doğru yerde kullanmak ustalıktır."*

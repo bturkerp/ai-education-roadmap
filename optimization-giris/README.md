@@ -38,18 +38,18 @@ Bu yöntemler, uygun varsayımlar altında **optimal çözüm garantisi** sunar.
 
 ### 0.1 Doğrusal Programlama (LP)
 
-* Simplex
-* Interior Point
+* Simplex Algoritması
+* İç Nokta (Interior Point) Algoritması
 
 ### 0.2 Tamsayılı Programlama (IP)
 
-* Branch and Bound
-* Cutting Planes
+* Dal-Sınır (Branch and Bound) Algoritması
+* Kesme Düzlemleri (Cutting Planes Algoritmaı
 
 ### 0.3 Karma Tamsayılı Programlama (MIP)
 
-* Branch and Cut
-* Branch and Price
+* Dal ve kesme (Branch and Cut) Algoritması
+* Dal ve Fiyat (Branch and Price) Algoritması
 
 ### 0.4 Hedef Programlama (Goal Programming)
 
@@ -58,9 +58,9 @@ Bu yöntemler, uygun varsayımlar altında **optimal çözüm garantisi** sunar.
 
 ### 0.5 Doğrusal Olmayan Programlama (NLP)
 
-* Convex optimization
-* Non-convex optimization
-* Gradient / Newton yöntemleri
+* Dışbükey Optimizasyon (Convex optimization)
+* Dışbükey olmayan optimizasyon (Non-convex optimization)
+* Gradyan / Newton yöntemleri (Gradient / Newton methods)
 * KKT koşulları
 
 ### 0.6 Dinamik Programlama (DP)

@@ -34,7 +34,82 @@ optimization-repo/
 - Yerel vs. global optimum, konvekslik, olurluluk bölgesi  
 - Optimallik koşulları (1. ve 2. derece şartlar)
 
-### 📌 Katkıda Bulunma
+### 🔢 [02 – Kesin Çözüm Yöntemleri](02-Exact-Methods/)
+- **Doğrusal Programlama**: Simpleks, iç-nokta, dualite, ulaşım/ata ma problemleri  
+- **Tamsayılı Programlama**: Dal-Sınır, kesme düzlemleri, MIP, 0-1 modeller  
+- **Dinamik Programlama**: Bellman ilkesi, deterministik/stokastik DP  
+- **Hedef Programlama**: Ağırlıklı, öncelikli, Chebyshev, leksikografik  
+- **Doğrusal Olmayan Programlama**: Lagrange, KKT, gradyan tabanlı metotlar
+
+### 🔍 [03 – Sezgisel Algoritmalar](03-Heuristics/)
+- **Basit sezgiseller**: Açgözlü arama, rastgele arama, yerel arama  
+- **Meta-sezgiseller**:  
+  - Tabu Arama  
+  - Tavlama Benzetimi  
+  - Değişken Komşuluk Arama  
+  - İteratif Yerel Arama  
+  - Yönlü Rastgele Arama
+
+### 👥 [04 – Popülasyon Temelli Yöntemler](04-Population-Based/)
+- **Evrimsel Algoritmalar**:  
+  - Genetik Algoritma (GA), Diferansiyel Gelişim, Evrimsel Stratejiler  
+- **Sürü Zekası**:  
+  - PSO, ACO, ABC, Ateşböceği, Kelebek Optimizasyonu  
+- **Doğa-esinli diğerleri**:  
+  - Grey Wolf, Whale, Bat, Cat Swarm Optimizasyonu
+
+### 🧠 [05 – Öğrenme Temelli Yöntemler](05-Learning-Based/)
+- Hiperparametre optimizasyonu (Bayes, Optuna, Hyperopt)  
+- Takviyeli öğrenme (RL) ile optimizasyon  
+- Derin öğrenme tabanlı optimizasyon modelleri  
+- Nöro-evrimsel hibrit sistemler  
+- Meta-öğrenme ve otomatik algoritma seçimi
+
+### ⚙️ [06 – Uygulama Alanları](06-Applications/)
+- **Endüstri**: Üretim çizelgeleme, tedarik zinciri, portföy optimizasyonu  
+- **Mühendislik**: Yapısal tasarım, robot yolu planlama, enerji sistemleri  
+- **Veri Bilimi**: Özellik seçimi, kümeleme, anomali tespiti, öneri sistemleri
+
+---
+
+## 🛠️ Kullanılan Araçlar ve Kütüphaneler
+
+| Kategori               | Kütüphaneler / Araçlar                                      |
+|------------------------|-------------------------------------------------------------|
+| **Kesin Yöntemler**    | `PuLP`, `OR-Tools`, `SciPy.optimize`, `CVXOPT`, `Gurobi`*   |
+| **Sezgiseller**        | `DEAP`, `pyswarms`, `scikit-opt`, `metaheuristic`           |
+| **Makine Öğrenmesi**   | `scikit-learn`, `Optuna`, `Hyperopt`, `BayesianOptimization`|
+| **Görselleştirme**     | `matplotlib`, `plotly`, `networkx`, `animatplot`            |
+| **Performans Ölçümü**  | `cProfile`, `line_profiler`, `time`, `memory_profiler`      |
+
+> \* *Ticari çözücüler (Gurobi, CPLEX) sadece örnek amaçlı kullanılır; açık alternatifler her zaman önceliklidir.*
+
+---
+
+## 📖 Öğrenme Yol Haritası
+
+```text
+Başlangıç
+  ↓
+Temel Kavramlar
+  ↓
+Doğrusal Programlama
+  ↓
+Tamsayılı & Dinamik Programlama
+  ↓
+Basit Sezgiseller
+  ↓
+Meta-sezgiseller
+  ↓
+Popülasyon Temelli Yöntemler
+  ↓
+Çok Amaçlı Optimizasyon
+  ↓
+Öğrenme Temelli Yöntemler
+  ↓
+Hibrit ve Araştırma Konuları
+
+## 📌 Katkıda Bulunma
 Bu repo toplu bilgi birikimine açıktır!
 
 - Yeni algoritmalar ekleyebilir,
@@ -43,7 +118,7 @@ Bu repo toplu bilgi birikimine açıktır!
 - Uygulama alanlarını genişletebilirsiniz.
 Lütfen CONTRIBUTING.md dosyasını inceleyin (henüz yoksa oluşturulacak).
 
-### 📚 Temel Kaynaklar
+## 📚 Temel Kaynaklar
 **Kitaplar**
 - Introduction to Operations Research – Hillier & Lieberman
 - Linear and Nonlinear Programming – Luenberger & Ye
@@ -54,13 +129,13 @@ Lütfen CONTRIBUTING.md dosyasını inceleyin (henüz yoksa oluşturulacak).
 - MIT OpenCourseWare – Optimization Methods
 - Coursera – Discrete Optimization
 - edX – Optimization: Models and Applications
-### 🎯 Hedef Kitle
+## 🎯 Hedef Kitle
 - Endüstri Mühendisliği, Bilgisayar Mühendisliği, Uygulamalı Matematik öğrencileri
 - Veri bilimciler ve araştırmacılar
 - Operasyonel araştırma uzmanları
 - Yapay zeka ve otomasyon mühendisleri
 - Akademik tez/ders/proje çalışanlar
-### 📬 İletişim & Destek
+## 📬 İletişim & Destek
 Sorularınız, öneri veya hata bildirimleriniz için Issues sekmesini kullanabilirsiniz.
 Repo sürekli güncellenmekte ve geliştirilmektedir. Takip etmek için Star ⭐️ vermeyi unutmayın!
 

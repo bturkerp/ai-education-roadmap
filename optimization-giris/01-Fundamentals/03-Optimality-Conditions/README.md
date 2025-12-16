@@ -156,8 +156,5 @@ Simetriye göre: `x₁ = x₂ = 0.5`
 
 Artık temel kavramlara hakimsiniz. Şimdi ilk **kesin çözüm yöntemini** öğrenme zamanı:
 
-→ **[Doğrusal Programlama](../../02-Exact-Methods/01-Linear-Programming/README.md)**
+→ **[Kesin Çözüm Yöntemleri](../../02-Exact-Methods/README.md)**
 
-veya sezgisellere atlamak isterseniz:
-
-→ **[Basit Sezgiseller](../../03-Heuristics/01-Simple-Heuristics/README.md)**

@@ -47,7 +47,7 @@ s.t.:
 ## ⚙️ Çözüm Yöntemleri
 
 ### 1. [Grafik Çözüm](graph-solution.md) 
-### 2. [**Simpleks Algoritması** (George Dantzig, 1947)](simpleks.md)
+### 2. [**Simpleks Algoritması** (George Dantzig, 1947)](simplex.md)
 - Köşe noktaları arasında **iyileştirme yönünde** hareket eder  
 - Pratikte çok hızlı; teoride en kötü durumda üssel zaman alabilir  
 - Günümüzde LP çözücülerinin çekirdeğinde yer alır

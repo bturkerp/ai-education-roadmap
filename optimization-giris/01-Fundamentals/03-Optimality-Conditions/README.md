@@ -10,7 +10,7 @@ Bu belge, bir çözümün **yerel optimum**, **global optimum** veya **uygunsuz 
 
 ### 1. **Uygun (Feasible) Çözüm**
 - Tüm **kısıtları** sağlayan çözüm.  
-- Örnek: `x₁ = 10`, `x₂ = 5` → Eğer `2·x₁ + x₂ ≤ 25` ise **uygun**tur.
+- Örnek: `x₁ = 10`, `x₂ = 5` → Eğer `2·x₁ + x₂ ≤ 25` ise **uygun**dur.
 
 ### 2. **Yerel (Local) Optimum**
 - Çözümün **komşuluğunda** daha iyi bir çözüm yoktur.  

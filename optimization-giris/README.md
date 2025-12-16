@@ -7,7 +7,7 @@ Hem akademik araştırmacılar hem de sektörde çalışan mühendisler/veri bil
 ---
 
 ## 🗂️ Repo Yapısı
-
+```
 optimization-repo/
 │
 ├── 01-Fundamentals/ # Temel kavramlar ve giriş
@@ -23,6 +23,7 @@ optimization-repo/
 ├── exercises/ # Sorular ve çözümler
 ├── references/ # Akademik makaleler, kitaplar, linkler
 └── README.md # Bu dosya
+```
 ---
 
 ## 📚 İçerik Kapsamı

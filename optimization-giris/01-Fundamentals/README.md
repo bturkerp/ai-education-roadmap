@@ -14,7 +14,7 @@ Bu bölümdeki içerikler, ileri düzey tüm yöntemlerin ortak dili niteliğind
 
 ## 📂 İçerikler
 
-### [1. Optimizasyona Giriş (Introduction)](01-Optimization-Introduction/README.md)
+### [1. Optimizasyona Giriş (Introduction)](01-Introduction/README.md)
 - Optimizasyon nedir?  
 - Tarihsel gelişimi (Newton’dan Simpleks’e)  
 - Uygulama alanlarına genel bakış:  

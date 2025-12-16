@@ -2,7 +2,7 @@
 
 > *“Bir çözümün iyi olduğunu iddia edebilmek için, ‘iyi’nin ne anlama geldiğini bilmek gerekir.”*
 
-Bu belge, bir çözümün **yerel optimum**, **global optimum** veya **uygunsuz (infeasible)** olup olmadığını nasıl anlayacağınızı öğretir. Optimizasyon algoritmaları bu koşulları hedefler; modelleyiciler ise bu kavramları kullanarak çözüm kalitesini değerlendirir.
+Bu belge, bir çözümün **yerel optimum**, **küresel optimum** veya **uygunsuz (infeasible)** olup olmadığını nasıl anlayacağınızı öğretir. Optimizasyon algoritmaları bu koşulları hedefler; modelleyiciler ise bu kavramları kullanarak çözüm kalitesini değerlendirir.
 
 ---
 
@@ -14,15 +14,15 @@ Bu belge, bir çözümün **yerel optimum**, **global optimum** veya **uygunsuz 
 
 ### 2. **Yerel (Local) Optimum**
 - Çözümün **komşuluğunda** daha iyi bir çözüm yoktur.  
-- Ancak **global en iyi** olmayabilir.
+- Ancak **küresel en iyi** olmayabilir.
 
-### 3. **Global Optimum**
+### 3. **Küresel Optimum**
 - **Tüm uygun çözümler arasında** en iyi olanıdır.  
 - Kesin çözüm yöntemleri bunu garanti eder; sezgiseller yakınsamayı hedefler.
 
 ### 4. **Konvekslik ve Optimallik**
 - Eğer **amaç fonksiyonu konveks** ve **kısıt bölgesi konveks** ise:  
-  → **Her yerel optimum, global optimumdur.**  
+  → **Her yerel optimum, küresel optimumdur.**  
 - Bu, doğrusal programlamanın gücüdür.
 
 ---
@@ -128,7 +128,7 @@ Simetriye göre: `x₁ = x₂ = 0.5`
 
 | Özellik | Konveks Problem | Genel (Non-konveks) Problem |
 |--------|------------------|----------------------------|
-| **Yerel optimum** | Her zaman global optimumdur | Yerel optimumlar yanıltıcı olabilir |
+| **Yerel optimum** | Her zaman küresel optimumdur | Yerel optimumlar yanıltıcı olabilir |
 | **Çözüm garantisi** | Evet (Simpleks, iç-nokta) | Hayır (algoritmalar lokal minimumda takılabilir) |
 | **KKT koşulları** | Gerekli ve yeterli | Sadece gerekli (bazen yetersiz) |
 
@@ -140,7 +140,7 @@ Simetriye göre: `x₁ = x₂ = 0.5`
 
 - **“Türev sıfır = en iyi çözüm”** → Hayır, eyer noktası da olabilir.  
 - **“Kısıt sağlanıyor = çözüm iyi”** → Uygun olabilir, ama optimal değil.  
-- **“Sezgisel iyi sonuç verdi = global optimum”** → Yanıltıcı olabilir; çoklu başlangıç gerekli.
+- **“Sezgisel iyi sonuç verdi = küresel optimum”** → Yanıltıcı olabilir; çoklu başlangıç gerekli.
 
 ---
 

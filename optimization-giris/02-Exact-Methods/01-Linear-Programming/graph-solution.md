@@ -32,7 +32,7 @@ s.t.:
 - Köşe noktaları: (0,0), (0,30), (50,0), **(42,16)**  
 - Optimum: **(42, 16)** → `Z = 2160`
 
-![Grafik Çözüm: Üretim Problemi](../production-graph.png)
+![Grafik Çözüm: Üretim Problemi](production-graph.png)
 
 > ✅ Görselde:  
 > - Mavi ve turuncu çizgiler: kısıt doğruları  
@@ -54,7 +54,7 @@ s.t.:
 - Kesişim noktası: **(6.06, 1.01)**  
 - Minimum maliyet: **≈17.17 ₺**
 
-![Grafik Çözüm: Diyet Problemi](../diet-graph.png)
+![Grafik Çözüm: Diyet Problemi](diet-graph.png)
 
 > ✅ Görselde:  
 > - Kısıtların “≥” olması nedeniyle uygun bölge **üst tarafta**  
@@ -77,7 +77,7 @@ s.t.:
 - Tüm `(x₁, x₂)` çiftleri: `x₁ + x₂ = 10`, `4 ≤ x₁ ≤ 6` → **sonsuz çözüm**  
 - Küresel optimum değeri: `Z = 20`
 
-![Grafik Çözüm: Alternatif Optimumlar](../alternative-solutions-graph.png)
+![Grafik Çözüm: Alternatif Optimumlar](alternative-solutions-graph.png)
 
 > ✅ Görselde:  
 > - Kırmızı kesikli çizgi: amaç fonksiyonu (Z = 20)  

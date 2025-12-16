@@ -46,12 +46,13 @@ s.t.:
 
 ## ⚙️ Çözüm Yöntemleri
 
-### 1. **Simpleks Algoritması** (George Dantzig, 1947)
+### 1. [Grafik Çözüm](graph-solution.md) 
+### 1. [**Simpleks Algoritması** (George Dantzig, 1947)](simpleks.md)
 - Köşe noktaları arasında **iyileştirme yönünde** hareket eder  
 - Pratikte çok hızlı; teoride en kötü durumda üssel zaman alabilir  
 - Günümüzde LP çözücülerinin çekirdeğinde yer alır
 
-### 2. **İç-Nokta Yöntemleri** (Karmarkar, 1984)
+### 2. [**İç-Nokta Yöntemleri** (Karmarkar, 1984)](icnokta.md)
 - Uygun bölgenin **içinden** geçerek optimuma yaklaşır  
 - Büyük ölçekli problemlerde Simpleks’ten daha iyi performans gösterebilir  
 - Polinomsal zaman karmaşıklığına sahiptir
@@ -60,7 +61,7 @@ s.t.:
 
 ---
 
-## 🔁 Dualite Teorisi
+## 🔁 [Dualite Teorisi](Dualite.md) 
 
 Her doğrusal programlama problemi (**primal**) için bir **dual** problem tanımlanabilir.
 
@@ -80,7 +81,7 @@ s.t.: ∑ aᵢⱼ·yᵢ ≥ cⱼ, &nbsp; yᵢ ≥ 0
 
 ---
 
-## 📉 Duyarlılık Analizi (Sensitivity Analysis)
+## 📉 [Duyarlılık Analizi (Sensitivity Analysis)](duyarlilik.md)
 
 DP modelleri, parametrelerdeki değişikliklere karşı ne kadar duyarlıdır?
 

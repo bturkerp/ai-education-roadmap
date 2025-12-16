@@ -93,6 +93,3 @@ En temel ve yaygın kullanılan kesin yöntemi öğrenmek için:
 
 → **[Doğrusal Programlama](01-Linear-Programming/README.md)**
 
-veya doğrudan ilgi alanına göre:
-
-→ **[Tamsayılı Programlama](02-Integer-Programming/README.md)**

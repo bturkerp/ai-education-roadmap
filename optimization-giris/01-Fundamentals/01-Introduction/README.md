@@ -1,115 +1,128 @@
-# 🧩 Problem Formülasyonu
+# 🌱 Optimizasyona Giriş
 
-> *“Bir problemi doğru formüle edebilmek, çözümün yarısıdır.”*
+> *“En iyi çözüm, problemin doğasını anladıktan sonra ortaya çıkar.”*
 
-Optimizasyon sadece algoritmalarla değil, **doğru modellemeyle** kazanılır. Bu bölümde, bir optimizasyon problemini oluşturan temel bileşenleri öğrenip, basit örnekler üzerinden **matematiksel modele** nasıl dönüştüreceğimizi adım adım inceleyeceğiz.
-
----
-
-## 🧱 Temel Bileşenler
-
-Her optimizasyon problemi üç temel öğeden oluşur:
-
-### 1. **Karar Değişkenleri (Decision Variables)**
-- Problemin çözümünü tanımlayan bilinmeyenlerdir.  
-- Örnekler:  
-  - `xᵢ`: `i`. ürünün üretilecek miktarı  
-  - `yⱼ`: `j`. tedarikçinin seçili olup olmadığı (0/1)  
-  - `tᵢⱼ`: `i`’den `j`’ye gitme süresi
-
-> Karar değişkenleri, çözüm uzayını tanımlar.
+Bu belge, **optimizasyonun temel felsefesini**, **tarihsel gelişimini**, **sınıflandırmasını** ve **gerçek dünya etkisini** aktarmayı amaçlar. Algoritmalara geçmeden önce, **neden optimizasyon yaptığımızı** ve **ne tür sorulara yanıt aradığımızı** bilmek esastır.
 
 ---
 
-### 2. **Amaç Fonksiyonu (Objective Function)**
-- Optimize edilmek istenen niceliktir: **minimize** (maliyet, zaman) ya da **maksimize** (kar, verimlilik).  
-- Örnekler:  
-  - **Min:** ∑ cᵢ·xᵢ &nbsp;&nbsp; (i = 1…n) → Toplam üretim maliyeti  
-  - **Max:** ∑ pⱼ·yⱼ &nbsp;&nbsp; (j = 1…m) → Toplam kar
+## 🔍 Optimizasyon Nedir?
 
-> Amaç fonksiyonu, çözümün “kalitesini” ölçer.
+**Optimizasyon**, belirli **kısıtlar** altında bir **amaç fonksiyonunu** mümkün olan en iyi şekilde gerçekleştiren **karar değişkenlerinin** seçilmesi sürecidir.
 
----
+### Genel Form:
+- **Amaç**: Min veya Max ∑ cᵢ·xᵢ &nbsp;&nbsp; (i = 1…n)  
+- **Kısıtlar**: ∑ aᵢⱼ·xⱼ ≤ bᵢ &nbsp;&nbsp; (i = 1…m)  
+- **Değişkenler**: xⱼ ∈ ℝ⁺, ℤ⁺ veya {0,1}
 
-### 3. **Kısıtlar (Constraints)**
-- Karar değişkenlerine getirilen mantıksal, fiziksel veya kaynak sınırlarını ifade eder.  
-- Türleri:  
-  - **Eşitsizlik kısıtları**: ∑ aᵢ·xᵢ ≤ b &nbsp;&nbsp; (kaynak tüketimi ≤ mevcut)  
-  - **Eşitlik kısıtları**: ∑ xᵢ = 1 &nbsp;&nbsp; (tam olarak bir seçenek seçilmeli)  
-  - **Değişken sınırları**: xᵢ ≥ 0, &nbsp; yⱼ ∈ {0,1}
+> Burada:
+> - `xⱼ`: karar değişkenleri  
+> - `cᵢ`: amaç katsayıları (maliyet, kar, vs.)  
+> - `aᵢⱼ`, `bᵢ`: kısıt katsayıları (kaynak, talep, kapasite)
 
-> Kısıtlar, çözümün **uygulanabilir (feasible)** olmasını sağlar.
+Optimizasyon, **“en iyi” kararın ne olduğunu sistematik olarak bulma sanatıdır**.
 
 ---
 
-## 📐 Matematiksel Model Örneği: Çanta (Knapsack) Problemi
+## 🕰️ Tarihsel Gelişimi
 
-**Senaryo**: Sınırlı kapasiteli bir çantaya, her birinin ağırlığı ve değeri bilinen eşyalar konulacak. Amacımız çantadaki **toplam değeri maksimize** etmek.
+| Dönem | Gelişme | Öne Çıkan Kişi/Kuram |
+|------|--------|---------------------|
+| 17.–18. yy | Türev tabanlı optimizasyon | Newton, Leibniz |
+| 1788 | Kısıtlı optimizasyon ilkeleri | Lagrange (Lagrange çarpanları) |
+| 1939 | Doğrusal programlamanın doğuşu | Leonid Kantorovich |
+| 1947 | Simpleks algoritması | George Dantzig |
+| 1950’ler | Dinamik programlama | Richard Bellman |
+| 1960–80’ler | NLP, KKT koşulları, iç-nokta | Kuhn, Tucker, Fiacco |
+| 1990’lar–günümüz | Meta-sezgiseller, öğrenme tabanlı optimizasyon | Kennedy (PSO), Holland (GA), vb. |
 
-### Karar Değişkenleri
-xᵢ = 1 → i. eşya çantaya konur
-xᵢ = 0 → i. eşya konmaz
-
-### Amaç Fonksiyonu
-**Max:** ∑ vᵢ·xᵢ &nbsp;&nbsp; (i = 1…n)  
-- `vᵢ`: `i`. eşyanın değeri
-
-### Kısıtlar
-∑ wᵢ·xᵢ ≤ W  
-- `wᵢ`: `i`. eşyanın ağırlığı  
-- `W`: Çantanın maksimum kapasitesi
-
-### Değişken Türü
-xᵢ ∈ {0,1}, &nbsp;&nbsp; ∀ i
-
-> Bu bir **0-1 tamsayılı programlama** problemidir.
+> 📌 II. Dünya Savaşı sırasında kaynakların etkin dağıtımı ihtiyacı, **operasyon araştırmasının** ve modern optimizasyonun doğuşunu tetiklemiştir.
 
 ---
 
-## 🏗️ Problem Formüle Etme Adımları
+## 🧩 Optimizasyon Türleri (Sınıflandırma)
 
-1. **Problemi anla**: Gerçek amacı ve sınırları belirle.  
-2. **Karar değişkenlerini tanımla**: “Ne karar vereceğim?”  
-3. **Amaç fonksiyonunu yaz**: “Ne optimize etmek istiyorum?”  
-4. **Kısıtları listele**: “Neler yapılabilir, neler yapılamaz?”  
-5. **Matematiksel modeli kur**: Yukarıdakileri sembolik olarak ifade et.  
-6. **Doğrula**: Uç durumlar (extreme cases) için mantıklı mı?
+Optimizasyon problemleri birden fazla eksen boyunca sınıflandırılır:
 
----
+| Sınıflandırma Ekseni | Türler |
+|----------------------|--------|
+| **Değişken Türü** | Sürekli (ℝ), tamsayı (ℤ), ikili ({0,1}), karışık |
+| **Amaç Sayısı** | Tek amaçlı, çok amaçlı (Pareto optimallik) |
+| **Doğrusallık** | Doğrusal (LP), doğrusal olmayan (NLP), ikinci derece (QP) |
+| **Kısıt Durumu** | Kısıtsız, kısıtlı |
+| **Belirsizlik** | Deterministik, stokastik, sağlam (robust) |
+| **Zaman Yapısı** | Statik, dinamik, çok periyotlu |
+| **Çözüm Yaklaşımı** | Kesin (exact), yaklaşık (heuristic), öğrenme tabanlı |
 
-## 🌐 Diğer Klasik Örnekler
-
-| Problem | Karar Değişkeni | Amaç | Kısıt |
-|--------|------------------|------|-------|
-| **Ulaşım Problemi** | `xᵢⱼ`: Fabrikadan mağazaya gönderilen ürün | **Min:** ∑ cᵢⱼ·xᵢⱼ | ∑ⱼ xᵢⱼ ≤ arzᵢ, &nbsp; ∑ᵢ xᵢⱼ ≥ talepⱼ |
-| **İş Çizelgeleme** | `xⱼₜ = 1`: İş `j`, zaman `t`’de başlasın | **Min:** toplam gecikme | Her iş tam 1 kez atanmalı |
-| **Portföy Seçimi** | `wᵢ`: Varlık `i`’ye yatırılan oran | **Max:** getiri, **Min:** risk | ∑ wᵢ = 1, &nbsp; wᵢ ≥ 0 |
+> Örnek: Bir üretim planı → **karışık tamsayılı, çok periyotlu, deterministik, kısıtlı, tek amaçlı LP** olabilir.
 
 ---
 
-## 💡 Yaygın Hatalar
+## 🌍 Gerçek Dünya Uygulamaları
 
-- **Amaçla kısıtı karıştırmak**: “Maliyet düşük olmalı” → kısıt mı, amaç mı?  
-- **Gereksiz değişken tanımlamak**: Modeli gereksiz yere karmaşıklaştırır.  
-- **Gerçekçi olmayan kısıtlar**: Örn. “üretim sonsuz hızlı” varsayımı.  
-- **Birim uyumsuzluğu**: kg ile tonu aynı denklemde kullanmak.
+| Sektör | Optimizasyon Problemi | Kullanılan Yöntem |
+|--------|----------------------|------------------|
+| **Lojistik** | Araç rotalama (VRP) | Meta-sezgiseller, LP |
+| **Havacılık** | Uçuş ve mürettebat çizelgeleme | Tamsayılı programlama |
+| **Finans** | Portföy optimizasyonu | Doğrusal olmayan programlama, çok amaçlı |
+| **Enerji** | Güç üretim dağılımı | Dinamik programlama, NLP |
+| **Sağlık** | Radyoterapi hedef yoğunluğu | NLP, konveks optimizasyon |
+| **Yapay Zeka** | Sinir ağı eğitimi | Gradyan tabanlı optimizasyon (SGD, Adam) |
+| **Perakende** | Stok yönetimi | Dinamik programlama, stokastik optimizasyon |
+
+> Bugün neredeyse **her etkin kaynak kullanımı**, bir optimizasyon problemidir.
 
 ---
 
-## 📚 İleri Okuma
+## 📊 Basit Bir Örnek: En Düşük Maliyetle Ulaşım
 
-- Winston, *Operations Research: Applications and Algorithms* – Bölüm 3  
-- Taha, *Operations Research: An Introduction* – Modelleme bölümü  
-- OR-Tools Dokümantasyonu: [Google Optimization Tools](https://developers.google.com/optimization)
+**Senaryo**: İki depo (D₁, D₂), üç mağaza (M₁, M₂, M₃).  
+Depo kapasiteleri: D₁=100, D₂=150  
+Mağaza talepleri: M₁=80, M₂=90, M₃=80  
+Birim taşıma maliyetleri (₺):
+
+|       | M₁ | M₂ | M₃ |
+|-------|----|----|----|
+| **D₁** | 2  | 3  | 1  |
+| **D₂** | 5  | 4  | 2  |
+
+### Model:
+- **Değişkenler**: `xᵢⱼ` = Dᵢ’den Mⱼ’ye gönderilen ürün miktarı  
+- **Amaç**: Min: 2·x₁₁ + 3·x₁₂ + 1·x₁₃ + 5·x₂₁ + 4·x₂₂ + 2·x₂₃  
+- **Kısıtlar**:  
+  - Arz: x₁₁ + x₁₂ + x₁₃ ≤ 100  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x₂₁ + x₂₂ + x₂₃ ≤ 150  
+  - Talep: x₁₁ + x₂₁ = 80  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x₁₂ + x₂₂ = 90  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x₁₃ + x₂₃ = 80  
+  - xᵢⱼ ≥ 0
+
+> Bu klasik bir **ulaşım problemi**dir ve **doğrusal programlama** ile çözülür.
+
+---
+
+## 📚 Bu Bölümü Neden Öğrenmeli?
+
+- Optimizasyonu "sihirli kutu" değil, **mantıklı bir karar verme süreci** olarak görürsün.  
+- Hangi yöntemin (**kesin mi? sezgisel mi?**) uygun olduğunu anlarsın.  
+- Modelleme hatalarını erkenden tespit edebilirsin.
+
+---
+
+## 📖 İleri Okuma
+
+- Hillier & Lieberman, *Introduction to Operations Research* – Bölüm 1–2  
+- Boyd & Vandenberghe, *Convex Optimization* – Giriş (ücretsiz PDF: [stanford.edu/~boyd/cvxbook](https://web.stanford.edu/~boyd/cvxbook/))  
+- MIT OpenCourseWare: [15.053 Optimization Methods](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/)
 
 ---
 
 ## ➡️ Sonraki Adım
 
-Bir çözümün **ne zaman “en iyi” olduğunu** anlamak için:
+Gerçek problemleri **matematiksel modele** dönüştürmeyi öğrenmek için:
+
+→ **[Problem Formülasyonu](../02-Problem-Formulation/README.md)**
+
+veya bir çözümün **“en iyi” olmasının ne anlama geldiğini** incelemek için:
 
 → **[Optimallik Koşulları](../03-Optimality-Conditions/README.md)**
-
-veya doğrudan kesin çözüm yöntemlerine geçmek için:
-
-→ **[Doğrusal Programlama](../../02-Exact-Methods/01-Linear-Programming/README.md)**

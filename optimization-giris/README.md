@@ -34,38 +34,38 @@ optimization-repo/
 - Yerel vs. global optimum, konvekslik, olurluluk bölgesi  
 - Optimallik koşulları (1. ve 2. derece şartlar)
 
-📌 Katkıda Bulunma
+### 📌 Katkıda Bulunma
 Bu repo toplu bilgi birikimine açıktır!
 
-Yeni algoritmalar ekleyebilir,
-Mevcut örnekleri geliştirebilir,
-Görselleştirme veya performans analizi ekleyebilir,
-Uygulama alanlarını genişletebilirsiniz.
+- Yeni algoritmalar ekleyebilir,
+- Mevcut örnekleri geliştirebilir,
+- Görselleştirme veya performans analizi ekleyebilir,
+- Uygulama alanlarını genişletebilirsiniz.
 Lütfen CONTRIBUTING.md dosyasını inceleyin (henüz yoksa oluşturulacak).
 
-📚 Temel Kaynaklar
-Kitaplar
-Introduction to Operations Research – Hillier & Lieberman
-Linear and Nonlinear Programming – Luenberger & Ye
-Metaheuristics: From Design to Implementation – E.-G. Talbi
-Evolutionary Computation – Michalewicz & Fogel
-Swarm Intelligence – Kennedy & Eberhart
-Online Eğitimler
-MIT OpenCourseWare – Optimization Methods
-Coursera – Discrete Optimization
-edX – Optimization: Models and Applications
-🎯 Hedef Kitle
-Endüstri Mühendisliği, Bilgisayar Mühendisliği, Uygulamalı Matematik öğrencileri
-Veri bilimciler ve araştırmacılar
-Operasyonel araştırma uzmanları
-Yapay zeka ve otomasyon mühendisleri
-Akademik tez/ders/proje çalışanlar
-📬 İletişim & Destek
+### 📚 Temel Kaynaklar
+**Kitaplar**
+- Introduction to Operations Research – Hillier & Lieberman
+- Linear and Nonlinear Programming – Luenberger & Ye
+- Metaheuristics: From Design to Implementation – E.-G. Talbi
+- Evolutionary Computation – Michalewicz & Fogel
+- Swarm Intelligence – Kennedy & Eberhart
+**Online Eğitimler**
+- MIT OpenCourseWare – Optimization Methods
+- Coursera – Discrete Optimization
+- edX – Optimization: Models and Applications
+### 🎯 Hedef Kitle
+- Endüstri Mühendisliği, Bilgisayar Mühendisliği, Uygulamalı Matematik öğrencileri
+- Veri bilimciler ve araştırmacılar
+- Operasyonel araştırma uzmanları
+- Yapay zeka ve otomasyon mühendisleri
+- Akademik tez/ders/proje çalışanlar
+### 📬 İletişim & Destek
 Sorularınız, öneri veya hata bildirimleriniz için Issues sekmesini kullanabilirsiniz.
 Repo sürekli güncellenmekte ve geliştirilmektedir. Takip etmek için Star ⭐️ vermeyi unutmayın!
 
 🌱 "En iyi çözüm, problemin doğasını anladıktan sonra ortaya çıkar."
 — Bu repo, o anlayışı inşa etmenize yardımcı olmak için var.
 
-Hazırlayan: [Adınız / Takım]
+Hazırlayan: B. Türker PALAMUTÇUOĞLU
 Lisans: MIT (açık kaynak kullanımı serbest)

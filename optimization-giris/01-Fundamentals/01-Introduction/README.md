@@ -13,9 +13,9 @@ Her optimizasyon problemi üç temel öğeden oluşur:
 ### 1. **Karar Değişkenleri (Decision Variables)**
 - Problemin çözümünü tanımlayan bilinmeyenlerdir.  
 - Örnekler:  
-  - \( x_i \): \( i \). ürünün üretilecek miktarı  
-  - \( y_j \): \( j \). tedarikçinin seçili olup olmadığı (0/1)  
-  - \( t_{ij} \): \( i \)’den \( j \)’ye gitme süresi
+  - `xᵢ`: `i`. ürünün üretilecek miktarı  
+  - `yⱼ`: `j`. tedarikçinin seçili olup olmadığı (0/1)  
+  - `tᵢⱼ`: `i`’den `j`’ye gitme süresi
 
 > Karar değişkenleri, çözüm uzayını tanımlar.
 
@@ -24,8 +24,8 @@ Her optimizasyon problemi üç temel öğeden oluşur:
 ### 2. **Amaç Fonksiyonu (Objective Function)**
 - Optimize edilmek istenen niceliktir: **minimize** (maliyet, zaman) ya da **maksimize** (kar, verimlilik).  
 - Örnekler:  
-  - **Min**: \( \sum_{i=1}^n c_i x_i \) → Toplam üretim maliyeti  
-  - **Max**: \( \sum_{j=1}^m p_j y_j \) → Toplam kar
+  - **Min:** ∑ cᵢ·xᵢ &nbsp;&nbsp; (i = 1…n) → Toplam üretim maliyeti  
+  - **Max:** ∑ pⱼ·yⱼ &nbsp;&nbsp; (j = 1…m) → Toplam kar
 
 > Amaç fonksiyonu, çözümün “kalitesini” ölçer.
 
@@ -34,9 +34,9 @@ Her optimizasyon problemi üç temel öğeden oluşur:
 ### 3. **Kısıtlar (Constraints)**
 - Karar değişkenlerine getirilen mantıksal, fiziksel veya kaynak sınırlarını ifade eder.  
 - Türleri:  
-  - **Eşitsizlik kısıtları**: \( \sum a_i x_i \leq b \) (kaynak tüketimi ≤ mevcut)  
-  - **Eşitlik kısıtları**: \( \sum x_i = 1 \) (tam olarak bir seçenek seçilmeli)  
-  - **Değişken sınırları**: \( x_i \geq 0 \), \( y_j \in \{0,1\} \)
+  - **Eşitsizlik kısıtları**: ∑ aᵢ·xᵢ ≤ b &nbsp;&nbsp; (kaynak tüketimi ≤ mevcut)  
+  - **Eşitlik kısıtları**: ∑ xᵢ = 1 &nbsp;&nbsp; (tam olarak bir seçenek seçilmeli)  
+  - **Değişken sınırları**: xᵢ ≥ 0, &nbsp; yⱼ ∈ {0,1}
 
 > Kısıtlar, çözümün **uygulanabilir (feasible)** olmasını sağlar.
 
@@ -47,31 +47,20 @@ Her optimizasyon problemi üç temel öğeden oluşur:
 **Senaryo**: Sınırlı kapasiteli bir çantaya, her birinin ağırlığı ve değeri bilinen eşyalar konulacak. Amacımız çantadaki **toplam değeri maksimize** etmek.
 
 ### Karar Değişkenleri
-\[
-x_i = 
-\begin{cases}
-1, & \text{eğer } i\text{. eşya çantaya konursa} \\
-0, & \text{aksi takdirde}
-\end{cases}
-\]
+xᵢ = 1 → i. eşya çantaya konur
+xᵢ = 0 → i. eşya konmaz
 
 ### Amaç Fonksiyonu
-\[
-\max \sum_{i=1}^{n} v_i x_i
-\]
-- \( v_i \): \( i \). eşyanın değeri
+**Max:** ∑ vᵢ·xᵢ &nbsp;&nbsp; (i = 1…n)  
+- `vᵢ`: `i`. eşyanın değeri
 
 ### Kısıtlar
-\[
-\sum_{i=1}^{n} w_i x_i \leq W
-\]
-- \( w_i \): \( i \). eşyanın ağırlığı  
-- \( W \): Çantanın maksimum kapasitesi
+∑ wᵢ·xᵢ ≤ W  
+- `wᵢ`: `i`. eşyanın ağırlığı  
+- `W`: Çantanın maksimum kapasitesi
 
 ### Değişken Türü
-\[
-x_i \in \{0,1\}, \quad \forall i
-\]
+xᵢ ∈ {0,1}, &nbsp;&nbsp; ∀ i
 
 > Bu bir **0-1 tamsayılı programlama** problemidir.
 
@@ -92,9 +81,9 @@ x_i \in \{0,1\}, \quad \forall i
 
 | Problem | Karar Değişkeni | Amaç | Kısıt |
 |--------|------------------|------|-------|
-| **Ulaşım Problemi** | \( x_{ij} \): Fabrikadan mağazaya gönderilen ürün | Maliyeti min. et | Arz = Talep, miktar ≥ 0 |
-| **İş Çizelgeleme** | \( x_{jt} = 1 \): İş \( j \), zaman \( t \)’de başlasın | Gecikmeyi min. et | Her iş bir kez çalışsın |
-| **Portföy Seçimi** | \( w_i \): Varlık \( i \)’ye yatırılan oran | Getiriyi max., riski min. | \( \sum w_i = 1 \), \( w_i \geq 0 \) |
+| **Ulaşım Problemi** | `xᵢⱼ`: Fabrikadan mağazaya gönderilen ürün | **Min:** ∑ cᵢⱼ·xᵢⱼ | ∑ⱼ xᵢⱼ ≤ arzᵢ, &nbsp; ∑ᵢ xᵢⱼ ≥ talepⱼ |
+| **İş Çizelgeleme** | `xⱼₜ = 1`: İş `j`, zaman `t`’de başlasın | **Min:** toplam gecikme | Her iş tam 1 kez atanmalı |
+| **Portföy Seçimi** | `wᵢ`: Varlık `i`’ye yatırılan oran | **Max:** getiri, **Min:** risk | ∑ wᵢ = 1, &nbsp; wᵢ ≥ 0 |
 
 ---
 

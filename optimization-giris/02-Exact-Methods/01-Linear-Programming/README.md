@@ -47,12 +47,12 @@ s.t.:
 ## ⚙️ Çözüm Yöntemleri
 
 ### 1. [Grafik Çözüm](graph-solution.md) 
-### 1. [**Simpleks Algoritması** (George Dantzig, 1947)](simpleks.md)
+### 2. [**Simpleks Algoritması** (George Dantzig, 1947)](simpleks.md)
 - Köşe noktaları arasında **iyileştirme yönünde** hareket eder  
 - Pratikte çok hızlı; teoride en kötü durumda üssel zaman alabilir  
 - Günümüzde LP çözücülerinin çekirdeğinde yer alır
 
-### 2. [**İç-Nokta Yöntemleri** (Karmarkar, 1984)](icnokta.md)
+### 3. [**İç-Nokta Yöntemleri** (Karmarkar, 1984)](icnokta.md)
 - Uygun bölgenin **içinden** geçerek optimuma yaklaşır  
 - Büyük ölçekli problemlerde Simpleks’ten daha iyi performans gösterebilir  
 - Polinomsal zaman karmaşıklığına sahiptir

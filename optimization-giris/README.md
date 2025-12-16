@@ -1,294 +1,129 @@
-🎯 Optimizasyona Giriş - Tam Kapsamlı Eğitim ve Referans Reposu
-https://img.shields.io/github/stars/username/optimization-repo?style=social
-https://img.shields.io/github/forks/username/optimization-repo?style=social
-https://img.shields.io/badge/License-MIT-yellow.svg
-https://img.shields.io/badge/contributions-welcome-brightgreen.svg
+🚀 Optimizasyona Giriş – TAM KAPSAMLI Eğitim ve Referans Reposu
+Bu repo, optimizasyon teorisinden uygulamalara, klasik kesin yöntemlerden öğrenme temelli modern yaklaşımlara kadar geniş bir spektrumu kapsayan, açık kaynaklı, uygulamaya dönük ve topluca geliştirilebilir bir eğitim ve başvuru kaynağıdır.
 
-📖 Hakkında
-Bu repo, optimizasyon teorisinin temellerinden başlayarak ileri seviye modern optimizasyon tekniklerine kadar tüm konuları kapsayan kapsamlı bir eğitim ve referans kaynağıdır. Hem akademik hem de endüstriyel uygulamalar için hazırlanmıştır.
+Hem akademik araştırmacılar hem de sektörde çalışan mühendisler/veri bilimciler için faydalı olacak şekilde tasarlanmıştır. Her konu, teoriden kodlamaya, örneklemden görselleştirmeye kadar tam döngülü bir şekilde ele alınır.
 
-🎯 Hedef Kitle:
-
-Üniversite öğrencileri (lisans/yüksek lisans)
-
-Veri bilimcileri ve makine öğrenmesi mühendisleri
-
-Operasyon araştırmacıları
-
-Yazılım geliştiriciler
-
-Araştırmacılar ve akademisyenler
-
-🏗️ Repo Yapısı
-text
+🗂️ Repo Yapısı
+123456789101112131415
 optimization-repo/
-├── 📚 01-Fundamentals/          # Temel kavramlar ve giriş
-├── 🔢 02-Exact-Methods/         # Kesin çözüm yöntemleri
-├── 🔍 03-Heuristics/           # Sezgisel algoritmalar
-├── 👥 04-Population-Based/     # Popülasyon temelli yöntemler
-├── 🧠 05-Learning-Based/       # Öğrenme temelli yöntemler
-├── ⚙️ 06-Applications/        # Uygulama alanları
-├── 📊 datasets/                # Örnek veri setleri
-├── 📓 notebooks/               # Jupyter notebook'ları
-├── 💻 src/                     # Kaynak kodları
-├── 📝 exercises/               # Alıştırmalar ve çözümler
-├── 📚 references/              # Kaynaklar ve makaleler
-└── 📄 README.md                # Bu dosya
-📑 İçindekiler
-1. 📚 Temel Kavramlar - Dosyalara Git
-1.1 Optimizasyona Giriş
+│
+├── 01-Fundamentals/          # Temel kavramlar ve giriş
+├── 02-Exact-Methods/         # Kesin çözüm yöntemleri
+├── 03-Heuristics/            # Sezgiseller ve üst-sezgiseller
+├── 04-Population-Based/      # Popülasyon temelli algoritmalar
+├── 05-Learning-Based/        # Makine ve derin öğrenme ile optimizasyon
+├── 06-Applications/          # Endüstri, mühendislik ve veri bilimi uygulamaları
+│
+├── datasets/                 # Test problemleri ve örnek veri setleri
 
-1.2 Problem Formülasyonu
-
-1.3 Optimallik Koşulları
-
-2. 🔢 Kesin Çözüm Yöntemleri - Dosyalara Git
-2.1 Doğrusal Programlama (LP)
-
-Simpleks Algoritması
-
-İç Nokta Metotları
-
-Dualite Teorisi
-
-Duyarlılık Analizi
-
-2.2 Tamsayılı Programlama (IP)
-
-Dal-Sınır Metodu
-
-Kesme Düzlemi Metodu
-
-0-1 Programlama
-
-2.3 Dinamik Programlama (DP)
-
-Bellman Optimalite Prensibi
-
-Deterministik DP
-
-Stokastik DP
-
-2.4 Hedef Programlama (GP)
-
-Ağırlıklı Hedef Programlama
-
-Öncelikli Hedef Programlama
-
-2.5 Doğrusal Olmayan Programlama (NLP)
-
-KKT Koşulları
-
-Gradyan Tabanlı Metotlar
-
-Kısıtsız Optimizasyon
-
-3. 🔍 Sezgisel Algoritmalar - Dosyalara Git
-3.1 Basit Sezgiseller
-
-Açgözlü Algoritmalar
-
-Yerel Arama
-
-Rastgele Arama
-
-3.2 Sezgisel Üstü Algoritmalar
-
+📚 İçerik Kapsamı
+🌐 01 – Temel Kavramlar
+Optimizasyon nedir? Uygulama alanları
+Problem formülasyonu: Amaç fonksiyonu, karar değişkenleri, kısıtlar
+Yerel vs. global optimum, konvekslik, olurluluk bölgesi
+Optimallik koşulları (1. ve 2. derece şartlar)
+🔢 02 – Kesin Çözüm Yöntemleri
+Doğrusal Programlama: Simpleks, iç-nokta, dualite, ulaşım/ata ma problemleri
+Tamsayılı Programlama: Dal-Sınır, kesme düzlemleri, MIP, 0-1 modeller
+Dinamik Programlama: Bellman ilkesi, deterministik/stokastik DP
+Hedef Programlama: Ağırlıklı, öncelikli, Chebyshev, leksikografik
+Doğrusal Olmayan Programlama: Lagrange, KKT, gradyan tabanlı metotlar
+🔍 03 – Sezgisel Algoritmalar
+Basit sezgiseller: Açgözlü arama, rastgele arama, yerel arama
+Meta-sezgiseller:
 Tabu Arama
-
 Tavlama Benzetimi
-
 Değişken Komşuluk Arama
-
-3.3 İleri Sezgisel Yöntemler
-
-Hyper-Heuristics
-
-Memetic Algoritmalar
-
-4. 👥 Popülasyon Temelli Yöntemler - Dosyalara Git
-4.1 Evrimsel Algoritmalar
-
-Genetik Algoritmalar
-
-Diferansiyel Gelişim
-
-Evrimsel Stratejiler
-
-4.2 Sürü Zekası Algoritmaları
-
-Parçacık Sürü Optimizasyonu
-
-Karınca Kolonisi Optimizasyonu
-
-Yapay Arı Kolonisi
-
-4.3 Biyolojik Esinli Algoritmalar
-
-Kurt Sürüsü Optimizasyonu
-
-Balina Optimizasyon Algoritması
-
-5. 🧠 Öğrenme Temelli Yöntemler - Dosyalara Git
-5.1 Optimizasyon için ML
-
-Bayesian Optimizasyon
-
-Hiperparametre Optimizasyonu
-
-5.2 Derin Öğrenme ile Optimizasyon
-
-Nöro-Evrimsel Algoritmalar
-
-Derin RL Optimizasyonu
-
-6. ⚙️ Uygulama Alanları - Dosyalara Git
-6.1 Endüstriyel Uygulamalar
-
-Üretim Planlama
-
-Tedarik Zinciri Optimizasyonu
-
-6.2 Mühendislik Uygulamaları
-
-Yapısal Optimizasyon
-
-Robot Yolu Planlama
-
-6.3 Veri Bilimi Uygulamaları
-
-Özellik Seçimi
-
-Kümeleme Optimizasyonu
-
-🚀 Hızlı Başlangıç
-Ön Koşullar
-bash
-# Gerekli Python paketlerini yükleyin
-pip install numpy scipy matplotlib pandas
-pip install pulp ortools scikit-learn
-pip install deap pyswarms
-İlk Örnek: Doğrusal Programlama
-python
-from pulp import LpProblem, LpVariable, LpMaximize
-
-# Problem tanımı
-prob = LpProblem("Simple_LP_Problem", LpMaximize)
-
-# Karar değişkenleri
-x = LpVariable("x", lowBound=0)
-y = LpVariable("y", lowBound=0)
-
-# Amaç fonksiyonu
-prob += 3*x + 5*y
-
-# Kısıtlar
-prob += x + 2*y <= 10
-prob += 3*x + y <= 12
-
-# Çöz
-prob.solve()
-print(f"Optimal değer: {prob.objective.value()}")
-print(f"x = {x.value()}, y = {y.value()}")
-📊 Öğrenme Yol Haritası
-Seviye	Konular	Tahmini Süre
-Başlangıç	Temel kavramlar, Doğrusal Programlama, Basit sezgiseller	2-4 hafta
-Orta	Tamsayılı Programlama, Dinamik Programlama, Meta-sezgiseller	4-6 hafta
-İleri	Popülasyon temelli yöntemler, Çok amaçlı optimizasyon	6-8 hafta
-Uzman	Öğrenme temelli yöntemler, Hybrid algoritmalar	8+ hafta
-💻 Kod Örnekleri ve Uygulamalar
-Her bölümde aşağıdaki içerikler bulunur:
-
-Teori ve Matematiksel Temeller
-
-Algoritma Adımları
-
-Python/MATLAB/R Implementasyonları
-
-Örnek Problemler ve Çözümler
-
-Görselleştirmeler
-
-Performans Analizleri
-
-Alıştırmalar ve Çözümler
-
-🤝 Katkıda Bulunma
-Bu proje açık kaynaklıdır ve katkılara açıktır. Katkıda bulunmak için:
-
-Repoyu fork edin
-
-Yeni bir branch oluşturun (git checkout -b feature/AmazingFeature)
-
-Değişikliklerinizi commit edin (git commit -m 'Add some AmazingFeature')
-
-Branch'inizi push edin (git push origin feature/AmazingFeature)
-
-Pull Request oluşturun
-
-Katkı Kuralları
-Kod yazarken PEP 8 standartlarına uyun
-
-Her yeni algoritma için testler yazın
-
-Dokümantasyonu güncel tutun
-
-Örneklerin çalıştığından emin olun
-
-📚 Kaynaklar ve Referanslar
-Temel Kitaplar
-Hillier & Lieberman - "Introduction to Operations Research"
-
-Luenberger & Ye - "Linear and Nonlinear Programming"
-
-Talbi - "Metaheuristics: From Design to Implementation"
-
-Online Kaynaklar
-MIT OpenCourseWare - Optimization Methods
-
-Coursera - Discrete Optimization
-
-edX - Optimization: Models and Applications
-
-Yararlı Kütüphaneler
-python
-# Optimizasyon için:
-- PuLP, OR-Tools, CVXOPT, SciPy
-- DEAP, pyswarms, scikit-opt
-- scikit-learn, Optuna, Hyperopt
-
-# Görselleştirme için:
-- matplotlib, seaborn, plotly
-- networkx (ağ problemleri için)
-🏆 Proje Hedefleri
-Tüm temel optimizasyon yöntemlerini kapsamak
-
-Her algoritma için çalışan kod örnekleri sağlamak
-
-Gerçek hayat problemleri için uygulamalar geliştirmek
-
-Performans karşılaştırmaları yapmak
-
-Türkçe dokümantasyon hazırlamak
-
-Topluluk katılımını artırmak
-
-📞 İletişim ve Destek
-Sorularınız için: GitHub Issues sayfasını kullanın
-
-Önerileriniz: Pull Request veya Issue olarak gönderin
-
-E-posta: your-email@example.com
-
-📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
-
-🙏 Teşekkürler
-Bu projeye katkıda bulunan tüm geliştiricilere ve optimizasyon alanında çalışan araştırmacılara teşekkür ederiz.
-
-⭐ Bu repoyu beğendiyseniz yıldız vermeyi unutmayın!
-
-"Optimizasyon, sınırlı kaynaklarla maksimum fayda sağlama sanatıdır."
-
-Son Güncelleme: Kasım 2023
-Versiyon: 1.0.0
+İteratif Yerel Arama
+Yönlü Rastgele Arama
+👥 04 – Popülasyon Temelli Yöntemler
+Evrimsel Algoritmalar:
+Genetik Algoritma (GA), Diferansiyel Gelişim, Evrimsel Stratejiler
+Sürü Zekası:
+PSO, ACO, ABC, Ateşböceği, Kelebek Optimizasyonu
+Doğa-esinli diğerleri:
+Grey Wolf, Whale, Bat, Cat Swarm Optimizasyonu
+🧠 05 – Öğrenme Temelli Yöntemler
+Hiperparametre optimizasyonu (Bayes, Optuna, Hyperopt)
+Takviyeli öğrenme (RL) ile optimizasyon
+Derin öğrenme tabanlı optimizasyon modelleri
+Nöro-evrimsel hibrit sistemler
+Meta-öğrenme ve otomatik algoritma seçimi
+⚙️ 06 – Uygulama Alanları
+Endüstri: Üretim çizelgeleme, tedarik zinciri, portföy optimizasyonu
+Mühendislik: Yapısal tasarım, robot yolu planlama, enerji sistemleri
+Veri Bilimi: Özellik seçimi, kümeleme, anomali tespiti, öneri sistemleri
+🛠️ Kullanılan Araçlar ve Kütüphaneler
+Kategori
+Kütüphaneler / Araçlar
+Kesin Yöntemler
+PuLP, OR-Tools, SciPy.optimize, CVXOPT, Gurobi*
+Sezgiseller
+DEAP, pyswarms, scikit-opt, metaheuristic
+Makine Öğrenmesi
+scikit-learn, Optuna, Hyperopt, BayesianOptimization
+Görselleştirme
+matplotlib, plotly, networkx, animatplot
+Performans Ölçümü
+cProfile, line_profiler, time, memory_profiler
+* Ticari çözücüler (Gurobi, CPLEX) sadece örnek amaçlı kullanılır; açık alternatifler her zaman önceliklidir.
+
+📖 Öğrenme Yol Haritası
+mermaid
+Başlangıç
+
+Temel Kavramlar
+
+Doğrusal Programlama
+
+Tamsayılı & Dinamik Programlama
+
+Basit Sezgiseller
+
+Meta-sezgiseller
+
+Popülasyon Temelli Yöntemler
+
+Çok Amaçlı Optimizasyon
+
+Öğrenme Temelli Yöntemler
+
+Hibrit ve Araştırma Konuları
+
+📌 Katkıda Bulunma
+Bu repo toplu bilgi birikimine açıktır!
+
+Yeni algoritmalar ekleyebilir,
+Mevcut örnekleri geliştirebilir,
+Görselleştirme veya performans analizi ekleyebilir,
+Uygulama alanlarını genişletebilirsiniz.
+Lütfen CONTRIBUTING.md dosyasını inceleyin (henüz yoksa oluşturulacak).
+
+📚 Temel Kaynaklar
+Kitaplar
+Introduction to Operations Research – Hillier & Lieberman
+Linear and Nonlinear Programming – Luenberger & Ye
+Metaheuristics: From Design to Implementation – E.-G. Talbi
+Evolutionary Computation – Michalewicz & Fogel
+Swarm Intelligence – Kennedy & Eberhart
+Online Eğitimler
+MIT OpenCourseWare – Optimization Methods
+Coursera – Discrete Optimization
+edX – Optimization: Models and Applications
+🎯 Hedef Kitle
+Endüstri Mühendisliği, Bilgisayar Mühendisliği, Uygulamalı Matematik öğrencileri
+Veri bilimciler ve araştırmacılar
+Operasyonel araştırma uzmanları
+Yapay zeka ve otomasyon mühendisleri
+Akademik tez/ders/proje çalışanlar
+📬 İletişim & Destek
+Sorularınız, öneri veya hata bildirimleriniz için Issues sekmesini kullanabilirsiniz.
+Repo sürekli güncellenmekte ve geliştirilmektedir. Takip etmek için Star ⭐️ vermeyi unutmayın!
+
+🌱 "En iyi çözüm, problemin doğasını anladıktan sonra ortaya çıkar."
+— Bu repo, o anlayışı inşa etmenize yardımcı olmak için var.
+
+Hazırlayan: [Adınız / Takım]
+Lisans: MIT (açık kaynak kullanımı serbest)
+
+İstersen bu README.md dosyasının İngilizce versiyonunu da hazırlayabilirim veya her alt dizin için örnek README içerikleri üretebilirim. Başlangıç olarak hangi bölümü ilk sıraya almak istersin? (Örneğin: 02-Exact-Methods/01-Linear-Programming/)

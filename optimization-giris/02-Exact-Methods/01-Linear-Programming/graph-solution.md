@@ -2,6 +2,8 @@
 
 Grafik çözüm, **iki karar değişkenli** doğrusal programlama problemlerini **geometrik olarak** çözmek için kullanılan sezgisel ve öğretici bir yöntemdir. Üç veya daha fazla değişkenli problemlerde görselleştirme mümkün olmadığı için bu yöntem yalnızca **eğitim ve anlama amacıyla** kullanılır.
 
+> 📌 Tüm görseller, [`visualization/`](../visualization/) klasöründe bulunan `matplotlib` kodlarıyla üretilmiştir.
+
 ---
 
 ## 🧠 Yöntem Adımları
@@ -26,37 +28,16 @@ s.t.:
 `x₁ + 3·x₂ ≤ 90` &nbsp;&nbsp;&nbsp;&nbsp; (malzeme)  
 `x₁, x₂ ≥ 0`
 
-### Adım 1: Kısıt doğrularını çiz
-- `2x₁ + x₂ = 100` → (0,100) ve (50,0) noktalarından geçer  
-- `x₁ + 3x₂ = 90` → (0,30) ve (90,0) noktalarından geçer
+### Çözüm Özeti:
+- Köşe noktaları: (0,0), (0,30), (50,0), **(42,16)**  
+- Optimum: **(42, 16)** → `Z = 2160`
 
-### Adım 2: Uygun bölgeyi belirle
-- Her iki kısıt da “≤” olduğundan, orijine (0,0) doğru olan taraf alınır  
-- Eksenlerde `x₁ ≥ 0`, `x₂ ≥ 0` → 1. çeyrek düzlem
+![Grafik Çözüm: Üretim Problemi](../visualization/production-graph.png)
 
-### Adım 3: Köşe noktalarını bul
-Kesişim noktaları:
-1. `(0, 0)`  
-2. `(0, 30)` → Malzeme kısıtı ile y ekseni  
-3. `(50, 0)` → İşçilik kısıtı ile x ekseni  
-4. **Kesişim noktası**:  
-   `2x₁ + x₂ = 100`  
-   `x₁ + 3x₂ = 90`  
-   → Çözüm: `x₁ = 42`, `x₂ = 16`
-
-### Adım 4: Amaç fonksiyonunu köşelerde değerlendir
-| Nokta | Z = 40·x₁ + 30·x₂ |
-|-------|-------------------|
-| (0, 0) | 0 |
-| (0, 30) | 900 |
-| (50, 0) | 2000 |
-| **(42, 16)** | **40·42 + 30·16 = 1680 + 480 = 2160** ✅
-
-### Sonuç:
-- **Küresel optimum**: `(x₁, x₂) = (42, 16)`  
-- **Maksimum kar**: **2160 ₺**
-
-> 📌 Bu nokta, iki kısıtın **kesiştiği yerde** → her iki kaynak tamamen kullanılır.
+> ✅ Görselde:  
+> - Mavi ve turuncu çizgiler: kısıt doğruları  
+> - Yeşil alan: uygun bölge  
+> - Kırmızı nokta: küresel optimum
 
 ---
 
@@ -69,32 +50,15 @@ s.t.:
 `5·x₁ + 12·x₂ ≥ 50` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (protein)  
 `x₁, x₂ ≥ 0`
 
-### Adım 1: Doğrular
-- `200x₁ + 150x₂ = 2000` → (0, 13.33), (10, 0)  
-- `5x₁ + 12x₂ = 50` → (0, 4.17), (10, 0)
+### Çözüm Özeti:
+- Kesişim noktası: **(6.06, 1.01)**  
+- Minimum maliyet: **≈17.17 ₺**
 
-### Adım 2: Uygun bölge
-- “≥” kısıtları → orijinden **uzak** taraf  
-- Uygun bölge: iki doğrunun **üst kesişimi**
+![Grafik Çözüm: Diyet Problemi](../visualization/diet-graph.png)
 
-### Adım 3: Köşe noktaları
-1. `(10, 0)` → Kalori sınırı  
-2. `(0, 13.33)` → Protein sınırı  
-3. **Kesişim**:  
-   `200x₁ + 150x₂ = 2000`  
-   `5x₁ + 12x₂ = 50`  
-   → Çözüm: `x₁ ≈ 6.06`, `x₂ ≈ 1.01`
-
-### Adım 4: Amaç değerlendirmesi
-| Nokta | Z = 2·x₁ + 5·x₂ |
-|-------|------------------|
-| (10, 0) | 20 |
-| (0, 13.33) | 66.65 |
-| **(6.06, 1.01)** | **2·6.06 + 5·1.01 ≈ 12.12 + 5.05 = 17.17** ✅
-
-### Sonuç:
-- **Küresel minimum**: `(6.06, 1.01)`  
-- **Minimum maliyet**: **≈17.17 ₺**
+> ✅ Görselde:  
+> - Kısıtların “≥” olması nedeniyle uygun bölge **üst tarafta**  
+> - Optimum iki kısıtın kesişiminde
 
 ---
 
@@ -108,17 +72,16 @@ s.t.:
 `x₂ ≤ 6`  
 `x₁, x₂ ≥ 0`
 
-### Gözlem:
-- Amaç fonksiyonu: `Z = 2(x₁ + x₂)`  
-- En büyük `x₁ + x₂ = 10` (ilk kısıt)  
-- Bu doğrunun uygun bölgeyle kesişimi: `(4,6)` ile `(6,4)` arası **doğru parçası**
+### Çözüm Özeti:
+- Amaç doğrusu, `x₁ + x₂ = 10` ile **özeldeşir**  
+- Tüm `(x₁, x₂)` çiftleri: `x₁ + x₂ = 10`, `4 ≤ x₁ ≤ 6` → **sonsuz çözüm**  
+- Küresel optimum değeri: `Z = 20`
 
-### Sonuç:
-- **Sonsuz sayıda optimal çözüm** var  
-- Tüm `(x₁, x₂)` çiftleri: `x₁ + x₂ = 10`, `4 ≤ x₁ ≤ 6`  
-- **Küresel optimum değeri**: `Z = 20`
+![Grafik Çözüm: Alternatif Optimumlar](../visualization/alternative-solutions-graph.png)
 
-> 💡 Bu, **dejenere olmayan alternatif çözümler** örneğidir.
+> ✅ Görselde:  
+> - Kırmızı kesikli çizgi: amaç fonksiyonu (Z = 20)  
+> - Kalın siyah çizgi: alternatif çözümlerin bulunduğu kenar
 
 ---
 
@@ -128,6 +91,8 @@ s.t.:
 - Uygun bölge her zaman **konveks çokgen**  
 - Optimum **mutlaka bir köşededir** (ya da kenar üzerinde sonsuz çözüm)  
 - Hem maksimizasyon hem minimizasyon için geçerlidir
+
+> 🔧 Tüm görseller [`visualization/`](../visualization/) klasöründeki Python kodlarıyla üretilmiştir. Kendi problemlerinizi görselleştirmek için bu kodları temel alabilirsiniz.
 
 ---
 

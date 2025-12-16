@@ -1,234 +1,294 @@
-# 🚀 Optimizasyona Giriş – TAM KAPSAMLI Eğitim ve Referans Reposu
+🎯 Optimizasyona Giriş - Tam Kapsamlı Eğitim ve Referans Reposu
+https://img.shields.io/github/stars/username/optimization-repo?style=social
+https://img.shields.io/github/forks/username/optimization-repo?style=social
+https://img.shields.io/badge/License-MIT-yellow.svg
+https://img.shields.io/badge/contributions-welcome-brightgreen.svg
 
-Bu GitHub deposu, **optimizasyon literatüründe yer alan tüm temel ve ileri yöntemleri** tek bir çatı altında toplayan **kapsamlı, sistematik ve eğitsel** bir referans reposudur.
+📖 Hakkında
+Bu repo, optimizasyon teorisinin temellerinden başlayarak ileri seviye modern optimizasyon tekniklerine kadar tüm konuları kapsayan kapsamlı bir eğitim ve referans kaynağıdır. Hem akademik hem de endüstriyel uygulamalar için hazırlanmıştır.
 
-Bu repo bir "örnek kod deposu" değildir. Amaç;
+🎯 Hedef Kitle:
 
-* 📚 öğrencilerin **tek bir README üzerinden tüm optimizasyon evrenine ulaşabilmesi**,
-* 🎓 lisans–YL–Doktora seviyesinde **ders materyali** olarak kullanılabilmesi,
-* 📊 akademik çalışmalar için **standart deney altyapısı** sunması,
-* ⚙️ endüstriyel optimizasyon problemleri için **karar rehberi** olmasıdır.
+Üniversite öğrencileri (lisans/yüksek lisans)
 
----
+Veri bilimcileri ve makine öğrenmesi mühendisleri
 
-## 🧠 Eğitim ve Tasarım İlkeleri
+Operasyon araştırmacıları
 
-* **Tek README → tüm yöntemlere erişim**
-* Literatüre dayalı **doğru sınıflandırma**
-* Basitten karmaşığa pedagojik akış
-* Her yöntem için:
+Yazılım geliştiriciler
 
-  * matematiksel model
-  * sezgisel açıklama
-  * algoritmik iskelet
-  * gerçek problem örneği
-  * performans (fitness–süre–enerji)
+Araştırmacılar ve akademisyenler
 
----
+🏗️ Repo Yapısı
+text
+optimization-repo/
+├── 📚 01-Fundamentals/          # Temel kavramlar ve giriş
+├── 🔢 02-Exact-Methods/         # Kesin çözüm yöntemleri
+├── 🔍 03-Heuristics/           # Sezgisel algoritmalar
+├── 👥 04-Population-Based/     # Popülasyon temelli yöntemler
+├── 🧠 05-Learning-Based/       # Öğrenme temelli yöntemler
+├── ⚙️ 06-Applications/        # Uygulama alanları
+├── 📊 datasets/                # Örnek veri setleri
+├── 📓 notebooks/               # Jupyter notebook'ları
+├── 💻 src/                     # Kaynak kodları
+├── 📝 exercises/               # Alıştırmalar ve çözümler
+├── 📚 references/              # Kaynaklar ve makaleler
+└── 📄 README.md                # Bu dosya
+📑 İçindekiler
+1. 📚 Temel Kavramlar - Dosyalara Git
+1.1 Optimizasyona Giriş
 
-# 🧭 OPTİMİZASYON YÖNTEMLERİ – LİTERATÜR TABANLI TAM TAKSONOMİ
+1.2 Problem Formülasyonu
 
-Aşağıdaki yapı, **Operasyon Araştırması (OR)**, **Yapay Zekâ (AI)** ve **Bilgisayar Bilimi** literatürünün ortak kabulüne dayanmaktadır.
+1.3 Optimallik Koşulları
 
----
+2. 🔢 Kesin Çözüm Yöntemleri - Dosyalara Git
+2.1 Doğrusal Programlama (LP)
 
-## 0️⃣ Matematiksel (Kesin / Exact) Optimizasyon Yöntemleri
+Simpleks Algoritması
 
-Bu yöntemler, uygun varsayımlar altında **optimal çözüm garantisi** sunar.
+İç Nokta Metotları
 
-### 0.1 Doğrusal Programlama (LP)
+Dualite Teorisi
 
-* Simplex
-* Interior Point
+Duyarlılık Analizi
 
-### 0.2 Tamsayılı Programlama (IP)
+2.2 Tamsayılı Programlama (IP)
 
-* Branch and Bound
-* Cutting Planes
+Dal-Sınır Metodu
 
-### 0.3 Karma Tamsayılı Programlama (MIP)
+Kesme Düzlemi Metodu
 
-* Branch and Cut
-* Branch and Price
+0-1 Programlama
 
-### 0.4 Hedef Programlama (Goal Programming)
+2.3 Dinamik Programlama (DP)
 
-* Ağırlıklı hedef programlama
-* Öncelikli hedef programlama
+Bellman Optimalite Prensibi
 
-### 0.5 Doğrusal Olmayan Programlama (NLP)
+Deterministik DP
 
-* Convex optimization
-* Non-convex optimization
-* Gradient / Newton yöntemleri
-* KKT koşulları
+Stokastik DP
 
-### 0.6 Dinamik Programlama (DP)
+2.4 Hedef Programlama (GP)
 
-* Bellman prensibi
-* Stage-based optimization
+Ağırlıklı Hedef Programlama
 
-**Problemler:** knapsack, shortest path, inventory
+Öncelikli Hedef Programlama
 
----
+2.5 Doğrusal Olmayan Programlama (NLP)
 
-## 1️⃣ Mantıksal ve Kısıt Tabanlı Yöntemler
+KKT Koşulları
 
-### 1.1 Kısıt Programlama (CP)
+Gradyan Tabanlı Metotlar
 
-* Constraint Satisfaction Problems (CSP)
-* Global constraints
+Kısıtsız Optimizasyon
 
-### 1.2 Mantıksal Programlama
+3. 🔍 Sezgisel Algoritmalar - Dosyalara Git
+3.1 Basit Sezgiseller
 
-* SAT / Max-SAT
-* SMT
+Açgözlü Algoritmalar
 
-### 1.3 Arama ve Greedy-Adaptive Algoritmalar
+Yerel Arama
 
-> Metaheuristic değildir.
+Rastgele Arama
 
-* BFS / DFS
-* Dijkstra
-* A*
-* IDA*
-* Greedy Best-First Search
+3.2 Sezgisel Üstü Algoritmalar
 
----
+Tabu Arama
 
-## 2️⃣ Basit Sezgisel Algoritmalar (Heuristics)
+Tavlama Benzetimi
 
-Problem-özel, hızlı, düşük maliyetli yöntemler.
+Değişken Komşuluk Arama
 
-### 2.1 Greedy Yaklaşımlar
+3.3 İleri Sezgisel Yöntemler
 
-* EDD, SPT, LPT
+Hyper-Heuristics
 
-### 2.2 Kural Tabanlı Sezgiseller
+Memetic Algoritmalar
 
-* IF–THEN rules
-* Priority rules
+4. 👥 Popülasyon Temelli Yöntemler - Dosyalara Git
+4.1 Evrimsel Algoritmalar
 
-### 2.3 Local Search
+Genetik Algoritmalar
 
-* Hill Climbing
-* First / Best Improvement
+Diferansiyel Gelişim
 
-### 2.4 Yapıcı (Constructive) Sezgiseller
+Evrimsel Stratejiler
 
-* Problem-özel inşa algoritmaları
+4.2 Sürü Zekası Algoritmaları
 
----
+Parçacık Sürü Optimizasyonu
 
-## 3️⃣ Sezgisel-Üstü (Metaheuristic) Algoritmalar
+Karınca Kolonisi Optimizasyonu
 
-Genel amaçlı, problem-bağımsız arama çerçeveleri.
+Yapay Arı Kolonisi
 
-### 3.1 Trajectory-Based Metaheuristics
+4.3 Biyolojik Esinli Algoritmalar
 
-* Simulated Annealing (SA)
-* Tabu Search (TS)
-* Variable Neighborhood Search (VNS)
-* Iterated Local Search (ILS)
-* Guided Local Search (GLS)
+Kurt Sürüsü Optimizasyonu
 
-### 3.2 Memory-Based Metaheuristics
+Balina Optimizasyon Algoritması
 
-* Tabu Search (advanced)
-* Scatter Search
+5. 🧠 Öğrenme Temelli Yöntemler - Dosyalara Git
+5.1 Optimizasyon için ML
 
----
+Bayesian Optimizasyon
 
-## 4️⃣ Popülasyon Temelli Sezgisel-Üstü Algoritmalar
+Hiperparametre Optimizasyonu
 
-### 4.1 Evrimsel Algoritmalar
+5.2 Derin Öğrenme ile Optimizasyon
 
-* Genetic Algorithms (GA)
-* Differential Evolution (DE)
-* Evolution Strategies (ES)
-* Genetic Programming (GP)
+Nöro-Evrimsel Algoritmalar
 
-### 4.2 Sürü Zekâsı (Swarm Intelligence)
+Derin RL Optimizasyonu
 
-* Particle Swarm Optimization (PSO)
-* Ant Colony Optimization (ACO)
-* Artificial Bee Colony (ABC)
-* Firefly Algorithm (FA)
-* Bat Algorithm
+6. ⚙️ Uygulama Alanları - Dosyalara Git
+6.1 Endüstriyel Uygulamalar
 
-### 4.3 Biyolojik / Fiziksel / Sosyal Metaforlar
+Üretim Planlama
 
-**Biyolojik:**
+Tedarik Zinciri Optimizasyonu
 
-* Immune Algorithms
-* Bacterial Foraging
+6.2 Mühendislik Uygulamaları
 
-**Fiziksel:**
+Yapısal Optimizasyon
 
-* Gravitational Search Algorithm
-* Harmony Search
+Robot Yolu Planlama
 
-**Sosyal:**
+6.3 Veri Bilimi Uygulamaları
 
-* Teaching–Learning Based Optimization (TLBO)
-* Social Spider Algorithm
+Özellik Seçimi
 
----
+Kümeleme Optimizasyonu
 
-## 5️⃣ Üst-Sezgisel (Hyper-Heuristic) Algoritmalar
+🚀 Hızlı Başlangıç
+Ön Koşullar
+bash
+# Gerekli Python paketlerini yükleyin
+pip install numpy scipy matplotlib pandas
+pip install pulp ortools scikit-learn
+pip install deap pyswarms
+İlk Örnek: Doğrusal Programlama
+python
+from pulp import LpProblem, LpVariable, LpMaximize
 
-> Sezgiselleri yöneten üst seviye yöntemler
+# Problem tanımı
+prob = LpProblem("Simple_LP_Problem", LpMaximize)
 
-### 5.1 Heuristic Selection
+# Karar değişkenleri
+x = LpVariable("x", lowBound=0)
+y = LpVariable("y", lowBound=0)
 
-* Rule-based
-* Learning-based
+# Amaç fonksiyonu
+prob += 3*x + 5*y
 
-### 5.2 Heuristic Generation
+# Kısıtlar
+prob += x + 2*y <= 10
+prob += 3*x + y <= 12
 
-* Genetic Programming HH
-* Grammar-based HH
+# Çöz
+prob.solve()
+print(f"Optimal değer: {prob.objective.value()}")
+print(f"x = {x.value()}, y = {y.value()}")
+📊 Öğrenme Yol Haritası
+Seviye	Konular	Tahmini Süre
+Başlangıç	Temel kavramlar, Doğrusal Programlama, Basit sezgiseller	2-4 hafta
+Orta	Tamsayılı Programlama, Dinamik Programlama, Meta-sezgiseller	4-6 hafta
+İleri	Popülasyon temelli yöntemler, Çok amaçlı optimizasyon	6-8 hafta
+Uzman	Öğrenme temelli yöntemler, Hybrid algoritmalar	8+ hafta
+💻 Kod Örnekleri ve Uygulamalar
+Her bölümde aşağıdaki içerikler bulunur:
 
-### 5.3 Öğrenme Tabanlı Hyper-Heuristics
+Teori ve Matematiksel Temeller
 
-* Reinforcement Learning
-* Multi-Armed Bandit
-* Neural Hyper-Heuristics
+Algoritma Adımları
 
----
+Python/MATLAB/R Implementasyonları
 
-## ⚙️ Paralel, Dağıtık ve GPU Destekli Optimizasyon
+Örnek Problemler ve Çözümler
 
-Her algoritma ailesi için:
+Görselleştirmeler
 
-* Single-thread
-* Multi-threading
-* Multiprocessing
-* GPU (CUDA / OpenCL)
+Performans Analizleri
 
-karşılaştırmalı örnekler sunulur.
+Alıştırmalar ve Çözümler
 
----
+🤝 Katkıda Bulunma
+Bu proje açık kaynaklıdır ve katkılara açıktır. Katkıda bulunmak için:
 
-## 📊 Performans ve Deney Standartları
+Repoyu fork edin
 
-* Fitness
-* Süre
-* Enerji tüketimi
-* Ölçeklenebilirlik
+Yeni bir branch oluşturun (git checkout -b feature/AmazingFeature)
 
----
+Değişikliklerinizi commit edin (git commit -m 'Add some AmazingFeature')
 
-## 🎓 Nihai Vizyon
+Branch'inizi push edin (git push origin feature/AmazingFeature)
 
-Bu repo:
+Pull Request oluşturun
 
-* Öğrenciler için **tek durak optimizasyon rehberi**
-* Akademisyenler için **deney altyapısı**
-* Endüstri için **algoritma seçim kılavuzu**
+Katkı Kuralları
+Kod yazarken PEP 8 standartlarına uyun
 
-olmayı hedefler.
+Her yeni algoritma için testler yazın
 
----
+Dokümantasyonu güncel tutun
 
-> ✨ *"Optimizasyonu öğrenmek algoritma ezberlemek değil, doğru problemi doğru araçla çözmeyi bilmektir."*
+Örneklerin çalıştığından emin olun
+
+📚 Kaynaklar ve Referanslar
+Temel Kitaplar
+Hillier & Lieberman - "Introduction to Operations Research"
+
+Luenberger & Ye - "Linear and Nonlinear Programming"
+
+Talbi - "Metaheuristics: From Design to Implementation"
+
+Online Kaynaklar
+MIT OpenCourseWare - Optimization Methods
+
+Coursera - Discrete Optimization
+
+edX - Optimization: Models and Applications
+
+Yararlı Kütüphaneler
+python
+# Optimizasyon için:
+- PuLP, OR-Tools, CVXOPT, SciPy
+- DEAP, pyswarms, scikit-opt
+- scikit-learn, Optuna, Hyperopt
+
+# Görselleştirme için:
+- matplotlib, seaborn, plotly
+- networkx (ağ problemleri için)
+🏆 Proje Hedefleri
+Tüm temel optimizasyon yöntemlerini kapsamak
+
+Her algoritma için çalışan kod örnekleri sağlamak
+
+Gerçek hayat problemleri için uygulamalar geliştirmek
+
+Performans karşılaştırmaları yapmak
+
+Türkçe dokümantasyon hazırlamak
+
+Topluluk katılımını artırmak
+
+📞 İletişim ve Destek
+Sorularınız için: GitHub Issues sayfasını kullanın
+
+Önerileriniz: Pull Request veya Issue olarak gönderin
+
+E-posta: your-email@example.com
+
+📄 Lisans
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için LICENSE dosyasına bakın.
+
+🙏 Teşekkürler
+Bu projeye katkıda bulunan tüm geliştiricilere ve optimizasyon alanında çalışan araştırmacılara teşekkür ederiz.
+
+⭐ Bu repoyu beğendiyseniz yıldız vermeyi unutmayın!
+
+"Optimizasyon, sınırlı kaynaklarla maksimum fayda sağlama sanatıdır."
+
+Son Güncelleme: Kasım 2023
+Versiyon: 1.0.0
